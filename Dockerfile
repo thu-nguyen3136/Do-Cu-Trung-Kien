@@ -1,6 +1,6 @@
 # Stage 1: Base
 FROM node:20-alpine AS base
-LABEL org.opencontainers.image.source="https://github.com/adminvpshub/Do-Cu-Vui-Hung-Net"
+LABEL org.opencontainers.image.source="https://github.com/thu-nguyen3136/Do-Cu-Trung-Kien"
 WORKDIR /app
 COPY package.json package-lock.json* ./
 
@@ -8,7 +8,7 @@ COPY package.json package-lock.json* ./
 FROM base AS dev
 RUN npm ci || npm install
 COPY . .
-ENV PORT=3003
+ENV PORT=3007
 CMD ["npm", "run", "dev"]
 
 # Stage 3: Builder for production
@@ -35,5 +35,5 @@ COPY nginx-log-format.conf /etc/nginx/conf.d/00-log-format.conf
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 3003
+EXPOSE 3007
 CMD ["nginx", "-g", "daemon off;"]

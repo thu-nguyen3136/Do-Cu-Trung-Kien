@@ -6,13 +6,13 @@ services:
       context: .
       target: dev
     ports:
-      - "3003:3003"
+      - "3007:3007"
     restart: unless-stopped
     volumes:
       - .:/app
       - /app/node_modules
       - /app/.next
     environment:
-      - PORT=3003
+      - PORT=3007
       - NODE_ENV=development
       - TZ=Asia/Ho_Chi_Minh
