@@ -2,13 +2,9 @@ version: '3.8'
 
 services:
   web-production:
-    build:
-      context: .
-      target: runner
+    image: ghcr.io/adminvpshub/do-cu-trung-kien:latest
     ports:
-      - "3003:3003"
+      - "3007:3007"
     restart: unless-stopped
     environment:
       - TZ=Asia/Ho_Chi_Minh
-    volumes:
-      - ${DEPLOY_PATH:-/tmp}/logs:/var/log/nginx
