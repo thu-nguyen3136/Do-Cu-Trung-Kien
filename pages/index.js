@@ -361,61 +361,68 @@ export default function Home() {
           </Link>
         </section>
 
-        {/* PHẦN QUY TRÌNH BAO TRỌN - ĐÃ GIẢM KHOẢNG CÁCH TỐI ĐA */}
-        <section className="py-2 md:py-2 bg-white relative overflow-hidden" id="quy-trinh">
-          <div className="max-w-[1400px] mx-auto px-5 md:px-10 relative z-10">
+        {/* SECTION QUY TRÌNH THU MUA */}
+        <section className="py-16 md:py-24 bg-[#f8fafc] relative overflow-hidden" id="quy-trinh">
+          {/* Decor mờ phía sau */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[#2e7d32]/5 rounded-full blur-[120px]"></div>
+            <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#2e7d32]/10 rounded-full blur-[120px]"></div>
+          </div>
 
-            {/* Tiêu đề: Giảm mb-10 xuống mb-6 */}
-            <div className="text-center mb-4 md:mb-6">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-[#111827] uppercase tracking-tight">
+          <div className="max-w-[1200px] mx-auto px-5 relative z-10">
+            {/* Tiêu đề */}
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-5xl font-black text-[#111827] uppercase tracking-tight">
                 Quy Trình <span className="text-[#2e7d32]">Thu Mua</span>
               </h2>
-              <div className="w-16 md:w-24 h-1 bg-gradient-to-r from-[#2e7d32] to-[#388e3c] mx-auto mt-3 rounded-full"></div>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[#2e7d32] to-[#388e3c] mx-auto mt-4 rounded-full"></div>
+              <p className="text-gray-500 mt-4 font-medium uppercase tracking-widest text-sm">Nhanh chóng - Chuyên nghiệp - Uy tín</p>
             </div>
 
-            <div className="relative">
-              {/* Lưới hiển thị: Giảm khoảng cách trên mobile để các bước sát nhau hơn */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-0 relative z-10">
-                {[
-                  { step: "1", title: "Nhận yêu cầu", desc: "Tiếp nhận thông tin qua hotline: 0398.771.444" },
-                  { step: "2", title: "Khảo sát", desc: "Khảo sát tận nơi hoặc báo giá nhanh qua hình ảnh Zalo." },
-                  { step: "3", title: "Báo giá", desc: "Thỏa thuận giá cả minh bạch, không ép giá khách hàng." },
-                  { step: "4", title: "Thu mua", desc: "Tháo dỡ nhanh gọn, thanh toán tiền mặt ngay tại chỗ." }
-                ].map((process, i) => (
-                  <div key={i} className="group flex flex-col items-center text-center px-4 relative cursor-default">
+            {/* Grid hiển thị 4 bước */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              {[
+                { step: "01", title: "Nhận yêu cầu", desc: "Tiếp nhận thông tin qua hotline: 0398.771.444" },
+                { step: "02", title: "Khảo sát", desc: "Khảo sát tận nơi hoặc báo giá nhanh qua hình ảnh Zalo." },
+                { step: "03", title: "Báo giá", desc: "Thỏa thuận giá cả minh bạch, không ép giá khách hàng." },
+                { step: "04", title: "Thu mua", desc: "Tháo dỡ nhanh gọn, thanh toán tiền mặt ngay tại chỗ." }
+              ].map((item, i) => (
+                <div key={i} className="group relative">
+                  {/* Card Wrapper */}
+                  <div className="h-full bg-white p-8 rounded-2xl border border-gray-100 shadow-sm group-hover:shadow-xl group-hover:shadow-[#2e7d32]/10 transition-all duration-500 relative z-10 overflow-hidden flex flex-col items-center text-center">
 
-                    {/* Đường kẻ nối SVG - Giữ nguyên nhưng thêm transition màu */}
-                    {i < 3 && (
-                      <svg className="hidden lg:block absolute top-[10px] left-[50%] w-full h-[50px] z-0 text-[#2e7d32]/20 group-hover:text-[#2e7d32]/40 transition-colors duration-500" preserveAspectRatio="none" viewBox="0 0 100 40">
-                        <path
-                          d={i % 2 === 0 ? "M20,30 Q50,0 80,30" : "M20,10 Q50,40 80,10"}
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeDasharray="4 4"
-                          vectorEffect="non-scaling-stroke"
-                        />
-                      </svg>
-                    )}
+                    {/* Số thứ tự lớn làm nền mờ */}
+                    <span className="absolute -top-2 -right-2 text-7xl font-black text-gray-50 group-hover:text-green-50/50 transition-colors duration-500 pointer-events-none">
+                      {item.step}
+                    </span>
 
-                    {/* Vòng tròn số: Hiệu ứng Hover biến đổi màu và phóng lớn */}
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-[#388e3c]/10 text-[#388e3c] rounded-full flex items-center justify-center text-2xl md:text-3xl font-black mb-4 mx-auto shadow-sm ring-4 ring-white z-10 relative 
-                            transition-all duration-500 transform group-hover:scale-110 group-hover:bg-[#111827] group-hover:text-[#388e3c] group-hover:shadow-lg">
-                      {process.step}
+                    {/* Vòng tròn số */}
+                    <div className="w-16 h-16 bg-[#2e7d32]/10 text-[#2e7d32] rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-[#2e7d32] group-hover:text-white transition-all duration-500 shadow-inner rotate-3 group-hover:rotate-0">
+                      {item.step}
                     </div>
 
-                    {/* Tiêu đề Bước Hoạt Động: Chuyển màu khi rê chuột  */}
-                    <h3 className="text-lg md:text-xl font-black mb-2 text-[#111827] transition-colors duration-300 group-hover:text-[#2e7d32] uppercase tracking-wide">
-                      {process.title}
+                    {/* Content */}
+                    <h3 className="text-xl font-bold mb-3 text-[#111827] uppercase tracking-wide group-hover:text-[#2e7d32] transition-colors duration-300">
+                      {item.title}
                     </h3>
-
-                    {/* Mô tả Từng Bước: Canh chỉnh thu nhỏ gọn gàng */}
-                    <p className="text-gray-500 font-medium text-[13px] md:text-[14px] leading-snug max-w-[240px] mx-auto transition-colors duration-300 group-hover:text-gray-800">
-                      {process.desc}
+                    <p className="text-gray-500 text-[15px] leading-relaxed font-medium">
+                      {item.desc}
                     </p>
+
+                    {/* Line trang trí dưới chân card */}
+                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#2e7d32] group-hover:w-full transition-all duration-500"></div>
                   </div>
-                ))}
-              </div>
+
+                  {/* Mũi tên nối (Chỉ hiện trên Desktop) */}
+                  {i < 3 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 z-0 opacity-20">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#2e7d32" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>
