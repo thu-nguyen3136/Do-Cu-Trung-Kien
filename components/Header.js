@@ -14,7 +14,7 @@ export default function Header() {
     <header className="w-full sticky top-0 z-[100] shadow-md font-sans bg-white">
       {/* --- MENU CHÍNH --- */}
       <nav className="border-b border-gray-100 relative">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-10 flex justify-between items-stretch h-[65px] md:h-[80px]">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-10 flex justify-between items-stretch h-[65px] md:h-[80px]">
 
           {/* 1. Nút Mobile Menu */}
           <button
@@ -49,16 +49,16 @@ export default function Header() {
 
           {/* 3. Menu Desktop & Cta Button */}
           <div className="hidden lg:flex items-center space-x-4 h-full">
-            <ul className="flex items-stretch space-x-1 font-bold text-[13px] xl:text-[14px] uppercase tracking-wide h-full">
-              <li className="h-full flex items-center">
+            <ul className="flex items-stretch space-x-1 font-bold text-[13px] xl:text-[14px] uppercase tracking-wide h-full m-0 p-0">
+              <li className="h-full flex items-center m-0">
                 <Link href="/" className={navLinkClass}>Trang chủ</Link>
               </li>
-              <li className="h-full flex items-center">
+              <li className="h-full flex items-center m-0">
                 <Link href="/gioi-thieu" className={navLinkClass}>Giới Thiệu</Link>
               </li>
 
               {/* Submenu: Thu Mua Đồ Cũ */}
-              <li className="relative group h-full cursor-pointer flex items-center">
+              <li className="relative group h-full cursor-pointer flex items-center m-0">
                 <div className={navLinkClass}>
                   Thu Mua Đồ Cũ
                   <svg className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,10 +83,10 @@ export default function Header() {
                 </div>
               </li>
 
-              <li className="h-full flex items-center">
+              <li className="h-full flex items-center m-0">
                 <Link href="/tin-tuc" className={navLinkClass}>Tin Tức</Link>
               </li>
-              <li className="h-full flex items-center">
+              <li className="h-full flex items-center m-0">
                 <Link href="/lien-he" className={navLinkClass}>Liên Hệ</Link>
               </li>
             </ul>

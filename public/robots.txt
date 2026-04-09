@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /access-denied-spam
 Sitemap: https://thumuadocutrungkien.com/sitemap.xml

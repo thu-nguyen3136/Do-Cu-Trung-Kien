@@ -110,12 +110,12 @@ p {
   /* Consistent paragraph spacing */
 }
 
-/* List spacing */
-ul,
-ol {
+/* List spacing - Chỉ áp dụng cho danh sách trong nội dung bài viết, tránh ảnh hưởng tới menu/nav */
+ul:not(nav ul),
+ol:not(nav ol) {
   margin-bottom: 1rem;
 }
 
-li {
+li:not(nav li) {
   margin-bottom: 0.5rem;
 }

@@ -104,7 +104,7 @@ export default function Sidebar() {
           <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
             <Link href="/tin-tuc/kinh-nghiem-thanh-ly-do-cu" className="flex items-center gap-3 group">
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
-                <Image src="/thanh-ly-nha-hang-uy-tin.jpg" alt="Tin tức 1" fill className="object-cover group-hover:scale-110 transition-transform" />
+                <Image src="/thu-mua-do-cu-gia-dinh-3.jpeg" alt="Tin tức 1" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
               <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight line-clamp-2">Kinh Nghiệm Thanh Lý Đồ Cũ Tại TP.HCM</h6>
             </Link>
@@ -112,7 +112,7 @@ export default function Sidebar() {
           <li className="p-3 hover:bg-gray-50 transition-colors">
             <Link href="/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san" className="flex items-center gap-3 group">
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
-                <Image src="/thu-mua-do-cu-gia-cao-go-vap.jpg" alt="Tin tức 2" fill className="object-cover group-hover:scale-110 transition-transform" />
+                <Image src="/thanh-ly-noi-that-khach-san-1.jpg" alt="Tin tức 2" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
               <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight line-clamp-2">Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn</h6>
             </Link>

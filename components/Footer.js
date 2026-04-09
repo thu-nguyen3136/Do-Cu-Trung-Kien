@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#388e3c]/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#388e3c]/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
 
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-10 relative z-10">
 
         {/* === PHẦN TRÊN: BOX LIÊN HỆ NỔI BẬT (Ngắt khỏi cột 1) === */}
         <div className="bg-[#111827]/50 border border-white/10 rounded-3xl p-8 mb-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">

@@ -38,16 +38,16 @@ export default function Home() {
       highlightTitle: 'ĐỒ CŨ', // Phần màu vàng #2e7d32
       description: 'Chuyên thu mua các loại đồ cũ với giá cao, tháo dỡ tận nơi chuyên nghiệp.',
       services: [
-        { id: 1, title: 'Thanh Lý Quán Cafe', image: '/thanh-ly-quan-cafe.jpg', link: '/thanh-ly-quan-cafe' },
-        { id: 2, title: 'Thanh Lý Quán Ăn', image: '/thanh-ly-quan-an.jpg', link: '/thanh-ly-quan-an' },
-        { id: 3, title: 'Thanh Lý Quán Nhậu', image: '/thanh-ly-quan-nhau.jpg', link: '/thanh-ly-quan-nhau' },
-        { id: 4, title: 'Thanh Lý Nhà Hàng', image: '/thanh-ly-nha-hang.jpg', link: '/thanh-ly-nha-hang' },
-        { id: 5, title: 'Thanh Lý Quán Phở', image: '/thanh-ly-quan-pho.jpg', link: '/thanh-ly-quan-pho' },
-        { id: 6, title: 'Thanh Lý Quán Trà Sữa', image: '/thanh-ly-quan-tra-sua.jpg', link: '/thanh-ly-quan-tra-sua' },
-        { id: 7, title: 'Thu Mua Tủ Đông, Tủ Mát', image: '/thu-mua-tu-dong-cu.jpg', link: '/thu-mua-tu-dong-tu-mat' },
-        { id: 8, title: 'Thu Mua Đồ Inox Cũ', image: '/thu-mua-do-inox.jpg', link: '/thu-mua-do-inox-cu' },
-        { id: 9, title: 'Thu mua đồ cũ gia đình', image: '/thu-mua-do-cu-gia-dinh.jpg', link: '/thu-mua-do-cu-gia-dinh' },
-        { id: 10, title: 'Thu Mua Nội Thất Khách Sạn', image: '/thanh-ly-noi-that-khach-san.jpg', link: '/thu-mua-noi-that-khach-san' },
+        { id: 1, title: 'Thanh Lý Quán Cafe', image: '/thanh-ly-quan-cafe.jpg', link: '/thanh-ly-quan-cafe', description: 'Thu mua bàn ghế, máy pha cafe, quầy bar và thiết bị quán cafe trọn gói giá cao.' },
+        { id: 2, title: 'Thanh Lý Quán Ăn', image: '/thanh-ly-quan-an.jpg', link: '/thanh-ly-quan-an', description: 'Chuyên thu mua thiết bị bếp, bàn ghế và dụng cụ quán ăn giá sỉ, tháo dỡ nhanh.' },
+        { id: 3, title: 'Thanh Lý Quán Nhậu', image: '/thanh-ly-quan-nhau.jpg', link: '/thanh-ly-quan-nhau', description: 'Thu mua trọn gói quán nhậu, nhà hàng, hỗ trợ tháo dỡ và vận chuyển tận nơi.' },
+        { id: 4, title: 'Thanh Lý Nhà Hàng', image: '/thanh-ly-nha-hang.jpg', link: '/thanh-ly-nha-hang', description: 'Thu mua thiết bị bếp công nghiệp, nội thất nhà hàng cao cấp với giá cạnh tranh nhất.' },
+        { id: 5, title: 'Thanh Lý Quán Phở', image: '/thanh-ly-quan-pho.jpg', link: '/thanh-ly-quan-pho', description: 'Thu mua nồi phở điện, bàn ghế gỗ, inox và toàn bộ trang thiết bị quán phở cũ.' },
+        { id: 6, title: 'Thanh Lý Quán Trà Sữa', image: '/thanh-ly-quan-tra-sua.jpg', link: '/thanh-ly-quan-tra-sua', description: 'Thu mua máy dập nắp, máy định lượng đường, quầy bar và nội thất quán trà sữa.' },
+        { id: 7, title: 'Thu Mua Tủ Đông, Tủ Mát', image: '/thu-mua-tu-dong-cu.jpg', link: '/thu-mua-tu-dong-tu-mat', description: 'Thu mua các loại tủ đông, tủ mát Sanaky, Alaska cũ hỏng giá cao tại TPHCM.' },
+        { id: 8, title: 'Thu Mua Đồ Inox Cũ', image: '/thu-mua-do-inox.jpg', link: '/thu-mua-do-inox-cu', description: 'Thu mua bồn rửa inox, bàn bếp inox, kệ inox và đồ dùng inox công nghiệp.' },
+        { id: 9, title: 'Thu mua đồ cũ gia đình', image: '/thu-mua-do-cu-gia-dinh.jpg', link: '/thu-mua-do-cu-gia-dinh', description: 'Thu mua nội thất gia đình, đồ gỗ cũ, tủ thờ, bàn ghế gỗ và đồ điện lạnh cũ.' },
+        { id: 10, title: 'Thu Mua Nội Thất Khách Sạn', image: '/thanh-ly-noi-that-khach-san.jpg', link: '/thu-mua-noi-that-khach-san', description: 'Thu mua trọn gói nội thất khách sạn, giường, tủ, nệm và thiết bị điện dân dụng.' },
       ]
     }
   ];
@@ -159,17 +159,17 @@ export default function Home() {
   const news = [
     {
       id: 1,
-      title: "Đơn Vị Thu Mua Đồ Cũ Uy Tín Tại TP.HCM",
-      desc: "Trung Kiên chuyên thu mua đồ cũ giá cao tại TP.HCM, hỗ trợ khảo sát tận nơi, thanh toán nhanh chóng.",
-      image: "/tin-tuc-1.jpg",
-      slug: "/tin-tuc/thu-mua-do-cu-uy-tin-tphcm"
+      title: "Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn",
+      desc: "Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ?",
+      image: "/thanh-ly-noi-that-khach-san-1.jpg",
+      slug: "/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san"
     },
     {
       id: 2,
-      title: "Thu Mua Thiết Bị Vệ Sinh, Phế Liệu Giá Cao Tại TP.HCM",
-      desc: "Nhận thu mua thiết bị vệ sinh cũ, phế liệu inox, sắt, nhôm giá cao, hỗ trợ tháo dỡ tận nơi.",
-      image: "/tin-tuc-2.jpg",
-      slug: "/tin-tuc/thu-mua-bon-cau-cu-thiet-bi-ve-sinh"
+      title: "Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM",
+      desc: "Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM",
+      image: "/thu-mua-do-cu-gia-dinh-3.jpeg",
+      slug: "/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
     }
   ];
 
@@ -219,7 +219,7 @@ export default function Home() {
       <main className="flex-grow">
 
         <section className="w-full py-12 md:py-20 bg-white overflow-hidden">
-          <div className="container mx-auto px-4">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-10">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
               {/* Cột bên trái: Nội dung Text chuẩn SEO */}
@@ -283,7 +283,7 @@ export default function Home() {
               // border-gray-50/50 tạo đường kẻ cực mảnh, gần như hòa vào nền
               className={`mt-0 mb-0 py-2 md:py-4 border-t border-gray-50/50 ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
             >
-              <div className="max-w-[1400px] mx-auto px-4 md:px-10">
+              <div className="max-w-[1400px] mx-auto px-5 md:px-10">
 
                 {/* TIÊU ĐỀ 2 MÀU IN HOA - ĐÃ ÉP SÁT KHOẢNG CÁCH */}
                 <div className="text-center mb-6 md:mb-8">
@@ -320,19 +320,19 @@ export default function Home() {
                       {/* NỘI DUNG THẺ DỊCH VỤ */}
                       <div className="p-5 md:p-6 flex flex-col flex-grow text-center items-center bg-white relative">
 
-                        {/* Huy hiệu mini */}
-                        <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 bg-[#388e3c] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-md border-[3px] border-white group-hover:scale-110 group-hover:bg-[#4caf50] transition-all">
-                          {srv.id < 10 ? `0${srv.id}` : srv.id}
-                        </div>
-
                         {/* Tiêu đề */}
-                        <h3 className="font-black text-[#111827] group-hover:text-[#388e3c] text-[16px] md:text-[19px] mt-4 mb-5 transition-colors line-clamp-2 leading-snug flex items-center justify-center h-[54px] w-full px-2">
+                        <h3 className="font-black text-[#111827] group-hover:text-[#388e3c] text-[16px] md:text-[19px] mt-2 mb-3 transition-colors line-clamp-2 leading-snug flex items-center justify-center h-[54px] w-full px-2">
                           {srv.title}
                         </h3>
 
+                        {/* Mô tả ngắn */}
+                        <p className="text-gray-500 text-[13px] md:text-[14px] leading-relaxed mb-6 line-clamp-2 min-h-[40px]">
+                          {srv.description}
+                        </p>
+
                         {/* Nút bấm */}
-                        <div className="inline-flex w-full items-center justify-center gap-2 bg-[#388e3c] group-hover:bg-[#2e7d32] text-white font-black py-3.5 px-6 rounded-xl text-[12px] md:text-[13px] uppercase tracking-widest transition-all duration-300 border border-[#388e3c] group-hover:border-[#2e7d32] group-hover:shadow-[0_8px_20px_rgba(136,13,17,0.3)]">
-                          XEM CHI TIẾT
+                        <div className="inline-flex w-full items-center justify-center gap-2 bg-[#388e3c] group-hover:bg-[#2e7d32] text-white font-black py-3.5 px-6 rounded-xl text-[12px] md:text-[13px] tracking-widest transition-all duration-300 border border-[#388e3c] group-hover:border-[#2e7d32] group-hover:shadow-[0_8px_20px_rgba(136,13,17,0.3)]">
+                          Xem Thêm
                           <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                           </svg>
@@ -363,7 +363,7 @@ export default function Home() {
 
         {/* PHẦN QUY TRÌNH BAO TRỌN - ĐÃ GIẢM KHOẢNG CÁCH TỐI ĐA */}
         <section className="py-2 md:py-2 bg-white relative overflow-hidden" id="quy-trinh">
-          <div className="max-w-[1400px] mx-auto px-4 md:px-10 relative z-10">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-10 relative z-10">
 
             {/* Tiêu đề: Giảm mb-10 xuống mb-6 */}
             <div className="text-center mb-4 md:mb-6">
@@ -427,7 +427,7 @@ export default function Home() {
           <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#388e3c]/20 blur-[150px] rounded-full"></div>
           <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-[#388e3c]/20 blur-[120px] rounded-full"></div>
 
-          <div className="max-w-[1100px] mx-auto px-6 relative z-10">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-10 relative z-10">
 
             {/* TITLE */}
             <div className="text-center mb-20">
@@ -525,7 +525,7 @@ export default function Home() {
           {/* Họa tiết nền */}
           <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white to-transparent"></div>
 
-          <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-10 relative z-10">
 
             {/* Tiêu đề */}
             <div className="text-center mb-16 md:mb-20">
@@ -627,7 +627,7 @@ export default function Home() {
 
         {/* NEWS SECTION */}
         <section className="pt-4 pb-4 md:pt-4 md:pb-4 bg-gray-50" id="tin-tuc">
-          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-10">
 
             {/* HEADER */}
             <div className="text-center mb-10 md:mb-12">
@@ -645,14 +645,14 @@ export default function Home() {
                   id: 1,
                   title: "Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn",
                   desc: "Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ?",
-                  image: "/thanh-ly-nha-hang-uy-tin.jpg",
+                  image: "/thanh-ly-noi-that-khach-san-1.jpg",
                   slug: "/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san"
                 },
                 {
                   id: 2,
                   title: "Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM",
                   desc: "Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM",
-                  image: "/thu-mua-do-cu-gia-cao-go-vap.jpg",
+                  image: "/thu-mua-do-cu-gia-dinh-3.jpeg",
                   slug: "/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
                 }
               ];
@@ -700,7 +700,7 @@ export default function Home() {
                             {item.desc}
                           </p>
 
-                          <div className="text-[#2e7d32] font-bold text-sm uppercase tracking-wide flex items-center gap-2 group-hover:text-[#111827]">
+                          <div className="text-[#2e7d32] font-bold text-sm tracking-wide flex items-center gap-2 group-hover:text-[#111827]">
                             Xem chi tiết
                             <span className="transition-transform group-hover:translate-x-1">→</span>
                           </div>
