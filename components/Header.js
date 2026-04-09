@@ -116,7 +116,7 @@ export default function Header() {
               </button>
             </div>
 
-            {/* List links mobile */}
+            {/* List links mobile*/}
             <div className="flex-1 overflow-y-auto custom-scrollbar p-4">
               <ul className="flex flex-col space-y-0.5 font-bold text-gray-800 uppercase text-[14px]">
                 <li><Link href="/" className="block py-2 px-3 border-b border-gray-50 hover:text-brand-600" onClick={() => setIsOpen(false)}>Trang chủ</Link></li>
