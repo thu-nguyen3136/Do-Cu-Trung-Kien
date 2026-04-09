@@ -8,7 +8,7 @@ export default function Header() {
 
   // Link dùng chung để dễ quản lý
   const navLinkClass = "text-brand-600 hover:text-brand-500 font-bold py-2 px-2 xl:px-4 transition-all duration-300 relative group flex items-center";
-  const subMenuLinkClass = "px-5 py-1 hover:bg-brand-50 text-gray-700 border-b border-gray-50 text-[13px] font-semibold hover:text-brand-600 hover:pl-7 transition-all duration-300 block";
+  const subMenuLinkClass = "px-5 py-2.5 hover:bg-brand-50 text-gray-700 border-b border-gray-50 text-[13px] font-semibold hover:text-brand-600 hover:pl-7 transition-all duration-300 block";
 
   return (
     <header className="w-full sticky top-0 z-[100] shadow-md font-sans bg-white">
@@ -125,16 +125,16 @@ export default function Header() {
                 <li className="py-2 px-3 text-brand-600 text-[12px] font-black border-b border-gray-50 bg-gray-50/50">Thu Mua Đồ Cũ</li>
                 <ul className="pl-4">
 
-                  <li><Link href="/thanh-ly-quan-cafe" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Cafe</Link></li>
-                  <li><Link href="/thanh-ly-quan-an" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Ăn</Link></li>
-                  <li><Link href="/thanh-ly-quan-nhau" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Nhậu</Link></li>
-                  <li><Link href="/thanh-ly-nha-hang" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Nhà Hàng</Link></li>
-                  <li><Link href="/thanh-ly-quan-pho" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Phở</Link></li>
-                  <li><Link href="/thanh-ly-quan-tra-sua" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Trà Sữa</Link></li>
-                  <li><Link href="/thu-mua-tu-dong-tu-mat" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Tủ Đông, Tủ Mát</Link></li>
-                  <li><Link href="/thu-mua-do-inox-cu" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Đồ Inox Cũ</Link></li>
-                  <li><Link href="/thu-mua-do-cu-gia-dinh" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu mua đồ cũ gia đình</Link></li>
-                  <li><Link href="/thu-mua-noi-that-khach-san" className="block py-0.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Nội Thất Khách Sạn</Link></li>
+                  <li><Link href="/thanh-ly-quan-cafe" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Cafe</Link></li>
+                  <li><Link href="/thanh-ly-quan-an" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Ăn</Link></li>
+                  <li><Link href="/thanh-ly-quan-nhau" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Nhậu</Link></li>
+                  <li><Link href="/thanh-ly-nha-hang" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Nhà Hàng</Link></li>
+                  <li><Link href="/thanh-ly-quan-pho" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Phở</Link></li>
+                  <li><Link href="/thanh-ly-quan-tra-sua" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Trà Sữa</Link></li>
+                  <li><Link href="/thu-mua-tu-dong-tu-mat" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Tủ Đông, Tủ Mát</Link></li>
+                  <li><Link href="/thu-mua-do-inox-cu" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Đồ Inox Cũ</Link></li>
+                  <li><Link href="/thu-mua-do-cu-gia-dinh" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu mua đồ cũ gia đình</Link></li>
+                  <li><Link href="/thu-mua-noi-that-khach-san" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Nội Thất Khách Sạn</Link></li>
                 </ul>
 
                 <li><Link href="/tin-tuc" className="block py-2 px-3 border-b border-gray-50" onClick={() => setIsOpen(false)}>Tin Tức</Link></li>
