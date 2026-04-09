@@ -11,7 +11,7 @@ export default function ArticleKinhNghiemDoCu() {
       <Head>
         <title>Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM (Cập Nhật 2026)</title>
         <meta name="description" content="Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM. Chọn đúng đơn vị thu mua trọn gói giúp bạn không bị ép giá." />
-        <link rel="canonical" href="https://thumuadocutrungkien.com/tin-tuc/kinh-nghiem-thanh-ly-do-cu-gia-cao" />
+        <link rel="canonical" href="https://thumuadocugiacao.net/tin-tuc/kinh-nghiem-thanh-ly-do-cu-gia-cao" />
       </Head>
 
       <main className="flex-grow pb-20">
@@ -45,7 +45,7 @@ export default function ArticleKinhNghiemDoCu() {
               {/* --- ẢNH CHÍNH --- */}
               <div className="relative w-full aspect-video rounded-3xl overflow-hidden mb-10 shadow-lg">
                 <Image
-                  src="/thu-mua-do-cu-gia-cao-go-vap.jpg"
+                  src="/thu-mua-do-cu-gia-dinh-3.jpeg"
                   alt="Kinh nghiệm thanh lý đồ cũ giá cao tại TPHCM"
                   fill
                   priority
@@ -59,7 +59,7 @@ export default function ArticleKinhNghiemDoCu() {
                   Khi dọn nhà, chuyển văn phòng hay đổi mới mô hình kinh doanh quán cafe, bạn sẽ phải đối mặt với một đống <strong>đồ cũ, đồ nội thất</strong> cần giải quyết. Thay vì vứt bỏ lãng phí, việc thanh lý lại cho các cửa hàng thu mua đồ cũ là giải pháp thông minh giúp bạn thu hồi một khoản vốn đáng kể.
                 </p>
                 <p>
-                  Tuy nhiên, làm sao để bán được giá cao, không bị ép giá và dọn dẹp nhanh gọn? Hãy cùng <strong className="text-[#388e3c]">Đồ Cũ TRung Kiên</strong> tham khảo những kinh nghiệm "xương máu" dưới đây nhé!
+                  Tuy nhiên, làm sao để bán được giá cao, không bị ép giá và dọn dẹp nhanh gọn? Hãy cùng <strong className="text-[#388e3c]">Đồ Cũ Trung Kiên</strong> tham khảo những kinh nghiệm "xương máu" dưới đây nhé!
                 </p>
               </div>
 
@@ -80,7 +80,7 @@ export default function ArticleKinhNghiemDoCu() {
                   2. Cung cấp thông tin chi tiết cho bên thu mua
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Hiện nay, để tiết kiệm thời gian, các đơn vị uy tín như TRung Kiên thường hỗ trợ <strong>báo giá online qua Zalo</strong>. Để nhận được báo giá chính xác nhất, bạn hãy chụp ảnh thật rõ nét (nhiều góc độ), báo rõ tình trạng xước xát, năm mua, và thương hiệu của sản phẩm.
+                  Hiện nay, để tiết kiệm thời gian, các đơn vị uy tín như Trung Kiên thường hỗ trợ <strong>báo giá online qua Zalo</strong>. Để nhận được báo giá chính xác nhất, bạn hãy chụp ảnh thật rõ nét (nhiều góc độ), báo rõ tình trạng xước xát, năm mua, và thương hiệu của sản phẩm.
                 </p>
 
                 <h2 className="text-2xl font-black text-[#111827] border-l-4 border-[#388e3c] pl-4 mb-6">
@@ -90,7 +90,7 @@ export default function ArticleKinhNghiemDoCu() {
                   Tuyệt đối tránh bán lẻ tẻ cho những người thu mua ve chai dạo vì bạn sẽ bị ép giá rất thấp. Hãy chọn những công ty lớn có khả năng <strong>thu mua trọn gói</strong>.
                 </p>
                 <div className="bg-[#388e3c]/5 border border-[#388e3c]/10 p-6 rounded-2xl mb-8">
-                  <p className="text-[#388e3c] font-bold mb-2">💡 Tại TPHCM, Đồ Cũ TRung Kiên cam kết:</p>
+                  <p className="text-[#388e3c] font-bold mb-2">💡 Tại TPHCM, Đồ Cũ Trung Kiên cam kết:</p>
                   <ul className="space-y-2 text-gray-800 font-medium">
                     <li>- Mua trọn gói từ A-Z không kén chọn.</li>
                     <li>- Tự tháo dỡ, khuân vác, không tính phí vận chuyển.</li>
@@ -106,8 +106,8 @@ export default function ArticleKinhNghiemDoCu() {
                 </h2>
                 <div className="space-y-4">
                   {[
-                    { q: "Đồ cũ bị hỏng hóc nhẹ có được thu mua không?", a: "Có. Đồ Cũ TRung Kiên vẫn thu mua các mặt hàng như bàn ghế trầy xước, tủ mát chạy yếu... Chúng tôi sẽ có đội ngũ thợ mộc, thợ điện lạnh tự tu sửa lại." },
-                    { q: "Có cần trả phí cho nhân viên đến khảo sát không?", a: "Hoàn toàn MIỄN PHÍ. Kể cả khi nhân viên đến tận nhà khảo sát nhưng bạn không đồng ý bán, TRung Kiên vẫn vui vẻ ra về mà không thu bất kỳ phí gì." }
+                    { q: "Đồ cũ bị hỏng hóc nhẹ có được thu mua không?", a: "Có. Đồ Cũ Trung Kiên vẫn thu mua các mặt hàng như bàn ghế trầy xước, tủ mát chạy yếu... Chúng tôi sẽ có đội ngũ thợ mộc, thợ điện lạnh tự tu sửa lại." },
+                    { q: "Có cần trả phí cho nhân viên đến khảo sát không?", a: "Hoàn toàn MIỄN PHÍ. Kể cả khi nhân viên đến tận nhà khảo sát nhưng bạn không đồng ý bán, Trung Kiên vẫn vui vẻ ra về mà không thu bất kỳ phí gì." }
                   ].map((faq, index) => (
                     <details key={index} className="group bg-gray-50 border border-gray-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
                       <summary className="flex cursor-pointer items-center justify-between gap-4 p-5 text-[#111827] font-bold hover:bg-gray-100 transition-colors">
@@ -123,7 +123,7 @@ export default function ArticleKinhNghiemDoCu() {
               {/* CTA Cuối bài */}
               <div className="mt-10 bg-[#111827] rounded-3xl p-8 text-center shadow-xl">
                 <h3 className="text-2xl font-black text-white uppercase mb-4">Cần Thanh Lý Đồ Cũ Nhanh Chóng?</h3>
-                <p className="text-gray-300 mb-8">Hãy chụp ảnh gửi ngay qua Zalo để TRung Kiên báo giá cao nhất cho bạn trong 5 phút!</p>
+                <p className="text-gray-300 mb-8">Hãy chụp ảnh gửi ngay qua Zalo để Trung Kiên báo giá cao nhất cho bạn trong 5 phút!</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href={`tel:${hotline}`} className="bg-[#388e3c] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#2e7d32] transition-all">Gọi Hotline: {hotline}</a>
                   <a href={`https://zalo.me/${hotline.replace(/\./g, '')}`} target="_blank" rel="noopener noreferrer" className="bg-white text-[#111827] px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all">Nhắn Tin Zalo</a>

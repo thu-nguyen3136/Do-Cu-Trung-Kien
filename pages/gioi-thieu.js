@@ -9,10 +9,10 @@ export default function GioiThieuPage() {
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
       <Head>
         {/* --- SEO META TAGS --- */}
-        <title>Về Chúng Tôi | Đồ Cũ TRung Kiên - Thu Mua Trọn Gói TPHCM</title>
-        <meta name="description" content="Đồ Cũ TRung Kiên với hơn 10 năm kinh nghiệm, chuyên thu mua đồ cũ giá cao tận nơi tại TPHCM. Cam kết không ép giá, dọn dẹp sạch sẽ, thanh toán 100%." />
-        <meta name="keywords" content="về đồ cũ TRung Kiên, giới thiệu đồ cũ TRung Kiên, thu mua đồ cũ uy tín" />
-        <link rel="canonical" href="https://thumuadocutrungkien.com/gioi-thieu" />
+        <title>Về Chúng Tôi | Đồ Cũ Trung Kiên - Thu Mua Trọn Gói TPHCM</title>
+        <meta name="description" content="Đồ Cũ Trung Kiên với hơn 10 năm kinh nghiệm, chuyên thu mua đồ cũ giá cao tận nơi tại TPHCM. Cam kết không ép giá, dọn dẹp sạch sẽ, thanh toán 100%." />
+        <meta name="keywords" content="về đồ cũ Trung Kiên, giới thiệu đồ cũ Trung Kiên, thu mua đồ cũ uy tín" />
+        <link rel="canonical" href="https://thumuadocugiacao.net/gioi-thieu" />
       </Head>
 
       <main className="flex-grow pb-20">
@@ -39,7 +39,7 @@ export default function GioiThieuPage() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#388e3c]"></span>
                 </span>
                 <span className="text-xs font-black tracking-[0.2em] text-[#388e3c] uppercase">
-                  Về Đồ Cũ TRung Kiên
+                  Về Đồ Cũ Trung Kiên
                 </span>
               </div>
 
@@ -61,7 +61,7 @@ export default function GioiThieuPage() {
               {/* 1. TEXT GIỚI THIỆU */}
               <div className="w-full max-w-4xl mx-auto">
                 <p className="text-gray-600 text-lg md:text-xl leading-relaxed text-justify md:text-center border-l-4 md:border-l-0 md:border-t-4 border-[#388e3c] pl-6 md:pl-0 md:pt-6 italic">
-                  Với tâm niệm <strong>"Mua của người chán - Bán cho người cần"</strong>, Đồ Cũ TRung Kiên mang đến giải pháp thanh lý tối ưu nhất. Chúng tôi giúp bạn giải phóng mặt bằng nhanh chóng và thu hồi vốn cao nhất cho các loại nội thất cũ, thiết bị điện lạnh, đồ dùng nhà hàng, quán ăn.
+                  Với tâm niệm <strong>"Mua của người chán - Bán cho người cần"</strong>, Đồ Cũ Trung Kiên mang đến giải pháp thanh lý tối ưu nhất. Chúng tôi giúp bạn giải phóng mặt bằng nhanh chóng và thu hồi vốn cao nhất cho các loại nội thất cũ, thiết bị điện lạnh, đồ dùng nhà hàng, quán ăn.
                 </p>
               </div>
 
@@ -70,7 +70,7 @@ export default function GioiThieuPage() {
                 <div className="relative w-full aspect-video md:h-[500px] flex items-center justify-center rounded-[30px] overflow-hidden shadow-2xl">
                   <Image
                     src="/anh-gioi-thieu-do-cu-vui-hung.jpg"
-                    alt="Về Đồ Cũ TRung Kiên"
+                    alt="Về Đồ Cũ Trung Kiên"
                     fill
                     className="object-full transition-transform duration-700 group-hover:scale-105"
                   />
@@ -162,7 +162,7 @@ export default function GioiThieuPage() {
 
             {/* Nút Gọi Ngay cuối bài */}
             <div className="text-center border-t border-gray-100 pt-10">
-              <p className="text-xl font-bold text-[#111827] mb-6">Bạn đang cần dọn dẹp mặt bằng? Gọi TRung Kiên ngay!</p>
+              <p className="text-xl font-bold text-[#111827] mb-6">Bạn đang cần dọn dẹp mặt bằng? Gọi Trung Kiên ngay!</p>
               <a href={`tel:${hotline}`} className="group inline-flex items-center gap-4 bg-[#111827] text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-lg hover:bg-[#388e3c] transition-all shadow-[0_15px_30px_rgba(17,24,39,0.3)] hover:-translate-y-1">
                 <span className="bg-white/20 p-2 rounded-lg group-hover:scale-110 transition-transform">📞</span>
                 Gọi Ngay: {hotline}

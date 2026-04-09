@@ -9,9 +9,9 @@ export default function ArticleNhaHangKhachSan() {
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
       <Head>
-        <title>5 Lưu Ý Quan Trọng Khi Thanh Lý Nhà Hàng Khách Sạn | TRung Kiên</title>
+        <title>5 Lưu Ý Quan Trọng Khi Thanh Lý Nhà Hàng Khách Sạn | Trung Kiên</title>
         <meta name="description" content="Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ? Đọc ngay bài viết để biết cách định giá thiết bị bếp, nội thất buồng phòng." />
-        <link rel="canonical" href="https://thumuadocutrungkien.com/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san" />
+        <link rel="canonical" href="https://thumuadocugiacao.net/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san" />
       </Head>
 
       <main className="flex-grow pb-20">
@@ -45,7 +45,7 @@ export default function ArticleNhaHangKhachSan() {
               {/* --- ẢNH CHÍNH --- */}
               <div className="relative w-full aspect-video rounded-3xl overflow-hidden mb-10 shadow-lg">
                 <Image
-                  src="/thanh-ly-nha-hang-uy-tin.jpg"
+                  src="/thanh-ly-noi-that-khach-san-1.jpg"
                   alt="Kinh nghiệm thanh lý nhà hàng khách sạn trọn gói"
                   fill
                   priority
@@ -59,7 +59,7 @@ export default function ArticleNhaHangKhachSan() {
                   Thanh lý một quán nước nhỏ đã khó, việc <strong>thanh lý toàn bộ một nhà hàng hay khách sạn</strong> còn phức tạp hơn gấp trăm lần. Hàng loạt tài sản từ hệ thống bếp công nghiệp, bàn ghế, tủ đông, cho đến nội thất hàng chục buồng phòng khách sạn cần được xử lý nhanh chóng để hoàn trả mặt bằng.
                 </p>
                 <p>
-                  Nếu không có kinh nghiệm, chủ đầu tư rất dễ bị các đơn vị thu mua không uy tín ép giá, gây thất thoát tài sản. Dưới đây là 5 lưu ý quan trọng từ <strong className="text-[#388e3c]">TRung Kiên</strong> giúp bạn bảo vệ quyền lợi của mình.
+                  Nếu không có kinh nghiệm, chủ đầu tư rất dễ bị các đơn vị thu mua không uy tín ép giá, gây thất thoát tài sản. Dưới đây là 5 lưu ý quan trọng từ <strong className="text-[#388e3c]">Trung Kiên</strong> giúp bạn bảo vệ quyền lợi của mình.
                 </p>
               </div>
 
@@ -91,7 +91,7 @@ export default function ArticleNhaHangKhachSan() {
                     Làm rõ vấn đề "Chi phí tháo dỡ và bốc xếp"
                   </h2>
                   <p className="text-gray-700 leading-relaxed">
-                    Tháo dỡ hệ thống máy lạnh trung tâm, cửa nhôm kính, bảng hiệu hay khiêng đồ nội thất từ tầng cao xuống tốn rất nhiều tiền nhân công. Hãy thỏa thuận rõ với bên thu mua xem giá họ đưa ra đã <strong>bao gồm công tháo dỡ và vận chuyển</strong> chưa. Tại TRung Kiên, chúng tôi hoàn toàn miễn phí các khoản này.
+                    Tháo dỡ hệ thống máy lạnh trung tâm, cửa nhôm kính, bảng hiệu hay khiêng đồ nội thất từ tầng cao xuống tốn rất nhiều tiền nhân công. Hãy thỏa thuận rõ với bên thu mua xem giá họ đưa ra đã <strong>bao gồm công tháo dỡ và vận chuyển</strong> chưa. Tại Trung Kiên, chúng tôi hoàn toàn miễn phí các khoản này.
                   </p>
                 </div>
 
@@ -110,8 +110,8 @@ export default function ArticleNhaHangKhachSan() {
               <div className="mb-12 bg-gray-50 border-2 border-gray-200 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6">
                 <div className="w-16 h-16 bg-[#388e3c] rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">✓</div>
                 <div>
-                  <h3 className="text-xl font-black text-[#111827] mb-2">Giải Pháp Từ Đồ Cũ TRung Kiên</h3>
-                  <p className="text-gray-600 mb-2">TRung Kiên tự hào là đối tác thanh lý nhà hàng, khách sạn uy tín hàng đầu khu vực phía Nam với năng lực xe tải và nhân công mạnh mẽ.</p>
+                  <h3 className="text-xl font-black text-[#111827] mb-2">Giải Pháp Từ Đồ Cũ Trung Kiên</h3>
+                  <p className="text-gray-600 mb-2">Trung Kiên tự hào là đối tác thanh lý nhà hàng, khách sạn uy tín hàng đầu khu vực phía Nam với năng lực xe tải và nhân công mạnh mẽ.</p>
                   <Link href="/thanh-ly-nha-hang" className="text-[#388e3c] font-bold hover:underline">Xem ngay dịch vụ Thu Mua Khách Sạn Trọn Gói →</Link>
                 </div>
               </div>
