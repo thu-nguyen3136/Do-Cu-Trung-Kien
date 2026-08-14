@@ -52,6 +52,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <title>Đồ Cũ Trung Kiên - Thu Mua Giá Cao Tận Nơi</title>
         <meta name="description" content="Chuyên thu mua đồ gỗ, đồ cũ..." />
         <link rel="icon" href="/favicon.ico" />

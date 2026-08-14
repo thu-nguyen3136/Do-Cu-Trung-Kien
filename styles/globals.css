@@ -12,8 +12,10 @@
 @layer base {
 
   html,
-  body {
+  body,
+  #__next {
     font-family: 'Be Vietnam Pro', sans-serif;
+    max-width: 100vw;
     overflow-x: hidden;
   }
 }
@@ -28,7 +30,7 @@
   --color-brand-400: #66bb6a;
   --color-brand-500: #4caf50;
   /* Xanh lá chính */
-  --color-brand-600: #388e3c;
+  --color-brand-600: #18631c;
   /* MÀU CHỦ ĐẠO CỦA THƯƠNG HIỆU */
   --color-brand-700: #2e7d32;
   --color-brand-800: #1b5e20;
@@ -47,7 +49,7 @@ body {
 /* Custom styles for all pages - Optimized spacing */
 h1,
 h2 {
-  color: #388e3c;
+  color: #18631c;
   /* New brand-600 */
   padding: 0.5rem 0;
   /* Reduced padding for tighter spacing */
@@ -58,7 +60,7 @@ h2 {
 }
 
 h3 {
-  color: #388e3c;
+  color: #18631c;
 }
 
 h1 {

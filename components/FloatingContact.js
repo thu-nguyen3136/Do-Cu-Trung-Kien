@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export function FloatingContact() {
   const [mounted, setMounted] = useState(false);
@@ -12,33 +13,32 @@ export function FloatingContact() {
   return (
     <>
       {/* FLOATING CONTACT BUTTONS - Bottom Corner Icons */}
-      
+
       {/* Left: Phone Button with Icon + Number (New Glossy Pill Design) */}
       <a
         href="tel:0398771444"
-        className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 flex items-center group hover:no-underline"
+        className="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-6 md:left-6 z-50 flex items-center group hover:no-underline"
         title="Gọi điện ngay"
         aria-label="Gọi điện"
       >
         <div className="relative flex items-center">
           {/* Ring Animations centered on the icon */}
-          <div className="absolute left-0 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center ml-1">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="absolute w-12 h-12 md:w-14 md:h-14 bg-brand-500 rounded-full animate-ping opacity-60"></div>
-            <div className="absolute w-16 h-16 md:w-20 md:h-20 border-2 border-brand-500 rounded-full animate-ping opacity-40" style={{ animationDuration: '1.5s' }}></div>
-            <div className="absolute w-20 h-20 md:w-24 md:h-24 border border-brand-500 rounded-full animate-ping opacity-20" style={{ animationDuration: '2s' }}></div>
+            <div className="absolute w-14 h-14 md:w-16 md:h-16 border-2 border-brand-500 rounded-full animate-ping opacity-40" style={{ animationDuration: '1.5s' }}></div>
           </div>
 
           {/* Pill Container */}
           <div className="relative flex items-center bg-[#388e3c] group-hover:bg-[#2e7d32] rounded-full shadow-[0_4px_15px_rgba(224,138,13,0.5)] transition-all duration-300 transform group-hover:scale-105 border border-[#e59524] overflow-hidden ml-1">
-            
+
             {/* Glossy top overlay (no horizontal line) */}
             <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-white/20 to-transparent pointer-events-none"></div>
-            
+
             {/* Phone Icon Circle */}
-            <div className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#e59524] to-[#388e3c] rounded-full border-[3px] border-[#efbe7a] shadow-[inset_0_2px_4px_rgba(255,255,255,0.4)] z-10 mx-[2px] my-[2px]">
-              <svg 
-                className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:rotate-12 transition-transform duration-300" 
-                fill="currentColor" 
+            <div className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#e59524] to-[#388e3c] rounded-full border-[2px] sm:border-[3px] border-[#efbe7a] shadow-[inset_0_2px_4px_rgba(255,255,255,0.4)] z-10 mx-[2px] my-[2px]">
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:rotate-12 transition-transform duration-300"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
@@ -47,8 +47,8 @@ export function FloatingContact() {
             </div>
 
             {/* Text */}
-            <div className="px-3 md:px-5 pr-4 md:pr-7 relative z-10">
-              <span className="text-white font-black text-[17px] md:text-xl tracking-wider drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
+            <div className="px-2 sm:px-3 md:px-5 pr-3 sm:pr-4 md:pr-7 relative z-10">
+              <span className="text-white font-black text-xs sm:text-[16px] md:text-xl tracking-wider drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
                 0398.771.444
               </span>
             </div>
@@ -56,40 +56,43 @@ export function FloatingContact() {
         </div>
       </a>
 
-      {/* Right: SMS Icon (Orange background for harmony) */}
+      {/* Right: SMS Icon */}
       <a
         href="sms:0398771444"
-        className="fixed bottom-6 right-6 z-40 group hover:no-underline"
+        className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-40 group hover:no-underline"
         title="Gửi SMS"
         aria-label="Gửi tin nhắn SMS"
       >
-        <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-500 hover:bg-brand-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-brand-500/50 hover:scale-110 transition-all duration-300 transform">
-          <svg 
-            className="w-6 h-6 md:w-7 md:h-7 text-white" 
-            fill="currentColor" 
+        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-brand-500 hover:bg-brand-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-brand-500/50 hover:scale-110 transition-all duration-300 transform">
+          <svg
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white"
+            fill="currentColor"
             viewBox="0 0 512 512"
             aria-hidden="true"
           >
-            <path d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z"/>
+            <path d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z" />
           </svg>
         </div>
       </a>
 
-      {/* Right: Zalo Icon (Orange background with Wiki Avatar) */}
+      {/* Right: Zalo Icon */}
       <a
         href="https://zalo.me/0398771444"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-24 right-6 z-40 group hover:no-underline"
+        className="fixed bottom-16 right-3 sm:bottom-24 sm:right-6 z-40 group hover:no-underline"
         title="Chat Zalo"
         aria-label="Liên hệ qua Zalo"
       >
-        <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-600 hover:bg-brand-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-brand-600/50 hover:scale-110 transition-all duration-300 transform">
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" 
-            alt="Zalo" 
-            className="w-8 h-8 md:w-9 md:h-9 object-contain" 
-            aria-hidden="true"
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-12 h-12 md:w-14 md:h-14 bg-[#0068ff] rounded-full animate-ping opacity-30"></div>
+        </div>
+
+        <div className="relative w-12 h-12 md:w-14 md:h-14 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-[#0068ff] hover:scale-110 transition-all duration-300 transform overflow-hidden p-1 z-10">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+            alt="Zalo"
+            className="w-full h-full object-contain"
           />
         </div>
       </a>
