@@ -33,13 +33,13 @@ export default function Header() {
 
           {/* 2. LOGO */}
           <Link href="/" className="flex items-center relative z-[100] lg:static lg:translate-x-0 absolute left-1/2 -translate-x-1/2 self-center shrink-0">
-            {/* Tăng kích thước khung logo một chút và đảm bảo độ sắc nét */}
-            <div className="relative w-64 h-10 md:w-72 md:h-16">
+            {/* Logo responsive kích thước vừa vặn trên điện thoại nhỏ như Samsung Galaxy A31 */}
+            <div className="relative w-44 sm:w-56 md:w-72 h-8 sm:h-10 md:h-16">
               <Image
-                src="/logo-dai-trung-kien.jpg"
+                src="/logo-dai-trung-kien.png"
                 alt="Logo Đồ Cũ Trung Kiên"
                 fill
-                className="object-contain object-left md:object-center"
+                className="object-contain object-center"
                 priority
                 quality={100}
                 unoptimized={true}

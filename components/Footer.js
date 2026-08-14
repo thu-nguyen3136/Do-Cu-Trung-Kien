@@ -16,22 +16,22 @@ export default function Footer() {
 
           {/* Logo (Đã được làm to hơn) */}
           <div className="flex-shrink-0">
-            <div className="bg-white p-2 rounded-2xl shadow-xl relative w-[260px] md:w-[300px] h-[80px] md:h-[95px] hover:scale-105 transition-transform duration-500">
-              <Image src="/logo-dai-trung-kien.jpg" alt="Đồ Cũ Trung Kiên" fill className="object-contain p-1" />
+            <div className="bg-white p-2 rounded-2xl shadow-xl relative w-full max-w-[260px] md:max-w-[300px] h-[75px] sm:h-[80px] md:h-[95px] hover:scale-105 transition-transform duration-500">
+              <Image src="/logo-dai-trung-kien.png" alt="Đồ Cũ Trung Kiên" fill className="object-contain p-1" />
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 md:gap-12 w-full lg:w-auto">
             {/* Box Email */}
-            <a href="mailto:docutrungkien@gmail.com" className="flex items-center gap-4 xl:gap-5 group w-full lg:w-auto lg:min-w-[320px] xl:min-w-[380px] bg-white/5 px-5 py-4 rounded-2xl border border-white/5 hover:bg-white/10 transition-all overflow-hidden">
-              <div className="bg-gradient-to-br from-[#2e7d32] to-[#1b5e20] w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-[0_0_15px_rgba(56,142,60,0.3)] group-hover:shadow-[0_0_25px_rgba(56,142,60,0.6)] transition-all">
-                <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <a href="mailto:docutrungkien@gmail.com" className="flex items-center gap-4 xl:gap-5 group w-full lg:w-auto lg:min-w-[320px] xl:min-w-[380px] bg-white/5 px-4 sm:px-5 py-4 rounded-2xl border border-white/5 hover:bg-white/10 transition-all overflow-hidden">
+              <div className="bg-gradient-to-br from-[#2e7d32] to-[#1b5e20] w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center flex-shrink-0 shadow-[0_0_15px_rgba(56,142,60,0.3)] group-hover:shadow-[0_0_25px_rgba(56,142,60,0.6)] transition-all">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <div className="overflow-x-auto custom-scrollbar-hide">
+              <div className="overflow-hidden min-w-0">
                 <p className="text-gray-400 text-[11px] font-bold uppercase tracking-widest mb-1">Gửi Email Liên Hệ</p>
-                <span className="text-white font-bold text-[15px] xl:text-[17px] whitespace-nowrap group-hover:text-[#4caf50] transition-colors">docutrungkien@gmail.com</span>
+                <span className="text-white font-bold text-xs sm:text-[15px] xl:text-[17px] truncate block group-hover:text-[#4caf50] transition-colors">docutrungkien@gmail.com</span>
               </div>
             </a>
 

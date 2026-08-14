@@ -218,14 +218,14 @@ export default function Home() {
 
       <main className="flex-grow">
 
-        <section className="w-full py-12 md:py-20 bg-white overflow-hidden">
+        <section className="w-full py-3 md:py-6 bg-white overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-5 md:px-10">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
               {/* Cột bên trái: Nội dung Text chuẩn SEO */}
               <div className="w-full md:w-1/2 space-y-6">
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
-                  Đồ Cũ Trung Kiên – Đơn Vị Thu Mua Đồ Cũ Giá Cao Uy Tín Số 1
+                  Đồ Cũ Trung Kiên – Đơn Vị Thu Mua Đồ Cũ Giá Cao Uy Tín Tại TpHCM
                 </h1>
 
                 <div className="h-1 w-20 bg-yellow-500"></div>
@@ -352,10 +352,10 @@ export default function Home() {
 
 
         {/* KHU VỰC NÚT BÁO GIÁ - Đã giảm tối đa khoảng đệm */}
-        <section className="py-0 md:py-1 bg-white flex justify-center w-full relative z-[6]">
+        <section className="py-2 md:py-1 bg-white flex justify-center w-full relative z-[6]">
           <Link
             href="/lien-he"
-            className="inline-flex items-center justify-center gap-3 bg-[#111827] text-white px-8 py-3 md:px-10 md:py-4 text-xs md:text-lg font-bold uppercase rounded-xl hover:bg-[#388e3c] transition-all shadow-lg hover:-translate-y-1"
+            className="inline-flex items-center justify-center gap-2 md:gap-3 bg-[#111827] text-white px-4 sm:px-8 py-3 md:px-10 md:py-4 text-[11px] sm:text-xs md:text-lg font-bold uppercase rounded-xl hover:bg-[#388e3c] transition-all shadow-lg hover:-translate-y-1 max-w-[92vw] text-center"
           >
             TÔI CẦN BÁO GIÁ CHO SẢN PHẨM KHÁC
           </Link>
