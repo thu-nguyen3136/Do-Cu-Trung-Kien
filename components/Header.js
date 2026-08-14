@@ -14,11 +14,11 @@ export default function Header() {
     <header className="w-full sticky top-0 z-[100] shadow-md font-sans bg-white">
       {/* --- MENU CHÍNH --- */}
       <nav className="border-b border-gray-100 relative">
-        <div className="max-w-[1400px] mx-auto px-5 md:px-10 flex justify-between items-stretch h-[65px] md:h-[80px]">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 flex justify-between items-center h-[75px] md:h-[90px] relative">
 
           {/* 1. Nút Mobile Menu */}
           <button
-            className="lg:hidden text-brand-600 hover:text-brand-700 transition z-[110] self-center"
+            className="lg:hidden text-brand-600 hover:text-brand-700 transition z-[110] p-1.5 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -32,9 +32,12 @@ export default function Header() {
           </button>
 
           {/* 2. LOGO */}
-          <Link href="/" className="flex items-center relative z-[100] lg:static lg:translate-x-0 absolute left-1/2 -translate-x-1/2 self-center shrink-0">
-            {/* Logo responsive kích thước vừa vặn trên điện thoại nhỏ như Samsung Galaxy A31 */}
-            <div className="relative w-44 sm:w-56 md:w-72 h-8 sm:h-10 md:h-16">
+          <Link
+            href="/"
+            className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 z-[100] flex items-center justify-center shrink-0"
+          >
+            {/* Logo kích thước lớn, cực kỳ nổi bật và dễ đọc */}
+            <div className="relative w-60 sm:w-72 md:w-80 h-14 sm:h-16 md:h-20">
               <Image
                 src="/logo-dai-trung-kien.png"
                 alt="Logo Đồ Cũ Trung Kiên"
@@ -46,6 +49,17 @@ export default function Header() {
               />
             </div>
           </Link>
+
+          {/* 3. Nút gọi điện thoại nhanh trên Mobile (giúp header cân đối đẹp mắt) */}
+          <a
+            href="tel:0398771444"
+            className="lg:hidden text-brand-600 hover:text-brand-700 p-1.5 z-[110] flex items-center justify-center"
+            aria-label="Gọi điện"
+          >
+            <svg className="w-7 h-7 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </a>
 
           {/* 3. Menu Desktop & Cta Button */}
           <div className="hidden lg:flex items-center space-x-4 h-full">
@@ -94,7 +108,11 @@ export default function Header() {
             {/* Nút Gọi Ngay - Thêm vào để đỡ trống header */}
             <div className="flex items-center pl-4 border-l border-gray-100 h-1/2">
               <a href="tel:0398771444" className="bg-brand-600 text-white px-5 py-2.5 rounded-full text-[13px] font-black uppercase tracking-wider hover:bg-brand-700 transition hover:shadow-lg hover:-translate-y-0.5 transform flex items-center gap-2">
-                <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center animate-pulse">📞</span>
+                <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center animate-pulse">
+                  <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
                 0398.771.444
               </a>
             </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export function FloatingContact() {
   const [mounted, setMounted] = useState(false);
@@ -12,7 +13,7 @@ export function FloatingContact() {
   return (
     <>
       {/* FLOATING CONTACT BUTTONS - Bottom Corner Icons */}
-      
+
       {/* Left: Phone Button with Icon + Number (New Glossy Pill Design) */}
       <a
         href="tel:0398771444"
@@ -29,15 +30,15 @@ export function FloatingContact() {
 
           {/* Pill Container */}
           <div className="relative flex items-center bg-[#388e3c] group-hover:bg-[#2e7d32] rounded-full shadow-[0_4px_15px_rgba(224,138,13,0.5)] transition-all duration-300 transform group-hover:scale-105 border border-[#e59524] overflow-hidden ml-1">
-            
+
             {/* Glossy top overlay (no horizontal line) */}
             <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-white/20 to-transparent pointer-events-none"></div>
-            
+
             {/* Phone Icon Circle */}
             <div className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#e59524] to-[#388e3c] rounded-full border-[2px] sm:border-[3px] border-[#efbe7a] shadow-[inset_0_2px_4px_rgba(255,255,255,0.4)] z-10 mx-[2px] my-[2px]">
-              <svg 
-                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:rotate-12 transition-transform duration-300" 
-                fill="currentColor" 
+              <svg
+                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:rotate-12 transition-transform duration-300"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
@@ -63,13 +64,13 @@ export function FloatingContact() {
         aria-label="Gửi tin nhắn SMS"
       >
         <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-brand-500 hover:bg-brand-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-brand-500/50 hover:scale-110 transition-all duration-300 transform">
-          <svg 
-            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" 
-            fill="currentColor" 
+          <svg
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white"
+            fill="currentColor"
             viewBox="0 0 512 512"
             aria-hidden="true"
           >
-            <path d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z"/>
+            <path d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM128 240c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm128 0c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24z" />
           </svg>
         </div>
       </a>
@@ -83,12 +84,15 @@ export function FloatingContact() {
         title="Chat Zalo"
         aria-label="Liên hệ qua Zalo"
       >
-        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-brand-600 hover:bg-brand-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-brand-600/50 hover:scale-110 transition-all duration-300 transform">
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" 
-            alt="Zalo" 
-            className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 object-contain" 
-            aria-hidden="true"
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-12 h-12 md:w-14 md:h-14 bg-[#0068ff] rounded-full animate-ping opacity-30"></div>
+        </div>
+
+        <div className="relative w-12 h-12 md:w-14 md:h-14 bg-white hover:bg-gray-50 rounded-full flex items-center justify-center shadow-lg border-2 border-[#0068ff] hover:scale-110 transition-all duration-300 transform overflow-hidden p-1 z-10">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+            alt="Zalo"
+            className="w-full h-full object-contain"
           />
         </div>
       </a>

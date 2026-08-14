@@ -218,7 +218,7 @@ export default function Home() {
 
       <main className="flex-grow">
 
-        <section className="w-full py-3 md:py-6 bg-white overflow-hidden">
+        <section className="w-full py-1 md:py-2 bg-white overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-5 md:px-10">
             <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
@@ -256,16 +256,16 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Cột bên phải: Hình ảnh Show Full */}
-              <div className="w-full md:w-1/2">
-                {/* Thêm h-[400px] hoặc h-[500px] trực tiếp vào đây */}
-                <div className="relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              {/* Cột bên phải: Hình ảnh hiển thị trọn vẹn, không thừa khoảng trống */}
+              <div className="w-full md:w-1/2 flex items-center justify-center">
+                <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/anh-gioi-thieu-do-cu-trung-kien.jpg"
                     alt="Dịch vụ thu mua đồ cũ giá cao Trung Kiên"
-                    fill
+                    width={800}
+                    height={600}
                     priority
-                    className="object-contain object-center"
+                    className="w-full h-auto object-contain"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
@@ -286,16 +286,16 @@ export default function Home() {
               <div className="max-w-[1400px] mx-auto px-5 md:px-10">
 
                 {/* TIÊU ĐỀ 2 MÀU IN HOA - ĐÃ ÉP SÁT KHOẢNG CÁCH */}
-                <div className="text-center mb-6 md:mb-8">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#111827] uppercase tracking-tight mb-2">
-                    {category.mainTitle} <span className="text-[#388e3c] relative inline-block">{category.highlightTitle}
-                      <svg className="absolute -bottom-1 left-0 w-full h-2 text-[#388e3c]/20 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 0 50 5 T 100 5" stroke="currentColor" strokeWidth="8" fill="none" /></svg>
+                <div className="text-center mb-2 md:mb-2">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827] uppercase tracking-tight mb-2">
+                    {category.mainTitle} <span className="text-[#18631c] relative inline-block">{category.highlightTitle}
+                      <svg className="absolute -bottom-1 left-0 w-full h-2 text-[#18631c]/20 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 25 0 50 5 T 100 5" stroke="currentColor" strokeWidth="8" fill="none" /></svg>
                     </span>
                   </h2>
-                  <p className="text-gray-500 text-[14px] md:text-base font-medium max-w-2xl mx-auto px-2 leading-relaxed italic">
+                  <p className="text-gray-700 text-[15px] md:text-[17px] font-medium max-w-2xl mx-auto px-2 leading-relaxed italic">
                     {category.description}
                   </p>
-                  <div className="w-12 md:w-20 h-1.5 bg-gradient-to-r from-[#388e3c] to-[#2e7d32] mx-auto mt-4 rounded-full"></div>
+                  <div className="w-12 md:w-20 h-1.5 bg-gradient-to-r from-[#18631c] to-[#2e7d32] mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 {/* GRID DỊCH VỤ - HIỂN THỊ 1 CỘT TRÊN MOBILE */}
@@ -304,7 +304,7 @@ export default function Home() {
                     <Link
                       key={srv.id}
                       href={srv.link}
-                      className="group flex flex-col bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-[0_20px_40px_rgba(136,13,17,0.08)] transition-all duration-500 border border-gray-100 hover:border-[#388e3c]/30 hover:-translate-y-2"
+                      className="group flex flex-col bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-[0_20px_40px_rgba(136,13,17,0.08)] transition-all duration-500 border border-gray-100 hover:border-[#18631c]/30 hover:-translate-y-2"
                     >
 
                       {/* PHẦN ẢNH */}
@@ -318,20 +318,20 @@ export default function Home() {
                       </div>
 
                       {/* NỘI DUNG THẺ DỊCH VỤ */}
-                      <div className="p-5 md:p-6 flex flex-col flex-grow text-center items-center bg-white relative">
+                      <div className="p-1 md:p-1 flex flex-col flex-grow text-center items-center bg-white relative">
 
                         {/* Tiêu đề */}
-                        <h3 className="font-black text-[#111827] group-hover:text-[#388e3c] text-[16px] md:text-[19px] mt-2 mb-3 transition-colors line-clamp-2 leading-snug flex items-center justify-center h-[54px] w-full px-2">
+                        <h3 className="font-bold text-[#111827] group-hover:text-[#18631c] text-[20px] md:text-[25px] mt-2 mb-3 transition-colors line-clamp-2 leading-snug flex items-center justify-center h-[54px] w-full px-2">
                           {srv.title}
                         </h3>
 
                         {/* Mô tả ngắn */}
-                        <p className="text-gray-500 text-[13px] md:text-[14px] leading-relaxed mb-6 line-clamp-2 min-h-[40px]">
+                        <p className="text-gray-700 text-[15px] md:text-[17px] leading-relaxed mb-6 line-clamp-2 min-h-[40px]">
                           {srv.description}
                         </p>
 
                         {/* Nút bấm */}
-                        <div className="inline-flex w-full items-center justify-center gap-2 bg-[#388e3c] group-hover:bg-[#2e7d32] text-white font-black py-3.5 px-6 rounded-xl text-[12px] md:text-[13px] tracking-widest transition-all duration-300 border border-[#388e3c] group-hover:border-[#2e7d32] group-hover:shadow-[0_8px_20px_rgba(136,13,17,0.3)]">
+                        <div className="inline-flex w-full items-center justify-center gap-2 bg-[#18631c] group-hover:bg-[#2e7d32] text-white font-bold py-3.5 px-6 rounded-xl text-[12px] md:text-[13px] tracking-widest transition-all duration-300 border border-[#18631c] group-hover:border-[#2e7d32] group-hover:shadow-[0_8px_20px_rgba(136,13,17,0.3)]">
                           Xem Thêm
                           <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -355,14 +355,14 @@ export default function Home() {
         <section className="py-2 md:py-1 bg-white flex justify-center w-full relative z-[6]">
           <Link
             href="/lien-he"
-            className="inline-flex items-center justify-center gap-2 md:gap-3 bg-[#111827] text-white px-4 sm:px-8 py-3 md:px-10 md:py-4 text-[11px] sm:text-xs md:text-lg font-bold uppercase rounded-xl hover:bg-[#388e3c] transition-all shadow-lg hover:-translate-y-1 max-w-[92vw] text-center"
+            className="inline-flex items-center justify-center gap-2 md:gap-3 bg-[#111827] text-white px-4 sm:px-8 py-3 md:px-10 md:py-4 text-[11px] sm:text-xs md:text-lg font-bold uppercase rounded-xl hover:bg-[#18631c] transition-all shadow-lg hover:-translate-y-1 max-w-[92vw] text-center"
           >
             TÔI CẦN BÁO GIÁ CHO SẢN PHẨM KHÁC
           </Link>
         </section>
 
         {/* SECTION QUY TRÌNH THU MUA */}
-        <section className="py-16 md:py-24 bg-[#f8fafc] relative overflow-hidden" id="quy-trinh">
+        <section className="py-4 md:py-10 bg-[#f8fafc] relative overflow-hidden" id="quy-trinh">
           {/* Decor mờ phía sau */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
             <div className="absolute top-20 left-10 w-72 h-72 bg-[#2e7d32]/5 rounded-full blur-[120px]"></div>
@@ -372,10 +372,10 @@ export default function Home() {
           <div className="max-w-[1200px] mx-auto px-5 relative z-10">
             {/* Tiêu đề */}
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-5xl font-black text-[#111827] uppercase tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-bold text-[#111827] uppercase tracking-tight">
                 Quy Trình <span className="text-[#2e7d32]">Thu Mua</span>
               </h2>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-[#2e7d32] to-[#388e3c] mx-auto mt-4 rounded-full"></div>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[#2e7d32] to-[#18631c] mx-auto mt-4 rounded-full"></div>
               <p className="text-gray-500 mt-4 font-medium uppercase tracking-widest text-sm">Nhanh chóng - Chuyên nghiệp - Uy tín</p>
             </div>
 
@@ -392,17 +392,17 @@ export default function Home() {
                   <div className="h-full bg-white p-8 rounded-2xl border border-gray-100 shadow-sm group-hover:shadow-xl group-hover:shadow-[#2e7d32]/10 transition-all duration-500 relative z-10 overflow-hidden flex flex-col items-center text-center">
 
                     {/* Số thứ tự lớn làm nền mờ */}
-                    <span className="absolute -top-2 -right-2 text-7xl font-black text-gray-50 group-hover:text-green-50/50 transition-colors duration-500 pointer-events-none">
+                    <span className="absolute -top-2 -right-2 text-7xl font-bold text-gray-50 group-hover:text-green-50/50 transition-colors duration-500 pointer-events-none">
                       {item.step}
                     </span>
 
                     {/* Vòng tròn số */}
-                    <div className="w-16 h-16 bg-[#2e7d32]/10 text-[#2e7d32] rounded-2xl flex items-center justify-center text-2xl font-black mb-6 group-hover:bg-[#2e7d32] group-hover:text-white transition-all duration-500 shadow-inner rotate-3 group-hover:rotate-0">
+                    <div className="w-16 h-16 bg-[#2e7d32]/10 text-[#2e7d32] rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-[#2e7d32] group-hover:text-white transition-all duration-500 shadow-inner rotate-3 group-hover:rotate-0">
                       {item.step}
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-xl font-bold mb-3 text-[#111827] uppercase tracking-wide group-hover:text-[#2e7d32] transition-colors duration-300">
+                    <h3 className="text-xl font-bold mb-1 text-[#111827] uppercase tracking-wide group-hover:text-[#2e7d32] transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-gray-500 text-[15px] leading-relaxed font-medium">
@@ -428,21 +428,21 @@ export default function Home() {
         </section>
 
         {/* VÌ SAO CHỌN Trung Kiên */}
-        <section className="relative py-20 md:py-28 bg-[#0f0f10] text-white overflow-hidden">
+        <section className="relative py-6 md:py-8 bg-[#0f0f10] !text-white overflow-hidden">
 
           {/* Glow */}
-          <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#388e3c]/20 blur-[150px] rounded-full"></div>
-          <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-[#388e3c]/20 blur-[120px] rounded-full"></div>
+          <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#18631c]/20 blur-[150px] rounded-full"></div>
+          <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-[#18631c]/20 blur-[120px] rounded-full"></div>
 
           <div className="max-w-[1400px] mx-auto px-5 md:px-10 relative z-10">
 
             {/* TITLE */}
-            <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tight">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight !text-white">
                 Vì sao khách hàng chọn
-                <span className="text-[#4caf50]"> Trung Kiên?</span>
+                <span className="!text-white"> Trung Kiên?</span>
               </h2>
-              <p className="text-gray-400 mt-4 text-lg">
+              <p className="text-white-400 mt-4 text-lg">
                 Không chỉ là thu mua – chúng tôi mang lại giá trị thật
               </p>
             </div>
@@ -451,7 +451,7 @@ export default function Home() {
             <div className="relative">
 
               {/* LINE GIỮA */}
-              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#388e3c] via-[#388e3c]/50 to-transparent"></div>
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#18631c] via-[#18631c]/50 to-transparent"></div>
 
               {[
                 {
@@ -487,19 +487,19 @@ export default function Home() {
                   {/* BLOCK */}
                   <div className="w-full md:w-[45%]">
 
-                    <div className="bg-[#1a1a1c]/50 border border-white/5 backdrop-blur-md rounded-3xl p-6 md:p-8 hover:border-[#388e3c]/50 hover:bg-[#1a1a1c]/80 transition-all duration-500 group shadow-lg hover:-translate-y-1">
+                    <div className="bg-[#1a1a1c]/50 border border-white/5 backdrop-blur-md rounded-3xl p-6 md:p-8 hover:border-[#18631c]/50 hover:bg-[#1a1a1c]/80 transition-all duration-500 group shadow-lg hover:-translate-y-1">
 
                       <div className="flex items-center gap-5 mb-4">
-                        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#388e3c] to-[#5c0909] rounded-2xl flex items-center justify-center text-2xl shadow-[0_5px_15px_rgba(136,13,17,0.4)] group-hover:scale-110 transition-transform duration-300 border border-[#4caf50]/20">
+                        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#18631c] to-[#5c0909] rounded-2xl flex items-center justify-center text-2xl shadow-[0_5px_15px_rgba(136,13,17,0.4)] group-hover:scale-110 transition-transform duration-300 border border-[#4caf50]/20">
                           {item.icon}
                         </div>
 
-                        <h3 className="text-xl md:text-2xl font-black group-hover:text-[#4caf50] transition-colors duration-300 tracking-wide">
+                        <h3 className="text-xl md:text-2xl font-bold !text-white transition-colors duration-300 tracking-wide">
                           {item.title}
                         </h3>
                       </div>
 
-                      <p className="text-gray-400 text-[15px] leading-relaxed group-hover:text-gray-300 transition-colors">
+                      <p className="text-white-400 text-[15px] leading-relaxed group-hover:text-gray-300 transition-colors">
                         {item.desc}
                       </p>
 
@@ -513,12 +513,15 @@ export default function Home() {
             </div>
 
             {/* CTA */}
-            <div className="text-center mt-20">
+            <div className="text-center mt-10">
               <a
                 href="tel:0398771444"
-                className="inline-flex items-center gap-4 bg-gradient-to-r from-[#388e3c] to-[#2e7d32] hover:from-[#2e7d32] hover:to-[#5c0909] px-10 py-5 rounded-2xl font-black text-lg shadow-[0_10px_20px_rgba(136,13,17,0.3)] transition-all hover:scale-105 border border-[#4caf50]/20"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#18631c] to-[#2e7d32] hover:from-[#2e7d32] hover:to-[#5c0909] px-10 py-5 rounded-2xl font-bold text-lg text-white shadow-[0_10px_20px_rgba(136,13,17,0.3)] transition-all hover:scale-105 border border-[#4caf50]/20"
               >
-                📞 GỌI NGAY: 0398.771.444
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
+                GỌI NGAY: 0398.771.444
               </a>
             </div>
 
@@ -528,7 +531,7 @@ export default function Home() {
 
 
         {/* ================= ĐÁNH GIÁ CỦA KHÁCH HÀNG ================= */}
-        <section className="py-20 md:py-24 bg-gray-50 overflow-hidden relative">
+        <section className="py-6 md:py-8 bg-gray-50 overflow-hidden relative">
           {/* Họa tiết nền */}
           <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white to-transparent"></div>
 
@@ -536,21 +539,21 @@ export default function Home() {
 
             {/* Tiêu đề */}
             <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-3xl md:text-5xl font-black text-[#111827] uppercase leading-tight tracking-tight">
-                Khách Hàng Nói Về <span className="text-[#388e3c]">Trung Kiên</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-[#111827] uppercase leading-tight tracking-tight">
+                Khách Hàng Nói Về <span className="text-[#18631c]">Trung Kiên</span>
               </h2>
-              <div className="w-20 h-1.5 bg-gradient-to-r from-[#388e3c] to-[#2e7d32] mx-auto mt-4 rounded-full"></div>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-[#18631c] to-[#2e7d32] mx-auto mt-4 rounded-full"></div>
             </div>
 
             <div className="relative">
               {/* Lưới Slider */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 transition-opacity duration-500 pt-8">
                 {getVisibleReviews().map((review) => (
-                  <div key={review.id} className="bg-white rounded-[32px] px-8 pb-10 pt-14 shadow-sm border border-gray-100 hover:border-[#388e3c]/20 hover:shadow-[0_20px_40px_rgba(136,13,17,0.08)] transition-all duration-500 relative flex flex-col justify-between h-full group hover:-translate-y-2">
+                  <div key={review.id} className="bg-white rounded-[32px] px-8 pb-10 pt-14 shadow-sm border border-gray-100 hover:border-[#18631c]/20 hover:shadow-[0_20px_40px_rgba(136,13,17,0.08)] transition-all duration-500 relative flex flex-col justify-between h-full group hover:-translate-y-2">
 
                     {/* AVATAR NỔI LÊN TRÊN */}
                     <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                      <div className="relative w-20 h-20 rounded-full overflow-hidden ring-4 ring-white shadow-xl group-hover:ring-[#388e3c]/20 transition-all bg-[#111827] flex items-center justify-center">
+                      <div className="relative w-20 h-20 rounded-full overflow-hidden ring-4 ring-white shadow-xl group-hover:ring-[#18631c]/20 transition-all bg-[#111827] flex items-center justify-center">
                         {review.avatar ? (
                           <img
                             src={review.avatar}
@@ -567,13 +570,13 @@ export default function Home() {
                     </div>
 
                     {/* Dấu ngoặc kép chìm */}
-                    <div className="text-8xl font-serif text-[#388e3c]/5 absolute top-10 left-6 select-none pointer-events-none transition-transform group-hover:-translate-y-2 group-hover:-translate-x-2">"</div>
+                    <div className="text-8xl font-serif text-[#18631c]/5 absolute top-10 left-6 select-none pointer-events-none transition-transform group-hover:-translate-y-2 group-hover:-translate-x-2">"</div>
 
                     {/* Nội dung Review */}
                     <div className="relative z-10 text-center flex-grow flex flex-col items-center">
                       <div className="flex gap-1 mb-6 justify-center">
                         {[1, 2, 3, 4, 5].map((star) => (
-                          <svg key={star} className="w-5 h-5 text-[#388e3c]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                          <svg key={star} className="w-5 h-5 text-[#18631c]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         ))}
                       </div>
 
@@ -584,8 +587,8 @@ export default function Home() {
 
                     {/* Thông tin Khách hàng */}
                     <div className="text-center pt-6 border-t border-dashed border-gray-200">
-                      <h3 className="font-black text-[#111827] text-[18px] leading-tight mb-1">{review.name}</h3>
-                      <span className="text-[#388e3c] font-bold tracking-widest text-[11px] uppercase bg-[#388e3c]/5 px-3 py-1 rounded-full inline-block mt-1">
+                      <h3 className="font-bold text-[#111827] text-[18px] leading-tight mb-1">{review.name}</h3>
+                      <span className="text-[#18631c] font-bold tracking-widest text-[11px] uppercase bg-[#18631c]/5 px-3 py-1 rounded-full inline-block mt-1">
                         {review.role}
                       </span>
                     </div>
@@ -600,7 +603,7 @@ export default function Home() {
                   <button
                     key={idx}
                     onClick={() => setCurrentReviewSlide(idx)}
-                    className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentReviewSlide ? 'w-10 bg-[#388e3c] shadow-[0_4px_10px_rgba(136,13,17,0.3)]' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentReviewSlide ? 'w-10 bg-[#18631c] shadow-[0_4px_10px_rgba(136,13,17,0.3)]' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`}
                     aria-label={`Slide ${idx + 1}`}
                   />
                 ))}
@@ -613,19 +616,19 @@ export default function Home() {
 
 
         {/* KÊU GỌI HÀNH ĐỘNG DƯỚI CÙNG */}
-        <section className="py-16 md:py-16 bg-[url('https://images.unsplash.com/photo-1541889025078-450f78235e23?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center relative">
+        <section className="py-6 md:py-8 bg-[url('https://images.unsplash.com/photo-1541889025078-450f78235e23?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-fixed bg-center relative">
           <div className="absolute inset-0 bg-gradient-to-b from-[#111827]/90 to-[#111827]/70 backdrop-blur-sm"></div>
           <div className="max-w-4xl mx-auto px-6 text-center relative z-10 text-white">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Bạn Đang Có Sản Phẩm Cần Thanh Lý?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight !text-[#48ef52]">Bạn Đang Có Sản Phẩm Cần Thanh Lý?</h2>
             <p className="text-xl font-medium text-gray-300 mb-10 leading-relaxed">
-              Gửi hình ảnh qua Zalo, Nhận báo giá trong <span className="font-black text-[#388e3c]">5 Phút</span>. <br className="hidden md:block" />
+              Gửi hình ảnh qua Zalo, Nhận báo giá trong <span className="font-bold text-[#48ef52]">5 Phút</span>. <br className="hidden md:block" />
               Thu mua không ép giá - Dọn dẹp sạch sẽ - Tiền trao cháo múc ngay lập tức.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:0398771444" className="bg-[#388e3c] text-white hover:bg-[#2e7d32] font-black uppercase px-8 py-5 rounded-xl shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-3">
+              <a href="tel:0398771444" className="bg-[#18631c] text-white hover:bg-[#2e7d32] font-bold uppercase px-8 py-5 rounded-xl shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-3">
                 <span className="text-2xl">📞</span> Gọi Hotine
               </a>
-              <a href="https://zalo.me/0398771444" target="_blank" rel="noopener noreferrer" className="bg-[#0068ff] text-white hover:bg-[#0052cc] font-black uppercase px-8 py-5 rounded-xl shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-3">
+              <a href="https://zalo.me/0398771444" target="_blank" rel="noopener noreferrer" className="bg-[#0068ff] text-white hover:bg-[#0052cc] font-bold uppercase px-8 py-5 rounded-xl shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-3">
                 <span className="text-2xl font-sans">Zalo</span> Gửi Hình Zalo
               </a>
             </div>
@@ -638,7 +641,7 @@ export default function Home() {
 
             {/* HEADER */}
             <div className="text-center mb-10 md:mb-12">
-              <h2 className="text-3xl md:text-5xl font-black text-[#111827] uppercase">
+              <h2 className="text-3xl md:text-5xl font-bold text-[#111827] uppercase">
                 Cập Nhật Tin Tức <span className="text-[#2e7d32]">Mới Nhất</span>
               </h2>
 
@@ -672,7 +675,7 @@ export default function Home() {
                       <Link
                         key={item.id}
                         href={item.slug}
-                        className="group bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(136,13,17,0.12)] transition-all duration-500 hover:-translate-y-2 hover:border-[#388e3c]/30"
+                        className="group bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-[0_20px_40px_rgba(136,13,17,0.12)] transition-all duration-500 hover:-translate-y-2 hover:border-[#18631c]/30"
                       >
 
                         {/* IMAGE - ĐÃ TĂNG CHIỀU CAO TRÊN DESKTOP */}
@@ -692,18 +695,18 @@ export default function Home() {
 
                         {/* CONTENT */}
                         <div className="p-5 md:p-8 bg-white relative">
-                          <div className="absolute -top-7 right-6 bg-[#388e3c] text-white px-4 py-2 rounded-xl text-[12px] font-bold uppercase shadow-lg group-hover:-translate-y-1 transition-transform">
+                          <div className="absolute -top-7 right-6 bg-[#18631c] text-white px-4 py-2 rounded-xl text-[12px] font-bold uppercase shadow-lg group-hover:-translate-y-1 transition-transform">
                             Bài Viết
                           </div>
-                          <span className="text-xs text-[#388e3c] font-bold uppercase tracking-wider">
+                          <span className="text-xs text-[#18631c] font-bold uppercase tracking-wider">
                             Tin tức
                           </span>
 
-                          <h3 className="font-black text-lg text-[#111827] mt-2 mb-3 line-clamp-2 group-hover:text-[#388e3c] transition-colors">
+                          <h3 className="font-bold text-lg text-[#111827] mt-2 mb-3 line-clamp-2 group-hover:text-[#18631c] transition-colors">
                             {item.title}
                           </h3>
 
-                          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
+                          <p className="text-gray-600 text-[15px] md:text-[17px] leading-relaxed line-clamp-3 mb-4">
                             {item.desc}
                           </p>
 
@@ -720,7 +723,7 @@ export default function Home() {
                   <div className="text-center mt-10 md:mt-12">
                     <Link
                       href="/tin-tuc"
-                      className="inline-flex items-center justify-center bg-[#111827] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#388e3c] transition"
+                      className="inline-flex items-center justify-center bg-[#111827] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#18631c] transition"
                     >
                       XEM TẤT CẢ TIN TỨC →
                     </Link>

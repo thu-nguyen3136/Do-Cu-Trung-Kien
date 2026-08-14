@@ -14,11 +14,19 @@ export default function Footer() {
         {/* === PHẦN TRÊN: BOX LIÊN HỆ KÍNH MỜ (Glassmorphism) === */}
         <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-6 md:p-10 mb-16 flex flex-col lg:flex-row items-center justify-between gap-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
 
-          {/* Logo (Đã được làm to hơn) */}
+          {/* Logo (Đã được làm to hơn & bọc Link về trang chủ) */}
           <div className="flex-shrink-0">
-            <div className="bg-white p-2 rounded-2xl shadow-xl relative w-full max-w-[260px] md:max-w-[300px] h-[75px] sm:h-[80px] md:h-[95px] hover:scale-105 transition-transform duration-500">
-              <Image src="/logo-dai-trung-kien.png" alt="Đồ Cũ Trung Kiên" fill className="object-contain p-1" />
-            </div>
+            <Link href="/" className="block bg-white p-3 rounded-2xl shadow-xl relative w-[240px] sm:w-[280px] md:w-[320px] h-[80px] sm:h-[90px] md:h-[100px] hover:scale-105 transition-transform duration-500">
+              <Image 
+                src="/logo-dai-trung-kien.png" 
+                alt="Đồ Cũ Trung Kiên" 
+                fill 
+                className="object-contain p-1" 
+                priority
+                quality={100}
+                unoptimized={true}
+              />
+            </Link>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 md:gap-12 w-full lg:w-auto">
@@ -31,7 +39,7 @@ export default function Footer() {
               </div>
               <div className="overflow-hidden min-w-0">
                 <p className="text-gray-400 text-[11px] font-bold uppercase tracking-widest mb-1">Gửi Email Liên Hệ</p>
-                <span className="text-white font-bold text-xs sm:text-[15px] xl:text-[17px] truncate block group-hover:text-[#4caf50] transition-colors">docutrungkien@gmail.com</span>
+                <span className="text-white font-bold text-xs text-[15px] md:text-[17px] truncate block group-hover:text-[#4caf50] transition-colors">docutrungkien@gmail.com</span>
               </div>
             </a>
 
