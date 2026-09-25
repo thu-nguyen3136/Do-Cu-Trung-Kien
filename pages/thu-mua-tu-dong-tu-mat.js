@@ -2,38 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThuMuaTuDongTuMatPage() {
   const hotline = "0398.771.444";
 
-  // Schema Local Business tối ưu SEO cho thiết bị điện lạnh
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Thu Mua Tủ Đông Tủ Mát Cũ Giá Cao",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Đồ Cũ Trung Kiên",
-      "telephone": "0398.771.444",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-        "addressLocality": "Quận Bình Tân",
-        "addressRegion": "TP.HCM"
-      }
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thu Mua Tủ Đông Tủ Mát', url: 'https://thumuadocutrungkien.com/thu-mua-tu-dong-tu-mat' }
+  ];
+
+  const faqs = [
+    {
+      question: "Trung Kiên thu mua các thương hiệu tủ đông, tủ mát nào?",
+      answer: "Chúng tôi thu mua tất cả các hãng: Sanaky, Alaska, Darling, Kangaroo, Panasonic, Berjaya, Denver, tủ đông đứng, tủ nằm 1 chế độ, 2 chế độ, tủ kính lùa cong."
     },
-    "description": "Trung Kiên chuyên thu mua tủ đông, tủ mát Sanaky, Alaska, tủ trưng bày siêu thị, tủ mặt kính cũ giá cao nhất TPHCM."
-  };
+    {
+      question: "Tủ bị xì gas, hỏng block hoặc cũ rỉ sét có mua không?",
+      answer: "Có. Chúng tôi thu mua tủ đông tủ mát mọi tình trạng: còn dùng tốt, yếu lạnh, hư lốc máy, xì dàn lạnh với giá thanh lý cao nhất."
+    },
+    {
+      question: "Nhân viên có tự mang xe tới chở tủ đông cồng kềnh không?",
+      answer: "Có. Chúng tôi cử xe tải và thợ chuyên nghiệp tự khuân vác, vận chuyển tủ tận nhà, chủ quán không cần động tay."
+    }
+  ];
+
+  const priceItems = [
+    { name: "Tủ đông nằm Sanaky, Alaska 1 ngăn đông, 2 ngăn đông mát (100L - 500L)", unit: "Chiếc", priceRange: "1.500.000 - 5.500.000 đ", note: "Dàn đồng hoặc dàn nhôm" },
+    { name: "Tủ đông mặt kính lùa cong trưng bày kem, hải sản", unit: "Chiếc", priceRange: "2.500.000 - 8.500.000 đ", note: "Kính cường lực có sấy kính" },
+    { name: "Tủ mát trưng bày nước ngọt 1 cánh kính (200L - 450L)", unit: "Chiếc", priceRange: "1.800.000 - 5.000.000 đ", note: "Sanaky, Alaska, Panasonic, Aqua" },
+    { name: "Tủ mát siêu thị 2 cánh, 3 cánh kính lùa/mở (800L - 1500L)", unit: "Chiếc", priceRange: "4.500.000 - 18.000.000 đ", note: "Đèn LED, quạt đảo nhiệt đều" },
+    { name: "Tủ đông tủ mát công nghiệp inox 4 cánh, 6 cánh (Berjaya)", unit: "Chiếc", priceRange: "7.000.000 - 28.000.000 đ", note: "Inox chuyên dùng cho nhà hàng" },
+    { name: "Tủ bánh kem để bàn, tủ bánh sinh nhật kính vuông", unit: "Chiếc", priceRange: "3.500.000 - 14.000.000 đ", note: "Sấy kính không đọng sương" },
+    { name: "Tủ đông hư hỏng, yếu lạnh hoặc xì gas", unit: "Chiếc", priceRange: "500.000 - 2.500.000 đ", note: "Thu mua tận nơi linh kiện/xác tủ" }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thu Mua Tủ Đông Tủ Mát Cũ Giá Cao TPHCM | Sanaky, Alaska"
+        description="Thu mua tủ đông, tủ mát cũ giá cao tận nơi tại TPHCM. Mua tủ đông Sanaky, Alaska, tủ mát siêu thị, tủ bánh kem, tủ hư hỏng xì gas. Hotline: 0398.771.444."
+        keywords="thu mua tủ đông cũ, thu mua tủ mát cũ, thanh lý tủ đông sanaky, thu mua tủ mát alaska, đồ cũ trung kiên"
+        canonical="https://thumuadocutrungkien.com/thu-mua-tu-dong-tu-mat"
+        ogImage="/thu-mua-tu-dong-cu.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thu Mua Tủ Đông Tủ Mát Cũ Giá Cao | Sanaky, Alaska, Darling</title>
-        <meta name="description" content="Dịch vụ thu mua tủ đông, tủ mát cũ giá cao tại TPHCM. Trung Kiên mua tận nơi tủ đông Sanaky, Alaska, tủ mát trưng bày, tủ siêu thị. Báo giá qua Zalo nhanh 5p." />
-        <meta name="keywords" content="thu mua tủ đông cũ, thu mua tủ mát cũ, thanh lý tủ đông sanaky, thu mua tủ mát alaska, đồ cũ trung kiên" />
-        <link rel="canonical" href="https://docutrungkien.com/thu-mua-tu-dong-tu-mat" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thu Mua Tủ Đông Tủ Mát Cũ Giá Cao TPHCM"
+          description="Chuyên thu mua tủ đông, tủ mát Sanaky, Alaska, tủ siêu thị mặt kính cũ giá cao tận nơi tại TPHCM."
+          url="https://thumuadocutrungkien.com/thu-mua-tu-dong-tu-mat"
+          image="https://thumuadocutrungkien.com/thu-mua-tu-dong-cu.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -54,7 +78,7 @@ export default function ThuMuaTuDongTuMatPage() {
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
-                  Thu Mua Tủ Đông - Tủ Mát Cũ Giá Cao Tại TPHCM
+                  Thu Mua Tủ Đông - Tủ Mát Cũ Giá Cao Tại TPHCM - Đồ Cũ Trung Kiên
                 </h1>
               </header>
 
@@ -65,7 +89,7 @@ export default function ThuMuaTuDongTuMatPage() {
                     Chuyên Thu Mua Tủ Đông, Tủ Mát Tận Nơi - Thanh Toán Ngay
                   </h2>
                   <p>
-                    Bạn có tủ đông, tủ mát đã qua sử dụng cần thanh lý để nâng cấp máy mới hoặc ngừng kinh doanh? Hãy gọi ngay cho <strong>Đồ Cũ Trung Kiên</strong>. Chúng tôi chuyên thu mua các loại tủ đông, tủ mát từ gia đình, quán ăn, nhà hàng đến các siêu thị lớn với mức giá <strong>cao hơn thị trường 20-30%</strong>.
+                    Bạn có tủ đông, tủ mát đã qua sử dụng cần thanh lý để nâng cấp máy mới hoặc ngừng kinh doanh? Hãy gọi ngay cho <strong>Đồ Cũ Trung Kiên</strong>. Chúng tôi chuyên thu mua các loại tủ đông, tủ mát từ gia đình, <Link href="/thanh-ly-quan-an" className="text-brand-600 font-semibold hover:underline">quán ăn</Link>, <Link href="/thanh-ly-nha-hang" className="text-brand-600 font-semibold hover:underline">nhà hàng</Link> đến các quán <Link href="/thanh-ly-quan-ca-phe" className="text-brand-600 font-semibold hover:underline">cafe trà sữa</Link> và siêu thị lớn với mức giá <strong>cao hơn thị trường 20-30%</strong>.
                   </p>
                   <div className="bg-yellow-300 px-4 py-3 rounded-lg flex flex-col md:flex-row justify-between items-center gap-4">
                     <span className="font-black text-red-600 text-xl uppercase">Hotline & Zalo: {hotline}</span>
@@ -154,6 +178,18 @@ export default function ThuMuaTuDongTuMatPage() {
                   </figcaption>
                 </figure>
 
+                {/* BẢNG GIÁ THAM KHẢO & FAQ (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thu Mua Tủ Đông Tủ Mát Tham Khảo"
+                  subtitle="Giá thu mua tủ đông tủ mát phụ thuộc vào thương hiệu (Sanaky, Alaska, Berjaya...), dung tích lít và độ lạnh thực tế. Gọi điện hoặc gửi ảnh qua Zalo nhận giá ngay sau 5 phút!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Câu Hỏi Thường Gặp Khi Bán Tủ Đông Tủ Mát Cũ"
+                  faqs={faqs}
+                />
+
                 {/* SEO LOCAL SECTION */}
                 <section>
                   <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6 text-left">
@@ -171,7 +207,7 @@ export default function ThuMuaTuDongTuMatPage() {
 
                 {/* LIÊN HỆ GỐC */}
                 <footer className="mt-12 p-8 bg-gray-900 text-white rounded-[2rem] shadow-2xl">
-                  <h4 className="text-2xl font-black uppercase mb-6 text-brand-500 text-left">THU MUA ĐỒ CŨ TRUNG KIÊN</h4>
+                  <h3 className="text-2xl font-black uppercase mb-6 text-brand-500 text-left">THU MUA ĐỒ CŨ TRUNG KIÊN</h3>
                   <div className="space-y-4 font-medium opacity-90 text-left">
                     <p>📍 <strong>Địa Chỉ:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</p>
                     <p>📞 <strong>Hotline:</strong> <span className="text-brand-400 text-xl">{hotline}</span></p>

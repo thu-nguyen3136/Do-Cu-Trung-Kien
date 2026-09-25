@@ -2,38 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThanhLyQuanPhoPage() {
   const hotline = "0398.771.444";
 
-  // Schema Local Business cho trang Thanh lý quán phở
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Thanh Lý Quán Phở Trọn Gói Giá Cao",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Đồ Cũ Trung Kiên",
-      "telephone": "0398.771.444",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-        "addressLocality": "Quận Bình Tân",
-        "addressRegion": "TP.HCM"
-      }
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thanh Lý Quán Phở', url: 'https://thumuadocutrungkien.com/thanh-ly-quan-pho' }
+  ];
+
+  const faqs = [
+    {
+      question: "Nồi nấu phở điện cũ các dung tích có được thu mua giá cao không?",
+      answer: "Có. Chúng tôi thu mua tất cả nồi nấu phở điện từ 20L, 30L, 50L, 80L, 100L đến 150L (inox 304, inox 201) với giá cao nhất TPHCM."
     },
-    "description": "Trung Kiên chuyên thu mua thanh lý quán phở trọn gói: nồi phở điện, bàn ghế, tủ kính, thiết bị bếp giá cao nhất TPHCM."
-  };
+    {
+      question: "Trung Kiên có thu mua tủ kính bán phở và xe phở inox không?",
+      answer: "Có. Chúng tôi nhận thu mua trọn gói xe phở inox, tủ kính trưng bày thịt, kệ inox đựng gia vị, bàn ghế inox hoặc bàn ghế gỗ quán phở."
+    },
+    {
+      question: "Có nhận thanh lý quán phở ở các tỉnh lân cận như Bình Dương, Đồng Nai không?",
+      answer: "Có. Đồ Cũ Trung Kiên nhận thu mua tận nơi tại TP.HCM và các tỉnh lân cận như Bình Dương, Đồng Nai, Long An. Có mặt sau 45-60 phút."
+    }
+  ];
+
+  const priceItems = [
+    { name: "Bộ 3 nồi nấu phở điện inox (Hầm xương, nấu nước lèo, trần bánh)", unit: "Bộ", priceRange: "4.500.000 - 16.000.000 đ", note: "Inox 304 dày 1.2mm, thanh nhiệt mới" },
+    { name: "Nồi nấu phở điện đơn 50L - 100L", unit: "Chiếc", priceRange: "1.800.000 - 6.000.000 đ", note: "Chế độ sôi tự động ngắt tiết kiệm điện" },
+    { name: "Xe đẩy bán phở, tủ kính inox bán bún phở có bánh xe", unit: "Chiếc", priceRange: "2.000.000 - 7.500.000 đ", note: "Kèm nồi gắn liền hoặc tủ kính trưng bày" },
+    { name: "Bàn ghế inox chữ nhật + ghế đôn inox quán phở", unit: "Bộ", priceRange: "700.000 - 3.200.000 đ", note: "1 bàn + 6 ghế đôn inox 201/304" },
+    { name: "Tủ đông tủ mát bảo quản thịt bò, rau củ", unit: "Chiếc", priceRange: "2.500.000 - 12.000.000 đ", note: "Sanaky, Alaska, Darling" },
+    { name: "Máy thái thịt bò tươi sống quán phở", unit: "Máy", priceRange: "1.500.000 - 6.500.000 đ", note: "Lưỡi dao thép sắc bén, mô tơ khỏe" },
+    { name: "Bát tô sứ trắng, muỗng đũa, hộp gia vị, ớt tỏi", unit: "Lô/Trọn gói", priceRange: "800.000 - 5.000.000 đ", note: "Định giá theo số lượng thực tế" }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thanh Lý Quán Phở Giá Cao TPHCM | Nồi Phở Điện, Bàn Ghế Inox"
+        description="Thu mua thanh lý quán phở, bún bò, hủ tiếu trọn gói giá cao TPHCM. Nồi phở điện, tủ kính bán phở, bàn ghế inox. Khảo sát 30p. Hotline: 0398.771.444."
+        keywords="thanh lý quán phở, thu mua quán phở, thanh lý nồi phở điện, thu mua bàn ghế quán phở, đồ cũ trung kiên"
+        canonical="https://thumuadocutrungkien.com/thanh-ly-quan-pho"
+        ogImage="/thanh-ly-quan-pho.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thanh Lý Quán Phở | Thu Mua Nồi Phở Điện & Bàn Ghế Giá Cao</title>
-        <meta name="description" content="Dịch vụ thanh lý quán phở trọn gói tại TPHCM. Đồ Cũ Trung Kiên thu mua nồi nấu phở điện, bộ bàn ghế, tủ kính bát đĩa giá cao. Khảo sát 30p, thanh toán ngay." />
-        <meta name="keywords" content="thanh lý quán phở, thu mua quán phở, thanh lý nồi phở điện, thu mua bàn ghế quán phở, đồ cũ trung kiên" />
-        <link rel="canonical" href="https://docutrungkien.com/thanh-ly-quan-pho" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thu Mua Thanh Lý Quán Phở Trọn Gói Giá Cao"
+          description="Chuyên thu mua nồi phở điện, bàn ghế quán phở, tủ kính bán phở và thiết bị bếp giá cao tại TPHCM."
+          url="https://thumuadocutrungkien.com/thanh-ly-quan-pho"
+          image="https://thumuadocutrungkien.com/thanh-ly-quan-pho.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -54,7 +78,7 @@ export default function ThanhLyQuanPhoPage() {
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
-                  Thanh Lý Quán Phở Trọn Gói Giá Cao
+                  Thanh Lý Quán Phở Trọn Gói Giá Cao TPHCM - Đồ Cũ Trung Kiên
                 </h1>
               </header>
 
@@ -65,7 +89,7 @@ export default function ThanhLyQuanPhoPage() {
                     Dịch Vụ Thu Mua Đồ Dùng Quán Phở Uy Tín Tại TPHCM
                   </h2>
                   <p>
-                    Bạn đang cần <strong>thanh lý quán phở</strong> để chuyển đổi kinh doanh hoặc trả mặt bằng? Bạn băn khoăn không biết đơn vị nào thu mua giá cao và dọn dẹp nhanh chóng? Hãy liên hệ ngay với <strong>Đồ Cũ Trung Kiên</strong>. Chúng tôi chuyên thu mua trọn gói thiết bị quán phở, quán hủ tiếu, quán bún bò với mức giá cạnh tranh nhất thị trường.
+                    Bạn đang cần <strong>thanh lý quán phở</strong> để chuyển đổi kinh doanh hoặc trả mặt bằng? Bạn băn khoăn không biết đơn vị nào thu mua giá cao và dọn dẹp nhanh chóng? Hãy liên hệ ngay với <strong>Đồ Cũ Trung Kiên</strong>. Chúng tôi chuyên thu mua trọn gói thiết bị quán phở, quán hủ tiếu, quán bún bò cũng như <Link href="/thanh-ly-quan-an" className="text-brand-600 font-semibold hover:underline">quán ăn</Link>, <Link href="/thu-mua-do-inox-cu" className="text-brand-600 font-semibold hover:underline">đồ inox nhà bếp</Link> và <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">tủ đông tủ mát</Link> với mức giá cạnh tranh nhất thị trường.
                   </p>
                   <p className="bg-yellow-300 inline-block px-4 py-2 font-black text-red-600 rounded-lg">
                     Hotline Tư Vấn: {hotline} (Zalo: 0398771444)
@@ -155,6 +179,18 @@ export default function ThanhLyQuanPhoPage() {
                   </figcaption>
                 </figure>
 
+                {/* BẢNG GIÁ THAM KHẢO & FAQ (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thanh Lý Quán Phở Tham Khảo"
+                  subtitle="Giá nồi phở điện và bàn ghế inox phụ thuộc vào kích cỡ, độ mới và chủng loại inox 304/201. Khảo sát báo giá tận nơi sau 30 phút!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Câu Hỏi Thường Gặp Khi Thanh Lý Quán Phở"
+                  faqs={faqs}
+                />
+
                 {/* KHU VỰC PHỤC VỤ (SEO LOCAL) */}
                 <section>
                   <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6">
@@ -173,12 +209,12 @@ export default function ThanhLyQuanPhoPage() {
 
                 {/* FOOTER BÀI VIẾT */}
                 <footer className="mt-12 p-8 bg-gray-900 text-white rounded-[2rem] shadow-2xl">
-                  <h4 className="text-2xl font-black uppercase mb-6 text-brand-500">THU MUA ĐỒ CŨ TRUNG KIÊN</h4>
+                  <h3 className="text-2xl font-black uppercase mb-6 text-brand-500">THU MUA ĐỒ CŨ TRUNG KIÊN</h3>
                   <div className="space-y-4 font-medium opacity-90">
                     <p>📍 <strong>Địa Chỉ:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</p>
                     <p>📞 <strong>Hotline:</strong> <span className="text-brand-400 text-xl">{hotline}</span> - Trung Kiên</p>
                     <p>💬 <strong>Zalo báo giá:</strong> 0398.771.444 (Gửi ảnh nhận báo giá ngay)</p>
-                    <p>🌐 <strong>Website:</strong> docutrungkien.com</p>
+                    <p>🌐 <strong>Website:</strong> thumuadocutrungkien.com</p>
                   </div>
                 </footer>
 

@@ -2,38 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThuMuaDoCuGiaDinhPage() {
   const hotline = "0398.771.444";
 
-  // Schema Local Business tối ưu SEO
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Thu Mua Đồ Cũ Gia Đình Trọn Gói Giá Cao",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Đồ Cũ Trung Kiên",
-      "telephone": "0398.771.444",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-        "addressLocality": "Quận Bình Tân",
-        "addressRegion": "TP.HCM"
-      }
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thu Mua Đồ Cũ Gia Đình', url: 'https://thumuadocutrungkien.com/thu-mua-do-cu-gia-dinh' }
+  ];
+
+  const faqs = [
+    {
+      question: "Đồ cũ gia đình gồm những mặt hàng nào được thu mua?",
+      answer: "Chúng tôi thu mua: bàn ghế gỗ gụ, gỗ hương, sofa phòng khách, giường tủ quần áo, bàn trang điểm, đồ thờ cúng gia tiên, tủ lạnh, máy giặt, tivi, máy lạnh cũ và đồ gia dụng."
     },
-    "description": "Đồ Cũ Trung Kiên chuyên thu mua đồ cũ gia đình trọn gói tại TPHCM. Mua nội thất gia đình, sofa, giường tủ, đồ điện lạnh, điện gia dụng giá cao tận nơi."
-  };
+    {
+      question: "Có thu mua đồ gỗ cũ xưa, đồ cổ truyền thống không?",
+      answer: "Có. Chúng tôi có chuyên gia am hiểu về các loại gỗ quý hiếm (gỗ trắc, cẩm lai, gõ đỏ, thủy tùng, hương đá) để định giá chính xác và mua với giá trị cao nhất cho gia chủ."
+    },
+    {
+      question: "Chung cư cao tầng có nhận tháo dỡ và khuân vác xuống không?",
+      answer: "Có. Nhân viên Trung Kiên tự lo toàn bộ thang máy, xe kéo và bốc vác từ căn hộ chung cư xuống sảnh mà gia đình không cần động tay."
+    }
+  ];
+
+  const priceItems = [
+    { name: "Sofa da, sofa nỉ, salon gỗ phòng khách (Bộ kèm bàn trà)", unit: "Bộ", priceRange: "1.000.000 - 9.500.000 đ", note: "Gỗ sồi, gõ đỏ, nệm da cao cấp" },
+    { name: "Giường ngủ gỗ, nệm cao su non/Kim Cương/Kymdan", unit: "Chiếc", priceRange: "800.000 - 8.000.000 đ", note: "Kích thước 1m6x2m, 1m8x2m" },
+    { name: "Tủ quần áo gỗ công nghiệp MDF, tủ gỗ tự nhiên 2-4 cánh", unit: "Chiếc", priceRange: "1.000.000 - 6.500.000 đ", note: "Không mục nát, bản lề trơn tru" },
+    { name: "Tủ lạnh gia đình (Inverter, Side by Side, 2 cánh)", unit: "Chiếc", priceRange: "1.200.000 - 10.000.000 đ", note: "Toshiba, Panasonic, LG, Samsung" },
+    { name: "Máy giặt cửa trên, máy giặt cửa trước", unit: "Chiếc", priceRange: "1.000.000 - 6.000.000 đ", note: "Electrolux, LG, Toshiba, Aqua" },
+    { name: "Máy lạnh treo tường (1HP - 2.5HP)", unit: "Bộ", priceRange: "1.500.000 - 5.500.000 đ", note: "Daikin, Panasonic, Casper, Sharp" },
+    { name: "Bàn ăn gia đình (Bàn mặt đá, bàn gỗ + 4-6 ghế)", unit: "Bộ", priceRange: "800.000 - 5.000.000 đ", note: "Khung chắc chắn, mặt bàn bóng đẹp" }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thu Mua Đồ Cũ Gia Đình Giá Cao TPHCM | Nội Thất, Điện Lạnh"
+        description="Thu mua đồ cũ gia đình trọn gói giá cao tại TPHCM. Bàn ghế gỗ, salon sofa, giường tủ, tivi, tủ lạnh, máy giặt. Tự tháo dỡ, dọn sạch: 0398.771.444."
+        keywords="thu mua đồ cũ gia đình, thanh lý đồ nội thất, thu mua giường tủ cũ, thu mua đồ điện lạnh cũ, đồ cũ gia đình tphcm, đồ cũ trung kiên"
+        canonical="https://thumuadocutrungkien.com/thu-mua-do-cu-gia-dinh"
+        ogImage="/thu-mua-do-cu-gia-dinh.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thu Mua Đồ Cũ Gia Đình TPHCM | Thu Mua Nội Thất Cũ Giá Cao</title>
-        <meta name="description" content="Chuyên thu mua đồ cũ gia đình trọn gói giá cao tại TPHCM. Thu mua bàn ghế gỗ, sofa, giường tủ, tivi, tủ lạnh, máy giặt cũ tận nơi. Khảo sát nhanh chóng 30p." />
-        <meta name="keywords" content="thu mua đồ cũ gia đình, thanh lý đồ nội thất, thu mua giường tủ cũ, thu mua đồ điện lạnh cũ, đồ cũ gia đình tphcm, đồ cũ trung kiên" />
-        <link rel="canonical" href="https://docutrungkien.com/thu-mua-do-cu/thu-mua-do-cu-gia-dinh" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thu Mua Đồ Cũ Gia Đình Trọn Gói Giá Cao TPHCM"
+          description="Dịch vụ thu mua nội thất gia đình, đồ gỗ cũ, sofa, giường tủ, đồ điện tử điện lạnh cũ giá cao tại TPHCM."
+          url="https://thumuadocutrungkien.com/thu-mua-do-cu-gia-dinh"
+          image="https://thumuadocutrungkien.com/thu-mua-do-cu-gia-dinh.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -41,8 +65,6 @@ export default function ThuMuaDoCuGiaDinhPage() {
         <nav className="bg-white border-b border-gray-100 py-3 shadow-sm">
           <div className="max-w-[1400px] mx-auto px-5 md:px-10 text-sm text-gray-500">
             <Link href="/" className="hover:text-brand-600 transition-colors">Trang chủ</Link>
-            <span className="mx-2">/</span>
-            <Link href="/thu-mua-do-cu" className="hover:text-brand-600 transition-colors">Thu Mua Đồ Cũ</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900 font-medium">Thu Mua Đồ Cũ Gia Đình</span>
           </div>
@@ -56,7 +78,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
-                  Thu Mua Đồ Cũ Gia Đình Giá Cao Tận Nơi TPHCM
+                  Thu Mua Đồ Cũ Gia Đình Giá Cao Tận Nơi TPHCM - Đồ Cũ Trung Kiên
                 </h1>
               </header>
 
@@ -67,7 +89,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
                     Gia đình bạn đang chuẩn bị chuyển nhà, chuyển trọ hay đơn giản là muốn đổi mới không gian sống bằng những món đồ nội thất hiện đại hơn? Việc xử lý đống đồ cũ cồng kềnh như giường, tủ, sofa hay tủ lạnh, máy giặt luôn là bài toán khiến nhiều người đau đầu.
                   </p>
                   <p className="text-[18px]">
-                    Đừng vứt bỏ lãng phí! Hãy gọi ngay cho <strong>Đồ Cũ Trung Kiên</strong>. Chúng tôi cung cấp dịch vụ <strong>thu mua đồ cũ gia đình trọn gói</strong> tại TPHCM. Biến đồ cũ của bạn thành một khoản tiền không nhỏ một cách nhanh chóng, sạch sẽ và cực kỳ chuyên nghiệp.
+                    Đừng vứt bỏ lãng phí! Hãy gọi ngay cho <strong>Đồ Cũ Trung Kiên</strong>. Chúng tôi cung cấp dịch vụ <strong>thu mua đồ cũ gia đình trọn gói</strong> tại TPHCM. Bên cạnh đó chúng tôi còn nhận <Link href="/thu-mua-noi-that-khach-san" className="text-brand-600 font-semibold hover:underline">thanh lý nội thất khách sạn</Link>, <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">tủ đông tủ mát</Link> và <Link href="/thu-mua-do-inox-cu" className="text-brand-600 font-semibold hover:underline">đồ inox gia dụng</Link>, biến đồ cũ của bạn thành một khoản tiền không nhỏ một cách nhanh chóng, sạch sẽ và cực kỳ chuyên nghiệp.
                   </p>
                 </section>
 
@@ -175,6 +197,19 @@ export default function ThuMuaDoCuGiaDinhPage() {
                     ))}
                   </ul>
                 </section>
+
+                {/* BẢNG GIÁ THAM KHẢO & FAQ (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thu Mua Đồ Cũ Gia Đình Tham Khảo"
+                  subtitle="Giá thu mua các thiết bị điện lạnh và đồ nội thất gỗ phụ thuộc vào tình trạng sử dụng và thương hiệu. Cam kết báo giá chuẩn xác, thanh toán 100% liền tay!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Câu Hỏi Thường Gặp Về Thu Mua Đồ Cũ Gia Đình"
+                  faqs={faqs}
+                />
+
                 {/* KHU VỰC PHỤC VỤ (SEO LOCAL) */}
                 <section className="mt-12 bg-gray-900 text-white p-8 rounded-3xl shadow-xl">
                   <h3 className="text-brand-400 text-xl font-black uppercase mb-6 border-b border-gray-700 pb-2">
@@ -196,7 +231,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
 
                 {/* THÔNG TIN LIÊN HỆ */}
                 <footer className="mt-8 p-8 bg-white border-2 border-brand-600 rounded-3xl shadow-md">
-                  <h4 className="text-2xl font-black text-brand-600 uppercase mb-8 border-b pb-2 text-center">THÔNG TIN LIÊN HỆ</h4>
+                  <h3 className="text-2xl font-black text-brand-600 uppercase mb-8 border-b pb-2 text-center">THÔNG TIN LIÊN HỆ</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[16px] font-medium text-gray-700">
                     <div className="space-y-4">
                       <p>📍 <strong>CN1:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</p>

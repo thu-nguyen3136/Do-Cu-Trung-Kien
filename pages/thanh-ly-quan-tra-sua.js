@@ -2,34 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThanhLyQuanTraSuaPage() {
   const hotline = "0398.771.444";
 
-  // Dữ liệu cấu trúc giúp Google hiểu trang này cung cấp dịch vụ thu mua đồ trà sữa
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Đồ Cũ Trung Kiên",
-    "description": "Trung Kiên chuyên thu mua thanh lý quán trà sữa trọn gói giá cao: máy dập nắp, máy định lượng đường, quầy bar, bàn ghế sofa trà sữa.",
-    "telephone": "0398.771.444",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-      "addressLocality": "Quận Bình Tân",
-      "addressRegion": "TP.HCM"
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thanh Lý Quán Trà Sữa', url: 'https://thumuadocutrungkien.com/thanh-ly-quan-tra-sua' }
+  ];
+
+  const faqs = [
+    {
+      question: "Đồ Cũ Trung Kiên thu mua những máy móc trà sữa nào?",
+      answer: "Chúng tôi thu mua máy dập nắp cốc tự động, máy định lượng đường, bình ủ trà inox, máy đun nước sôi siêu tốc, máy xay sinh tố công nghiệp, quầy pha chế inox có bồn rửa."
+    },
+    {
+      question: "Bàn ghế bệt, ghế gỗ trà sữa cũ có mua không?",
+      answer: "Có. Chúng tôi nhận thu mua toàn bộ bàn ghế bệt phong cách Hàn Quốc/Nhật Bản, sofa nệm, ghế cafe trà sữa và đèn trang trí."
+    },
+    {
+      question: "Hình thức thanh lý trọn gói quán trà sữa như thế nào?",
+      answer: "Chỉ cần gửi ảnh qua Zalo 0398.771.444, chúng tôi báo giá ước tính sau 5 phút và đến tận quán khảo sát, chốt giá, tự bốc xếp và thanh toán 100% tiền mặt."
     }
-  };
+  ];
+
+  const priceItems = [
+    { name: "Máy dập nắp cốc tự động (Fest, Yubann, YiFang...)", unit: "Máy", priceRange: "1.500.000 - 5.500.000 đ", note: "Mắt đọc quang học chuẩn, dập nhanh" },
+    { name: "Máy định lượng đường tự động 16 nút", unit: "Máy", priceRange: "1.000.000 - 3.800.000 đ", note: "Bơm đường chính xác, inox sáng đẹp" },
+    { name: "Máy làm trân châu tự động, nồi ủ trân châu", unit: "Bộ", priceRange: "1.200.000 - 6.000.000 đ", note: "Các dòng máy vo hạt, nồi ủ giữ nhiệt" },
+    { name: "Bình ủ trà inox 8L - 10L - 12L giữ nhiệt", unit: "Chiếc", priceRange: "250.000 - 800.000 đ", note: "Ruột inox 304 2 lớp cách nhiệt" },
+    { name: "Quầy pha chế trà sữa inox 304 có khay topping, bồn rửa", unit: "Bộ", priceRange: "3.500.000 - 15.000.000 đ", note: "Dài 1m2 - 2m2 theo kích thước" },
+    { name: "Máy làm đá viên quán trà sữa 40kg - 120kg", unit: "Máy", priceRange: "4.500.000 - 18.000.000 đ", note: "Làm đá nhanh, đá già tinh khiết" },
+    { name: "Bàn ghế bệt gỗ, bàn ghế sắt bọc đệm quán trà sữa", unit: "Bộ", priceRange: "400.000 - 2.500.000 đ", note: "1 bàn + 4 ghế theo mẫu mã quán" }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thanh Lý Quán Trà Sữa Giá Cao TPHCM | Máy Dập Nắp, Quầy Bar"
+        description="Chuyên thu mua thanh lý quán trà sữa trọn gói giá cao TPHCM: máy dập nắp, máy định lượng đường, quầy bar inox, bàn ghế. Khảo sát ngay: 0398.771.444."
+        keywords="thanh lý quán trà sữa, thu mua quán trà sữa, thanh lý máy dập nắp trà sữa, đồ cũ trung kiên, thu mua quầy bar inox"
+        canonical="https://thumuadocutrungkien.com/thanh-ly-quan-tra-sua"
+        ogImage="/thanh-ly-quan-tra-sua.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thanh Lý Quán Trà Sữa | Thu Mua Máy Pha Trà Sữa & Quầy Bar Giá Cao</title>
-        <meta name="description" content="Bạn cần thanh lý quán trà sữa? Đồ Cũ Trung Kiên thu mua trọn gói thiết bị máy dập nắp, máy định lượng đường, tủ mát trưng bày giá cao nhất TPHCM. Có mặt sau 30p." />
-        <meta name="keywords" content="thanh lý quán trà sữa, thu mua quán trà sữa, thanh lý máy dập nắp trà sữa, đồ cũ trung kiên, thu mua quầy bar inox" />
-        <link rel="canonical" href="https://docutrungkien.com/thanh-ly-quan-tra-sua" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thu Mua Thanh Lý Quán Trà Sữa Trọn Gói Giá Cao"
+          description="Chuyên thu mua máy dập nắp cốc, máy định lượng đường, quầy pha chế inox, bàn ghế quán trà sữa giá cao tại TPHCM."
+          url="https://thumuadocutrungkien.com/thanh-ly-quan-tra-sua"
+          image="https://thumuadocutrungkien.com/thanh-ly-quan-tra-sua.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -50,7 +78,7 @@ export default function ThanhLyQuanTraSuaPage() {
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
-                  Thanh Lý Quán Trà Sữa Trọn Gói Giá Cao
+                  Thanh Lý Quán Trà Sữa Trọn Gói Giá Cao TPHCM - Đồ Cũ Trung Kiên
                 </h1>
               </header>
 
@@ -61,7 +89,7 @@ export default function ThanhLyQuanTraSuaPage() {
                     Dịch Vụ Thu Mua Thiết Bị Quán Trà Sữa Tận Nơi TPHCM
                   </h2>
                   <p>
-                    Kinh doanh trà sữa đang là xu hướng nhưng cũng cạnh tranh rất lớn. Khi bạn cần <strong>thanh lý quán trà sữa</strong> để nâng cấp mặt bằng hoặc chuyển hướng kinh doanh, <strong>Đồ Cũ Trung Kiên</strong> luôn sẵn sàng hỗ trợ. Chúng tôi chuyên thu mua tất cả thiết bị máy móc pha chế, quầy kệ và bàn ghế quán trà sữa với cam kết giá cao hơn thị trường 20%.
+                    Kinh doanh trà sữa đang là xu hướng nhưng cũng cạnh tranh rất lớn. Khi bạn cần <strong>thanh lý quán trà sữa</strong> để nâng cấp mặt bằng hoặc chuyển hướng sang mô hình <Link href="/thanh-ly-quan-ca-phe" className="text-brand-600 font-semibold hover:underline">quán cafe</Link>, <Link href="/thanh-ly-quan-an" className="text-brand-600 font-semibold hover:underline">quán ăn</Link>, <strong>Đồ Cũ Trung Kiên</strong> luôn sẵn sàng hỗ trợ. Chúng tôi chuyên thu mua tất cả thiết bị máy móc pha chế, <Link href="/thu-mua-do-inox-cu" className="text-brand-600 font-semibold hover:underline">quầy bar inox</Link> và <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">tủ đông tủ mát</Link> quán trà sữa với cam kết giá cao hơn thị trường 20%.
                   </p>
                   <p className="bg-yellow-300 inline-block px-4 py-2 font-black text-red-600 rounded-lg">
                     GỌI BÁO GIÁ NGAY: {hotline}
@@ -148,6 +176,18 @@ export default function ThanhLyQuanTraSuaPage() {
                   </div>
                 </figure>
 
+                {/* BẢNG GIÁ THAM KHẢO & FAQ (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thanh Lý Quán Trà Sữa Tham Khảo"
+                  subtitle="Giá máy dập nắp, máy định lượng đường và quầy bar inox phụ thuộc vào tình trạng và nhãn hiệu. Khảo sát tận nơi sau 30 phút!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Câu Hỏi Thường Gặp Khi Thanh Lý Quán Trà Sữa"
+                  faqs={faqs}
+                />
+
                 <section>
                   <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
                     Khu vực phục vụ thu mua quán trà sữa
@@ -162,7 +202,7 @@ export default function ThanhLyQuanTraSuaPage() {
 
                 {/* THÔNG TIN LIÊN HỆ GỐC */}
                 <footer className="mt-12 p-8 bg-gray-900 text-white rounded-[2rem] shadow-2xl">
-                  <h4 className="text-2xl font-black uppercase mb-6 text-brand-500">THU MUA ĐỒ CŨ TRUNG KIÊN</h4>
+                  <h3 className="text-2xl font-black uppercase mb-6 text-brand-500">THU MUA ĐỒ CŨ TRUNG KIÊN</h3>
                   <div className="space-y-4 font-medium opacity-90 text-left">
                     <p>📍 <strong>Địa Chỉ 1:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</p>
                     <p>📍 <strong>Địa Chỉ 2:</strong> 207 Nơ Trang Long, Phường 12, Quận Bình Thạnh, TP.HCM</p>

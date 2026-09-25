@@ -17,34 +17,61 @@ const beVietnam = Be_Vietnam_Pro({
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter(); // <-- 2. Khởi tạo router
 
-  // BỘ ĐẾM CHỐNG F5 LIÊN TỤC
+  // BỘ ĐẾM CHỐNG F5 / RELOAD SPAM THÔNG MINH
   useEffect(() => {
-    // Nếu đang ở trang phạt rồi thì dừng lại, không chạy code bên dưới nữa
+    // 1. Nếu là bot của công cụ tìm kiếm (Googlebot, Bingbot, AdsBot...) thì miễn trừ 100% để không ảnh hưởng SEO
+    if (typeof navigator !== 'undefined') {
+      const ua = navigator.userAgent.toLowerCase();
+      if (/googlebot|google-inspectiontool|adsbot-google|mediapartners-google|bingbot|ahrefsbot|semrushbot|facebookexternalhit/i.test(ua)) {
+        return;
+      }
+    }
+
+    const now = Date.now();
+
+    // 2. Kiểm tra xem người dùng có đang trong thời gian bị phạt tạm thời không
+    const bannedUntil = Number(localStorage.getItem('f5_banned_until') || 0);
+    if (bannedUntil > now) {
+      if (router.pathname !== '/access-denied-spam') {
+        router.push('/access-denied-spam');
+      }
+      return;
+    } else if (bannedUntil > 0) {
+      // Hết thời gian phạt -> xóa bỏ trạng thái phạt
+      localStorage.removeItem('f5_banned_until');
+      localStorage.removeItem('user_visits');
+    }
+
+    // Nếu đang ở trang phạt rồi thì dừng lại
     if (router.pathname === '/access-denied-spam') {
       return;
     }
 
-    const MAX_REQUESTS = 3;
-    const TIME_WINDOW = 60000;
+    // 3. Phân tích lịch sử lượt tải trang trong 10 giây gần nhất
+    const SHORT_WINDOW = 10000; // 10 giây
+    const MAX_SHORT_REQUESTS = 8; // Chỉ coi là spam nếu F5 liên tục > 8 lần trong 10 giây
 
-    const now = Date.now();
-    let visits = JSON.parse(localStorage.getItem('user_visits') || '[]');
-
-    // Lọc và chỉ giữ lại những lần truy cập trong vòng 1 phút đổ lại
-    visits = visits.filter(time => now - time < TIME_WINDOW);
-
-    // --- KIỂM TRA PHẠT ---
-    if (visits.length >= MAX_REQUESTS) {
-      console.log('Phát hiện F5 quá nhanh! Đang chặn...');
-      // Chuyển hướng kẻ phá hoại sang trang báo lỗi
-      router.push('/access-denied-spam');
-      return;
+    let visits = [];
+    try {
+      visits = JSON.parse(localStorage.getItem('user_visits') || '[]');
+    } catch {
+      visits = [];
     }
 
-    // Ghi nhận lần truy cập mới này vào lịch sử
+    // Lọc lại những lần truy cập trong 10 giây gần nhất
+    visits = visits.filter(time => now - time < SHORT_WINDOW);
     visits.push(now);
     localStorage.setItem('user_visits', JSON.stringify(visits));
-  }, []);
+
+    // --- KIỂM TRA PHẠT ---
+    if (visits.length > MAX_SHORT_REQUESTS) {
+      console.warn('Phát hiện F5 dồn dập bất thường! Tạm khóa 30 giây...');
+      // Tạm khóa trong 30 giây
+      localStorage.setItem('f5_banned_until', String(now + 30000));
+      localStorage.removeItem('user_visits');
+      router.push('/access-denied-spam');
+    }
+  }, [router.pathname]);
 
   // 3. Kiểm tra xem có đang ở trang phạt không
   const isBanned = router.asPath === '/access-denied-spam';
@@ -53,8 +80,6 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-        <title>Đồ Cũ Trung Kiên - Thu Mua Giá Cao Tận Nơi</title>
-        <meta name="description" content="Chuyên thu mua đồ gỗ, đồ cũ..." />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

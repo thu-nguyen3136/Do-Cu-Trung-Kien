@@ -2,34 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThanhLyNhaHangPage() {
   const hotline = "0398.771.444";
 
-  // Schema Markup cho doanh nghiệp địa phương (Tốt cho SEO)
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Đồ Cũ Trung Kiên",
-    "description": "Trung Kiên chuyên thu mua thanh lý nhà hàng trọn gói, giá cao tại TPHCM. Khảo sát miễn phí, tháo dỡ tận nơi, thanh toán ngay.",
-    "telephone": "0398.771.444",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-      "addressLocality": "Quận Bình Tân",
-      "addressRegion": "TP.HCM"
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thanh Lý Nhà Hàng', url: 'https://thumuadocutrungkien.com/thanh-ly-nha-hang' }
+  ];
+
+  const faqs = [
+    {
+      question: "Đồ Cũ Trung Kiên thu mua những thiết bị nhà hàng nào?",
+      answer: "Chúng tôi thu mua trọn gói toàn bộ: thiết bị bếp Á, bếp Âu công nghiệp, tum hút mùi, bàn ghế nhà hàng cao cấp, tủ đông tủ mát, bồn rửa inox, điều hòa âm trần và đồ dùng sảnh tiệc."
+    },
+    {
+      question: "Thời gian khảo sát và tháo dỡ nhà hàng mất bao lâu?",
+      answer: "Sau 30 phút nhận yêu cầu, đội ngũ chuyên viên sẽ có mặt tận nơi để định giá. Với nhà hàng quy mô lớn, chúng tôi cam kết tháo dỡ và hoàn trả mặt bằng sạch sẽ chỉ trong 24h - 48h."
+    },
+    {
+      question: "Hình thức thanh toán khi thanh lý nhà hàng như thế nào?",
+      answer: "Trung Kiên thanh toán 100% tiền mặt hoặc chuyển khoản ngay tại chỗ trước khi tiến hành bốc xếp hàng hóa lên xe."
     }
-  };
+  ];
+
+  const priceItems = [
+    { name: "Bếp Á đôi, bếp Á ba công nghiệp có quạt thổi", unit: "Bộ", priceRange: "4.500.000 - 18.000.000 đ", note: "Inox 304, còn sử dụng tốt" },
+    { name: "Bếp Âu 4 họng, 6 họng (Berjaya, OB4/OB6)", unit: "Chiếc", priceRange: "5.000.000 - 22.000.000 đ", note: "Có lò nướng hoặc không lò nướng" },
+    { name: "Tủ đông, tủ mát 4 cánh - 6 cánh inox công nghiệp", unit: "Chiếc", priceRange: "7.000.000 - 32.000.000 đ", note: "Berjaya, Hoshizaki, Sanaky" },
+    { name: "Bàn ghế nhà hàng (Gỗ sồi, bọc da, sofa nhà hàng tiệc)", unit: "Bộ", priceRange: "1.200.000 - 8.500.000 đ", note: "Bao gồm bàn và 4-8 ghế" },
+    { name: "Bàn sơ chế, chậu rửa bát inox 3 hố công nghiệp", unit: "Chiếc", priceRange: "1.500.000 - 6.500.000 đ", note: "Inox dày 1.0mm - 1.2mm" },
+    { name: "Hệ thống tum hút khói mùi & quạt hút ly tâm", unit: "Hệ thống", priceRange: "3.000.000 - 25.000.000 đ", note: "Tháo dỡ trọn gói tận nơi" },
+    { name: "Máy rửa chén bát công nghiệp nhà hàng", unit: "Máy", priceRange: "8.000.000 - 45.000.000 đ", note: "Winterhalter, Comenda, Dolphin" }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thanh Lý Nhà Hàng Giá Cao TPHCM | Khảo Sát 30P - Trung Kiên"
+        description="Dịch vụ thanh lý nhà hàng trọn gói giá cao TPHCM. Thu mua bếp Á Âu, tủ đông mát, bàn ghế, đồ inox. Khảo sát 30p, thanh toán 100%. Hotline: 0398.771.444."
+        keywords="thanh lý nhà hàng trọn gói, thanh lý nhà hàng giá cao, thanh lý nhà hàng tại tphcm, đồ cũ trung kiên, thu mua đồ nhà hàng cũ"
+        canonical="https://thumuadocutrungkien.com/thanh-ly-nha-hang"
+        ogImage="/thanh-ly-nha-hang.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thanh Lý Nhà Hàng Trọn Gói Giá Cao | Đồ Cũ Trung Kiên</title>
-        <meta name="description" content="Trung Kiên chuyên thu mua thanh lý nhà hàng trọn gói, giá cao. Dịch vụ chuyên nghiệp: khảo sát miễn phí, tháo dỡ tận nơi, thanh toán ngay 100%." />
-        <meta name="keywords" content="thanh lý nhà hàng trọn gói, thanh lý nhà hàng giá cao, thanh lý nhà hàng tại tphcm, đồ cũ trung kiên" />
-        <link rel="canonical" href="https://docutrungkien.com/thu-mua-do-cu/thanh-ly-nha-hang" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thu Mua Thanh Lý Nhà Hàng Trọn Gói Giá Cao"
+          description="Dịch vụ thu mua thanh lý nhà hàng trọn gói, thiết bị bếp công nghiệp, bàn ghế và nội thất nhà hàng giá cao tại TPHCM."
+          url="https://thumuadocutrungkien.com/thanh-ly-nha-hang"
+          image="https://thumuadocutrungkien.com/thanh-ly-nha-hang.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -62,7 +90,7 @@ export default function ThanhLyNhaHangPage() {
                     Trung Kiên - Đối Tác Tin Cậy Trong Dịch Vụ Thanh Lý Nhà Hàng Trọn Gói
                   </h2>
                   <p>
-                    Việc chuyển đổi mô hình, ngừng kinh doanh hoặc nâng cấp nhà hàng không còn là nỗi lo khi có <strong>Trung Kiên</strong>. Chúng tôi chuyên cung cấp dịch vụ <strong>thu mua đồ cũ và <Link href="/" className="text-brand-600 font-bold hover:underline">thanh lý nhà hàng</Link> trọn gói</strong>, giúp chủ đầu tư tối ưu hóa giá trị tài sản và giải quyết bài toán một cách nhanh chóng, hiệu quả.
+                    Việc chuyển đổi mô hình, ngừng kinh doanh hoặc nâng cấp nhà hàng không còn là nỗi lo khi có <Link href="/" className="text-brand-600 font-bold hover:underline">Đồ Cũ Trung Kiên</Link>. Chúng tôi chuyên cung cấp dịch vụ <strong>thu mua đồ cũ và thanh lý nhà hàng trọn gói</strong>, giúp chủ đầu tư tối ưu hóa giá trị tài sản và giải quyết bài toán một cách nhanh chóng, hiệu quả.
                   </p>
                 </section>
 
@@ -88,16 +116,16 @@ export default function ThanhLyNhaHangPage() {
                   </p>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 mt-6">
                     <li className="bg-gray-50 p-4 rounded-xl border border-gray-100 italic">
-                      <strong>Nội thất:</strong> Bàn ghế gỗ, ghế sofa, ghế bar, tủ kệ trưng bày, quầy bar, quầy thu ngân, bàn inox.
+                      <strong>Nội thất:</strong> Bàn ghế gỗ, ghế sofa, ghế bar, tủ kệ trưng bày, quầy bar, quầy thu ngân, <Link href="/thu-mua-do-inox-cu" className="text-brand-600 font-semibold hover:underline">bàn inox nhà hàng</Link>.
                     </li>
                     <li className="bg-gray-50 p-4 rounded-xl border border-gray-100 italic">
-                      <strong>Thiết bị bếp:</strong> Bếp Á công nghiệp, tủ cơm, lò nướng, lò vi sóng, máy xay, tủ đông, tủ mát, bàn inox gia công.
+                      <strong>Thiết bị bếp:</strong> Bếp Á công nghiệp, tủ cơm, lò nướng, lò vi sóng, máy xay, <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">tủ đông tủ mát công nghiệp</Link>, bàn inox gia công.
                     </li>
                     <li className="bg-gray-50 p-4 rounded-xl border border-gray-100 italic">
-                      <strong>Hệ thống điện:</strong> Máy lạnh công nghiệp, máy lạnh âm trần, quạt hút công nghiệp, đèn trang trí.
+                      <strong>Hệ thống điện & lạnh:</strong> Máy lạnh công nghiệp, máy lạnh âm trần, quạt hút công nghiệp, hệ thống đèn trang trí.
                     </li>
                     <li className="bg-gray-50 p-4 rounded-xl border border-gray-100 italic">
-                      <strong>Vật dụng khác:</strong> Chén, đĩa, ly, bát, nồi, chảo... (số lượng lớn).
+                      <strong>Dịch vụ liên quan:</strong> Nhận <Link href="/thanh-ly-quan-an" className="text-brand-600 font-semibold hover:underline">thanh lý quán ăn</Link>, <Link href="/thanh-ly-quan-nhau" className="text-brand-600 font-semibold hover:underline">thanh lý quán nhậu</Link>, <Link href="/thanh-ly-quan-ca-phe" className="text-brand-600 font-semibold hover:underline">thanh lý quán cafe</Link> trọn gói giá cao.
                     </li>
                   </ul>
                 </section>
@@ -189,6 +217,18 @@ export default function ThanhLyNhaHangPage() {
                     />
                   </div>
                 </figure>
+
+                {/* BẢNG GIÁ THAM KHẢO & FAQ ACCORDION (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thanh Lý Nhà Hàng Tham Khảo Mới Nhất"
+                  subtitle="Giá thu mua thực tế tùy thuộc vào hãng sản xuất, chất liệu inox và độ mới của sản phẩm. Gọi ngay để được định giá tận nơi miễn phí!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Giải Đáp Thắc Mắc Khi Thanh Lý Nhà Hàng"
+                  faqs={faqs}
+                />
 
                 {/* BỔ SUNG SEO: Khu vực phục vụ */}
                 <section className="bg-gray-900 text-white p-8 rounded-3xl shadow-xl">

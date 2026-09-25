@@ -1,18 +1,36 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../../components/Sidebar';
+import { BreadcrumbSchema, ArticleSchema } from '../../components/SchemaMarkup';
+import SEOHead from '../../components/SEOHead';
 
 export default function ArticleNhaHangKhachSan() {
   const hotline = "0398.771.444";
 
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Tin tức', url: 'https://thumuadocutrungkien.com/tin-tuc' },
+    { name: 'Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn', url: 'https://thumuadocutrungkien.com/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san' }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
-      <Head>
-        <title>5 Lưu Ý Quan Trọng Khi Thanh Lý Nhà Hàng Khách Sạn | Trung Kiên</title>
-        <meta name="description" content="Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ? Đọc ngay bài viết để biết cách định giá thiết bị bếp, nội thất buồng phòng." />
-        <link rel="canonical" href="https://thumuadocugiacao.net/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san" />
-      </Head>
+      <SEOHead
+        title="Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn Tránh Thua Lỗ | Trung Kiên"
+        description="Những lưu ý quan trọng khi thanh lý nhà hàng, khách sạn trọn gói để không bị ép giá, thất thoát tài sản và thu hồi vốn tối đa. Xem chi tiết!"
+        canonical="/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san"
+        ogType="article"
+        ogImage="/thanh-ly-noi-that-khach-san-1.jpg"
+        publishedTime="2024-02-10T08:00:00+07:00"
+        modifiedTime="2026-03-01T08:00:00+07:00"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
+      <ArticleSchema
+        title="5 Lưu Ý Quan Trọng Khi Thanh Lý Nhà Hàng Khách Sạn | Trung Kiên"
+        description="Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ? Đọc ngay bài viết để biết cách định giá thiết bị bếp, nội thất buồng phòng."
+        url="https://thumuadocutrungkien.com/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san"
+        image="https://thumuadocutrungkien.com/thanh-ly-noi-that-khach-san-1.jpg"
+      />
 
       <main className="flex-grow pb-20">
         {/* ================= BREADCRUMB ================= */}
@@ -111,8 +129,11 @@ export default function ArticleNhaHangKhachSan() {
                 <div className="w-16 h-16 bg-[#388e3c] rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">✓</div>
                 <div>
                   <h3 className="text-xl font-black text-[#111827] mb-2">Giải Pháp Từ Đồ Cũ Trung Kiên</h3>
-                  <p className="text-gray-600 mb-2">Trung Kiên tự hào là đối tác thanh lý nhà hàng, khách sạn uy tín hàng đầu khu vực phía Nam với năng lực xe tải và nhân công mạnh mẽ.</p>
-                  <Link href="/thanh-ly-nha-hang" className="text-[#388e3c] font-bold hover:underline">Xem ngay dịch vụ Thu Mua Khách Sạn Trọn Gói →</Link>
+                  <div className="flex flex-wrap gap-4 mt-3">
+                    <Link href="/thanh-ly-nha-hang" className="text-[#388e3c] font-bold hover:underline">Dịch vụ Thanh Lý Nhà Hàng →</Link>
+                    <span className="text-gray-300 hidden sm:inline">|</span>
+                    <Link href="/thu-mua-noi-that-khach-san" className="text-[#388e3c] font-bold hover:underline">Dịch vụ Thu Mua Nội Thất Khách Sạn →</Link>
+                  </div>
                 </div>
               </div>
 

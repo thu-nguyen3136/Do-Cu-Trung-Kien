@@ -1,3 +1,42 @@
+# robots.txt for https://thumuadocutrungkien.com/
+
 User-agent: *
 Allow: /
+Disallow: /access-denied-spam
+Disallow: /404
+Disallow: /admin-dashboard-access
+Disallow: /api/
+
+# Cho phép bot tìm kiếm tải tài nguyên tĩnh để render layout chính xác
+Allow: /_next/static/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Tối ưu riêng cho các bot tìm kiếm chính
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Chặn các AI scraper và bot đào dữ liệu vô ích gây tải server
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Sơ đồ trang web chính thức
 Sitemap: https://thumuadocutrungkien.com/sitemap.xml

@@ -1,34 +1,26 @@
-import Head from "next/head";
 import Link from "next/link";
+import { BreadcrumbSchema } from "../../components/SchemaMarkup";
+import SEOHead from "../../components/SEOHead";
+import newsPosts from "../../data/posts.json";
 
 export default function NewsPage() {
 
-  const news = [
-    {
-      id: 1,
-      title: "Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn",
-      desc: "Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ?",
-      image: "/thanh-ly-noi-that-khach-san-1.jpg",
-      slug: "/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san"
-    },
-    {
-      id: 2,
-      title: "Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM",
-      desc: "Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM",
-      image: "/thu-mua-do-cu-gia-dinh-3.jpeg",
-      slug: "/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
-    }
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Tin tức', url: 'https://thumuadocutrungkien.com/tin-tuc' }
   ];
+
+  const news = newsPosts;
 
   return (
     <>
-      <Head>
-        <title>Tin Tức Thu Mua Đồ Cũ | Trung Kiên</title>
-        <meta
-          name="description"
-          content="Cập nhật tin tức thu mua đồ cũ, kinh nghiệm thanh lý nhà xưởng, cửa cũ, thiết bị vệ sinh giá cao tại TP.HCM."
-        />
-      </Head>
+      <SEOHead
+        title="Tin Tức & Kinh Nghiệm Thanh Lý Đồ Cũ | Đồ Cũ Trung Kiên"
+        description="Tổng hợp kinh nghiệm thanh lý nhà hàng, khách sạn, quán cafe, đồ dùng gia đình giá cao. Cập nhật mẹo định giá đồ cũ từ chuyên gia: 0398.771.444."
+        canonical="/tin-tuc"
+        ogImage="/banner-do-cu-trung-kien.jpg"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
 
       <div className="min-h-screen flex flex-col bg-gray-50">
         <main className="flex-grow">
@@ -83,7 +75,7 @@ export default function NewsPage() {
                       </h2>
 
                       <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
-                        {item.desc}
+                        {item.description || item.desc}
                       </p>
 
                       <div className="text-[#388e3c] font-bold text-sm uppercase tracking-wide flex items-center gap-2 group-hover:text-[#2e7d32]">

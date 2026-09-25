@@ -113,7 +113,7 @@ export default function Footer() {
             <ul className="space-y-1">
               {[
 
-                { title: "Thanh Lý Quán Cafe", href: "/thanh-ly-quan-cafe" },
+                { title: "Thanh Lý Quán Cafe", href: "/thanh-ly-quan-ca-phe" },
                 { title: "Thanh Lý Nhà Hàng", href: "/thanh-ly-nha-hang" },
                 { title: "Thu Mua Tủ Đông, Tủ Mát", href: "/thu-mua-tu-dong-tu-mat" },
                 { title: "Thu Mua Đồ Cũ Gia Đình", href: "/thu-mua-do-cu-gia-dinh" },

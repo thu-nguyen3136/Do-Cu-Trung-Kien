@@ -143,7 +143,7 @@ export default function Header() {
                 <li className="py-2 px-3 text-brand-600 text-[12px] font-black border-b border-gray-50 bg-gray-50/50">Thu Mua Đồ Cũ</li>
                 <ul className="pl-4">
 
-                  <li><Link href="/thanh-ly-quan-cafe" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Cafe</Link></li>
+                  <li><Link href="/thanh-ly-quan-ca-phe" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Cafe</Link></li>
                   <li><Link href="/thanh-ly-quan-an" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Ăn</Link></li>
                   <li><Link href="/thanh-ly-quan-nhau" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Nhậu</Link></li>
                   <li><Link href="/thanh-ly-nha-hang" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Nhà Hàng</Link></li>

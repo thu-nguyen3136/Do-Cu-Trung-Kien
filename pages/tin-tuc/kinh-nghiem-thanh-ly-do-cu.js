@@ -1,18 +1,36 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../../components/Sidebar';
+import { BreadcrumbSchema, ArticleSchema } from '../../components/SchemaMarkup';
+import SEOHead from '../../components/SEOHead';
 
 export default function ArticleKinhNghiemDoCu() {
   const hotline = "0398.771.444";
 
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Tin tức', url: 'https://thumuadocutrungkien.com/tin-tuc' },
+    { name: 'Kinh Nghiệm Thanh Lý Đồ Cũ', url: 'https://thumuadocutrungkien.com/tin-tuc/kinh-nghiem-thanh-ly-do-cu' }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
-      <Head>
-        <title>Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM (Cập Nhật 2026)</title>
-        <meta name="description" content="Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM. Chọn đúng đơn vị thu mua trọn gói giúp bạn không bị ép giá." />
-        <link rel="canonical" href="https://thumuadocugiacao.net/tin-tuc/kinh-nghiem-thanh-ly-do-cu-gia-cao" />
-      </Head>
+      <SEOHead
+        title="Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM | Trung Kiên"
+        description="Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM. Chọn đúng đơn vị thu mua trọn gói giúp bạn không bị ép giá."
+        canonical="/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
+        ogType="article"
+        ogImage="/thu-mua-do-cu-gia-dinh-3.jpeg"
+        publishedTime="2024-01-15T08:00:00+07:00"
+        modifiedTime="2026-03-01T08:00:00+07:00"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
+      <ArticleSchema
+        title="Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM (Cập Nhật 2026)"
+        description="Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM. Chọn đúng đơn vị thu mua trọn gói giúp bạn không bị ép giá."
+        url="https://thumuadocutrungkien.com/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
+        image="https://thumuadocutrungkien.com/thu-mua-do-cu-gia-dinh-3.jpeg"
+      />
 
       <main className="flex-grow pb-20">
         {/* ================= BREADCRUMB ================= */}
