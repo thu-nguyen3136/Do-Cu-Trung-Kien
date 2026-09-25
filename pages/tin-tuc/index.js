@@ -70,7 +70,7 @@ export default function NewsPage() {
                         Tin tức
                       </span>
 
-                      <h2 className="font-black text-xl text-[#111827] mt-2 mb-3 line-clamp-2 group-hover:text-[#388e3c] transition-colors">
+                      <h2 className="font-black !text-xl text-[#111827] mt-2 mb-3 line-clamp-2 group-hover:text-[#388e3c] transition-colors">
                         {item.title}
                       </h2>
 

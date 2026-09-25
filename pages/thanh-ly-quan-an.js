@@ -31,17 +31,17 @@ export default function ThanhLyQuanAnPage() {
   ];
 
   const priceItems = [
-    { name: "Bàn ghế gỗ quán ăn, quán cơm (Bàn + 4 ghế)", unit: "Bộ", priceRange: "600.000 - 2.800.000 đ", note: "Gỗ cao su, gỗ thông, chân sắt" },
-    { name: "Bàn ghế inox quán ăn (Bàn inox chữ nhật + 6 ghế đôn)", unit: "Bộ", priceRange: "700.000 - 3.200.000 đ", note: "Inox 201/304 sáng bóng" },
-    { name: "Bếp khè gas công nghiệp (Gado, Wonderful...)", unit: "Họng", priceRange: "300.000 - 1.200.000 đ", note: "Kèm dây van gas điều áp" },
-    { name: "Tủ cơm công nghiệp, nồi nấu phở/hầm xương điện", unit: "Chiếc", priceRange: "2.000.000 - 8.500.000 đ", note: "30L - 100L inox cao cấp" },
-    { name: "Tủ mát, tủ đông trữ thực phẩm quán ăn", unit: "Chiếc", priceRange: "2.500.000 - 14.000.000 đ", note: "Sanaky, Alaska, Darling" },
-    { name: "Chậu rửa inox, kệ chén inox, bàn chặt thực phẩm", unit: "Chiếc", priceRange: "800.000 - 4.500.000 đ", note: "Inox 304 không gỉ" },
-    { name: "Trọn gói chén, đĩa sứ/melamine, xoong nồi, muỗng đũa", unit: "Lô/Trọn gói", priceRange: "1.000.000 - 10.000.000 đ", note: "Định giá theo số lượng" }
+    { name: "Thanh lý bàn ghế gỗ quán ăn, quán cơm (Bàn + 4 ghế)", unit: "Bộ", priceRange: "600.000 - 2.800.000 đ", note: "Gỗ cao su, gỗ thông, chân sắt" },
+    { name: "Thanh lý bàn ghế inox quán ăn (Bàn inox chữ nhật + 6 ghế đôn)", unit: "Bộ", priceRange: "700.000 - 3.200.000 đ", note: "Inox 201/304 sáng bóng" },
+    { name: "Thanh lý bếp khè gas công nghiệp (Gado, Wonderful...)", unit: "Họng", priceRange: "300.000 - 1.200.000 đ", note: "Kèm dây van gas điều áp" },
+    { name: "Thanh lý tủ cơm công nghiệp, nồi nấu phở/hầm xương điện", unit: "Chiếc", priceRange: "2.000.000 - 8.500.000 đ", note: "30L - 100L inox cao cấp" },
+    { name: "Thanh lý tủ mát, tủ đông trữ thực phẩm quán ăn", unit: "Chiếc", priceRange: "2.500.000 - 14.000.000 đ", note: "Sanaky, Alaska, Darling" },
+    { name: "Thanh lý chậu rửa inox, kệ chén inox, bàn chặt thực phẩm", unit: "Chiếc", priceRange: "800.000 - 4.500.000 đ", note: "Inox 304 không gỉ" },
+    { name: "Thanh lý trọn gói chén, đĩa sứ/melamine, xoong nồi, muỗng đũa", unit: "Lô/Trọn gói", priceRange: "1.000.000 - 10.000.000 đ", note: "Định giá theo số lượng" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thanh Lý Quán Ăn Giá Cao TPHCM | Thu Mua Trọn Gói 30 Phút"
         description="Dịch vụ thanh lý quán ăn, quán cơm giá cao nhất TPHCM. Thu mua bàn ghế, bếp khè, tủ mát, đồ inox. Tự tháo dỡ, dọn dẹp sạch sẽ. Gọi ngay: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThanhLyQuanAnPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
             {/* --- CỘT TRÁI: NỘI DUNG --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               {/* TIÊU ĐỀ GỐC (Chuẩn H1) */}
               <h1 className="text-2xl md:text-3xl font-black text-brand-600 uppercase mb-8 leading-tight">
@@ -109,7 +109,7 @@ export default function ThanhLyQuanAnPage() {
                 </figure>
 
                 {/* TEXT GỐC 3 */}
-                <h2 className="text-xl md:text-2xl font-bold text-red-600 uppercase">
+                <h2 className="!text-xl md:!text-2xl font-bold text-red-600 uppercase">
                   Dịch Vụ Thanh Lý Quán Ăn Chuyên Nghiệp Tại TPHCM
                 </h2>
                 <p>
@@ -129,7 +129,7 @@ export default function ThanhLyQuanAnPage() {
                 </figure>
 
                 {/* TEXT GỐC 4 (Lý do chọn) */}
-                <h2 className="text-xl md:text-2xl font-bold text-red-600 uppercase">
+                <h2 className="!text-xl md:!text-2xl font-bold text-red-600 uppercase">
                   Tại Sao Nên Chọn Dịch Vụ Thu Mua Quán Ăn Của Trung Kiên?
                 </h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">

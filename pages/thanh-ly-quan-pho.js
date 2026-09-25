@@ -31,17 +31,17 @@ export default function ThanhLyQuanPhoPage() {
   ];
 
   const priceItems = [
-    { name: "Bộ 3 nồi nấu phở điện inox (Hầm xương, nấu nước lèo, trần bánh)", unit: "Bộ", priceRange: "4.500.000 - 16.000.000 đ", note: "Inox 304 dày 1.2mm, thanh nhiệt mới" },
-    { name: "Nồi nấu phở điện đơn 50L - 100L", unit: "Chiếc", priceRange: "1.800.000 - 6.000.000 đ", note: "Chế độ sôi tự động ngắt tiết kiệm điện" },
-    { name: "Xe đẩy bán phở, tủ kính inox bán bún phở có bánh xe", unit: "Chiếc", priceRange: "2.000.000 - 7.500.000 đ", note: "Kèm nồi gắn liền hoặc tủ kính trưng bày" },
-    { name: "Bàn ghế inox chữ nhật + ghế đôn inox quán phở", unit: "Bộ", priceRange: "700.000 - 3.200.000 đ", note: "1 bàn + 6 ghế đôn inox 201/304" },
-    { name: "Tủ đông tủ mát bảo quản thịt bò, rau củ", unit: "Chiếc", priceRange: "2.500.000 - 12.000.000 đ", note: "Sanaky, Alaska, Darling" },
-    { name: "Máy thái thịt bò tươi sống quán phở", unit: "Máy", priceRange: "1.500.000 - 6.500.000 đ", note: "Lưỡi dao thép sắc bén, mô tơ khỏe" },
-    { name: "Bát tô sứ trắng, muỗng đũa, hộp gia vị, ớt tỏi", unit: "Lô/Trọn gói", priceRange: "800.000 - 5.000.000 đ", note: "Định giá theo số lượng thực tế" }
+    { name: "Thanh lý bộ 3 nồi nấu phở điện inox (Hầm xương, nấu nước lèo, trần bánh)", unit: "Bộ", priceRange: "4.500.000 - 16.000.000 đ", note: "Inox 304 dày 1.2mm, thanh nhiệt mới" },
+    { name: "Thanh lý nồi nấu phở điện đơn 50L - 100L", unit: "Chiếc", priceRange: "1.800.000 - 6.000.000 đ", note: "Chế độ sôi tự động ngắt tiết kiệm điện" },
+    { name: "Thanh lý xe đẩy bán phở, tủ kính inox bán bún phở có bánh xe", unit: "Chiếc", priceRange: "2.000.000 - 7.500.000 đ", note: "Kèm nồi gắn liền hoặc tủ kính trưng bày" },
+    { name: "Thanh lý bàn ghế inox chữ nhật + ghế đôn inox quán phở", unit: "Bộ", priceRange: "700.000 - 3.200.000 đ", note: "1 bàn + 6 ghế đôn inox 201/304" },
+    { name: "Thanh lý tủ đông tủ mát bảo quản thịt bò, rau củ", unit: "Chiếc", priceRange: "2.500.000 - 12.000.000 đ", note: "Sanaky, Alaska, Darling" },
+    { name: "Thanh lý máy thái thịt bò tươi sống quán phở", unit: "Máy", priceRange: "1.500.000 - 6.500.000 đ", note: "Lưỡi dao thép sắc bén, mô tơ khỏe" },
+    { name: "Thanh lý bát tô sứ trắng, muỗng đũa, hộp gia vị, ớt tỏi", unit: "Lô/Trọn gói", priceRange: "800.000 - 5.000.000 đ", note: "Định giá theo số lượng thực tế" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thanh Lý Quán Phở Giá Cao TPHCM | Nồi Phở Điện, Bàn Ghế Inox"
         description="Thu mua thanh lý quán phở, bún bò, hủ tiếu trọn gói giá cao TPHCM. Nồi phở điện, tủ kính bán phở, bàn ghế inox. Khảo sát 30p. Hotline: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThanhLyQuanPhoPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
@@ -85,7 +85,7 @@ export default function ThanhLyQuanPhoPage() {
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-justify space-y-8">
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Dịch Vụ Thu Mua Đồ Dùng Quán Phở Uy Tín Tại TPHCM
                   </h2>
                   <p>
@@ -110,7 +110,7 @@ export default function ThanhLyQuanPhoPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Trung Kiên Nhận Thu Mua Những Gì Tại Quán Phở?
                   </h2>
                   <p>
@@ -145,7 +145,7 @@ export default function ThanhLyQuanPhoPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100">
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
                     Tại Sao Nên Chọn Đồ Cũ Trung Kiên?
                   </h2>
                   <div className="grid grid-cols-1 gap-4">
@@ -193,7 +193,7 @@ export default function ThanhLyQuanPhoPage() {
 
                 {/* KHU VỰC PHỤC VỤ (SEO LOCAL) */}
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6">
                     Khu Vực Thu Mua Quán Phở Tại TP.HCM
                   </h2>
                   <p>Chúng tôi nhận thu mua tận nơi tại tất cả các quận huyện:</p>

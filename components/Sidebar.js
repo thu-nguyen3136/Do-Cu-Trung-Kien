@@ -29,6 +29,14 @@ export default function Sidebar() {
             </Link>
           </li>
           <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
+            <Link href="/thu-mua-quan-karaoke" className="flex items-center gap-3 group">
+              <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                <Image src="/thu-mua-quan-karaoke-3.jpg" alt="Thu Mua Quán Karaoke" fill className="object-cover group-hover:scale-110 transition-transform" />
+              </div>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thu Mua Quán Karaoke</h6>
+            </Link>
+          </li>
+          <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
             <Link href="/thu-mua-do-inox-cu" className="flex items-center gap-3 group">
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                 <Image src="/thu-mua-do-inox.jpg" alt="Thu Mua Đồ Inox Cũ" fill className="object-cover group-hover:scale-110 transition-transform" />

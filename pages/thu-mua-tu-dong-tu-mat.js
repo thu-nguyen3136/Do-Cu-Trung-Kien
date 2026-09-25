@@ -31,17 +31,17 @@ export default function ThuMuaTuDongTuMatPage() {
   ];
 
   const priceItems = [
-    { name: "Tủ đông nằm Sanaky, Alaska 1 ngăn đông, 2 ngăn đông mát (100L - 500L)", unit: "Chiếc", priceRange: "1.500.000 - 5.500.000 đ", note: "Dàn đồng hoặc dàn nhôm" },
-    { name: "Tủ đông mặt kính lùa cong trưng bày kem, hải sản", unit: "Chiếc", priceRange: "2.500.000 - 8.500.000 đ", note: "Kính cường lực có sấy kính" },
-    { name: "Tủ mát trưng bày nước ngọt 1 cánh kính (200L - 450L)", unit: "Chiếc", priceRange: "1.800.000 - 5.000.000 đ", note: "Sanaky, Alaska, Panasonic, Aqua" },
-    { name: "Tủ mát siêu thị 2 cánh, 3 cánh kính lùa/mở (800L - 1500L)", unit: "Chiếc", priceRange: "4.500.000 - 18.000.000 đ", note: "Đèn LED, quạt đảo nhiệt đều" },
-    { name: "Tủ đông tủ mát công nghiệp inox 4 cánh, 6 cánh (Berjaya)", unit: "Chiếc", priceRange: "7.000.000 - 28.000.000 đ", note: "Inox chuyên dùng cho nhà hàng" },
-    { name: "Tủ bánh kem để bàn, tủ bánh sinh nhật kính vuông", unit: "Chiếc", priceRange: "3.500.000 - 14.000.000 đ", note: "Sấy kính không đọng sương" },
-    { name: "Tủ đông hư hỏng, yếu lạnh hoặc xì gas", unit: "Chiếc", priceRange: "500.000 - 2.500.000 đ", note: "Thu mua tận nơi linh kiện/xác tủ" }
+    { name: "Thu mua tủ đông nằm Sanaky, Alaska 1 ngăn đông, 2 ngăn đông mát (100L - 500L)", unit: "Chiếc", priceRange: "1.500.000 - 5.500.000 đ", note: "Dàn đồng hoặc dàn nhôm" },
+    { name: "Thu mua tủ đông mặt kính lùa cong trưng bày kem, hải sản", unit: "Chiếc", priceRange: "2.500.000 - 8.500.000 đ", note: "Kính cường lực có sấy kính" },
+    { name: "Thu mua tủ mát trưng bày nước ngọt 1 cánh kính (200L - 450L)", unit: "Chiếc", priceRange: "1.800.000 - 5.000.000 đ", note: "Sanaky, Alaska, Panasonic, Aqua" },
+    { name: "Thu mua tủ mát siêu thị 2 cánh, 3 cánh kính lùa/mở (800L - 1500L)", unit: "Chiếc", priceRange: "4.500.000 - 18.000.000 đ", note: "Đèn LED, quạt đảo nhiệt đều" },
+    { name: "Thu mua tủ đông tủ mát công nghiệp inox 4 cánh, 6 cánh (Berjaya)", unit: "Chiếc", priceRange: "7.000.000 - 28.000.000 đ", note: "Inox chuyên dùng cho nhà hàng" },
+    { name: "Thu mua tủ bánh kem để bàn, tủ bánh sinh nhật kính vuông", unit: "Chiếc", priceRange: "3.500.000 - 14.000.000 đ", note: "Sấy kính không đọng sương" },
+    { name: "Thu mua tủ đông hư hỏng, yếu lạnh hoặc xì gas", unit: "Chiếc", priceRange: "500.000 - 2.500.000 đ", note: "Thu mua tận nơi linh kiện/xác tủ" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thu Mua Tủ Đông Tủ Mát Cũ Giá Cao TPHCM | Sanaky, Alaska"
         description="Thu mua tủ đông, tủ mát cũ giá cao tận nơi tại TPHCM. Mua tủ đông Sanaky, Alaska, tủ mát siêu thị, tủ bánh kem, tủ hư hỏng xì gas. Hotline: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThuMuaTuDongTuMatPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
@@ -85,7 +85,7 @@ export default function ThuMuaTuDongTuMatPage() {
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-justify space-y-8">
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Chuyên Thu Mua Tủ Đông, Tủ Mát Tận Nơi - Thanh Toán Ngay
                   </h2>
                   <p>
@@ -111,7 +111,7 @@ export default function ThuMuaTuDongTuMatPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Các dòng tủ đông - tủ mát chúng tôi nhận thu mua:
                   </h2>
                   <p>Chúng tôi không giới hạn thương hiệu hay kích cỡ, chỉ cần tủ còn hoạt động hoặc hư hỏng nhẹ, chúng tôi đều thu mua:</p>
@@ -144,7 +144,7 @@ export default function ThuMuaTuDongTuMatPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100">
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
                     Tại sao nên thanh lý tủ cho Trung Kiên?
                   </h2>
                   <div className="grid grid-cols-1 gap-4">
@@ -192,7 +192,7 @@ export default function ThuMuaTuDongTuMatPage() {
 
                 {/* SEO LOCAL SECTION */}
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6 text-left">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6 text-left">
                     Khu Vực Thu Mua Tủ Đông - Tủ Mát
                   </h2>
                   <p className="text-left">Chúng tôi có xe tải túc trực tại các khu vực để thu mua nhanh nhất:</p>

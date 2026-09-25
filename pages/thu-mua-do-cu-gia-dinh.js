@@ -31,17 +31,17 @@ export default function ThuMuaDoCuGiaDinhPage() {
   ];
 
   const priceItems = [
-    { name: "Sofa da, sofa nỉ, salon gỗ phòng khách (Bộ kèm bàn trà)", unit: "Bộ", priceRange: "1.000.000 - 9.500.000 đ", note: "Gỗ sồi, gõ đỏ, nệm da cao cấp" },
-    { name: "Giường ngủ gỗ, nệm cao su non/Kim Cương/Kymdan", unit: "Chiếc", priceRange: "800.000 - 8.000.000 đ", note: "Kích thước 1m6x2m, 1m8x2m" },
-    { name: "Tủ quần áo gỗ công nghiệp MDF, tủ gỗ tự nhiên 2-4 cánh", unit: "Chiếc", priceRange: "1.000.000 - 6.500.000 đ", note: "Không mục nát, bản lề trơn tru" },
-    { name: "Tủ lạnh gia đình (Inverter, Side by Side, 2 cánh)", unit: "Chiếc", priceRange: "1.200.000 - 10.000.000 đ", note: "Toshiba, Panasonic, LG, Samsung" },
-    { name: "Máy giặt cửa trên, máy giặt cửa trước", unit: "Chiếc", priceRange: "1.000.000 - 6.000.000 đ", note: "Electrolux, LG, Toshiba, Aqua" },
-    { name: "Máy lạnh treo tường (1HP - 2.5HP)", unit: "Bộ", priceRange: "1.500.000 - 5.500.000 đ", note: "Daikin, Panasonic, Casper, Sharp" },
-    { name: "Bàn ăn gia đình (Bàn mặt đá, bàn gỗ + 4-6 ghế)", unit: "Bộ", priceRange: "800.000 - 5.000.000 đ", note: "Khung chắc chắn, mặt bàn bóng đẹp" }
+    { name: "Thu mua sofa da, sofa nỉ, salon gỗ phòng khách (Bộ kèm bàn trà)", unit: "Bộ", priceRange: "1.000.000 - 9.500.000 đ", note: "Gỗ sồi, gõ đỏ, nệm da cao cấp" },
+    { name: "Thu mua giường ngủ gỗ, nệm cao su non/Kim Cương/Kymdan", unit: "Chiếc", priceRange: "800.000 - 8.000.000 đ", note: "Kích thước 1m6x2m, 1m8x2m" },
+    { name: "Thu mua tủ quần áo gỗ công nghiệp MDF, tủ gỗ tự nhiên 2-4 cánh", unit: "Chiếc", priceRange: "1.000.000 - 6.500.000 đ", note: "Không mục nát, bản lề trơn tru" },
+    { name: "Thu mua tủ lạnh gia đình (Inverter, Side by Side, 2 cánh)", unit: "Chiếc", priceRange: "1.200.000 - 10.000.000 đ", note: "Toshiba, Panasonic, LG, Samsung" },
+    { name: "Thu mua máy giặt cửa trên, máy giặt cửa trước", unit: "Chiếc", priceRange: "1.000.000 - 6.000.000 đ", note: "Electrolux, LG, Toshiba, Aqua" },
+    { name: "Thu mua máy lạnh treo tường (1HP - 2.5HP)", unit: "Bộ", priceRange: "1.500.000 - 5.500.000 đ", note: "Daikin, Panasonic, Casper, Sharp" },
+    { name: "Thu mua bàn ăn gia đình (Bàn mặt đá, bàn gỗ + 4-6 ghế)", unit: "Bộ", priceRange: "800.000 - 5.000.000 đ", note: "Khung chắc chắn, mặt bàn bóng đẹp" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thu Mua Đồ Cũ Gia Đình Giá Cao TPHCM | Nội Thất, Điện Lạnh"
         description="Thu mua đồ cũ gia đình trọn gói giá cao tại TPHCM. Bàn ghế gỗ, salon sofa, giường tủ, tivi, tủ lạnh, máy giặt. Tự tháo dỡ, dọn sạch: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
@@ -122,7 +122,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6 border-l-4 border-red-700 pl-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6 border-l-4 border-red-700 pl-4">
                     Trung Kiên Nhận Thu Mua Những Mặt Hàng Gia Đình Nào?
                   </h2>
                   <p>Chúng tôi nhận thu mua hầu hết các vật dụng trong gia đình, từ phòng khách, phòng ngủ đến nhà bếp. Bao gồm:</p>
@@ -155,7 +155,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100 mt-10">
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
                     Quy Trình Thu Mua Chuyên Nghiệp - Không Ngại Mưa Nắng
                   </h2>
                   <div className="space-y-4 text-[17px]">
@@ -180,7 +180,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6 border-l-4 border-red-700 pl-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6 border-l-4 border-red-700 pl-4">
                     Vì Sao Bạn Nên Chọn Đồ Cũ Trung Kiên?
                   </h2>
                   <ul className="grid grid-cols-1 gap-4 list-none p-0">

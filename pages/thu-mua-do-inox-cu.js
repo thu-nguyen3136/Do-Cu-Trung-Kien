@@ -31,17 +31,17 @@ export default function ThuMuaDoInoxPage() {
   ];
 
   const priceItems = [
-    { name: "Bàn inox 304 có tầng, bàn sơ chế đồ ăn", unit: "Chiếc", priceRange: "1.200.000 - 4.500.000 đ", note: "Inox dày 1.0mm - 1.5mm, có lót gỗ" },
-    { name: "Bàn ghế inox chữ nhật, bàn tròn tiệc inox", unit: "Bộ", priceRange: "600.000 - 3.200.000 đ", note: "1 bàn + 6-10 ghế đôn inox" },
-    { name: "Chậu rửa bát inox công nghiệp (1 hố, 2 hố, 3 hố)", unit: "Chiếc", priceRange: "1.500.000 - 6.000.000 đ", note: "Kèm vòi cấp xả và bàn chờ" },
-    { name: "Kệ inox để chén đĩa, giá nan inox 3-5 tầng", unit: "Chiếc", priceRange: "800.000 - 3.500.000 đ", note: "Inox thanh hộp chắc chắn" },
-    { name: "Tum hút mùi inox, quạt ly tâm công nghiệp", unit: "Hệ thống", priceRange: "2.500.000 - 18.000.000 đ", note: "Tự tháo dỡ nguyên hệ thống" },
-    { name: "Xe đẩy thức ăn inox, xe đẩy khay cơm 3 tầng", unit: "Chiếc", priceRange: "700.000 - 2.800.000 đ", note: "Bánh xe xoay 360 độ" },
-    { name: "Bồn nước inox Đại Thành, Sơn Hà cũ (500L - 2000L)", unit: "Bồn", priceRange: "1.000.000 - 4.500.000 đ", note: "Inox 304 không thủng, rò rỉ" }
+    { name: "Thu mua bàn inox 304 có tầng, bàn sơ chế đồ ăn", unit: "Chiếc", priceRange: "1.200.000 - 4.500.000 đ", note: "Inox dày 1.0mm - 1.5mm, có lót gỗ" },
+    { name: "Thu mua bàn ghế inox chữ nhật, bàn tròn tiệc inox", unit: "Bộ", priceRange: "600.000 - 3.200.000 đ", note: "1 bàn + 6-10 ghế đôn inox" },
+    { name: "Thu mua chậu rửa bát inox công nghiệp (1 hố, 2 hố, 3 hố)", unit: "Chiếc", priceRange: "1.500.000 - 6.000.000 đ", note: "Kèm vòi cấp xả và bàn chờ" },
+    { name: "Thu mua kệ inox để chén đĩa, giá nan inox 3-5 tầng", unit: "Chiếc", priceRange: "800.000 - 3.500.000 đ", note: "Inox thanh hộp chắc chắn" },
+    { name: "Thu mua tum hút mùi inox, quạt ly tâm công nghiệp", unit: "Hệ thống", priceRange: "2.500.000 - 18.000.000 đ", note: "Tự tháo dỡ nguyên hệ thống" },
+    { name: "Thu mua xe đẩy thức ăn inox, xe đẩy khay cơm 3 tầng", unit: "Chiếc", priceRange: "700.000 - 2.800.000 đ", note: "Bánh xe xoay 360 độ" },
+    { name: "Thu mua bồn nước inox Đại Thành, Sơn Hà cũ (500L - 2000L)", unit: "Bồn", priceRange: "1.000.000 - 4.500.000 đ", note: "Inox 304 không thủng, rò rỉ" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thu Mua Đồ Inox Cũ Giá Cao TPHCM | Bàn Ghế, Bếp Inox 304"
         description="Đồ Cũ Trung Kiên thu mua đồ inox cũ giá cao tại TPHCM: bàn sơ chế inox, bồn rửa chén, kệ inox, tum hút mùi, bàn ghế inox tiệc. Hotline: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThuMuaDoInoxPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH (3/4) --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
@@ -106,7 +106,7 @@ export default function ThuMuaDoInoxPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
                     Những mặt hàng đồ inox mà Trung Kiên nhận thu mua và Thanh lý:
                   </h2>
                   <ul className="list-none p-0 space-y-4 text-[20px]">
@@ -152,7 +152,7 @@ export default function ThuMuaDoInoxPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100">
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-gray-800 uppercase mb-6 text-center">
                     Quy Trình Thu Mua Đồ Cũ Của Công Ty Chúng Tôi
                   </h2>
                   <div className="space-y-6 text-[18px]">
@@ -174,7 +174,7 @@ export default function ThuMuaDoInoxPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
                     Cam kết thu mua đồ inox cũ giá cao nhất tại TP HCM
                   </h2>
                   <ul className="grid grid-cols-1 gap-4 list-none p-0">

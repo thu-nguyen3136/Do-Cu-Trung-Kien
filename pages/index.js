@@ -56,6 +56,7 @@ export default function Home() {
         { id: 8, title: 'Thu Mua Đồ Inox Cũ', image: '/thu-mua-do-inox.jpg', link: '/thu-mua-do-inox-cu', description: 'Thu mua bồn rửa inox, bàn bếp inox, kệ inox và đồ dùng inox công nghiệp.' },
         { id: 9, title: 'Thu mua đồ cũ gia đình', image: '/thu-mua-do-cu-gia-dinh.jpg', link: '/thu-mua-do-cu-gia-dinh', description: 'Thu mua nội thất gia đình, đồ gỗ cũ, tủ thờ, bàn ghế gỗ và đồ điện lạnh cũ.' },
         { id: 10, title: 'Thu Mua Nội Thất Khách Sạn', image: '/thanh-ly-noi-that-khach-san.jpg', link: '/thu-mua-noi-that-khach-san', description: 'Thu mua trọn gói nội thất khách sạn, giường, tủ, nệm và thiết bị điện dân dụng.' },
+        { id: 11, title: 'Thu Mua Quán Karaoke', image: '/thu-mua-quan-karaoke-3.jpg', link: '/thu-mua-quan-karaoke-3', description: 'Thu mua trọn gói dàn âm thanh, loa, amply, ánh sáng sân khấu, tivi và bàn ghế sofa quán karaoke.' },
       ]
     }
   ];
@@ -659,11 +660,11 @@ export default function Home() {
         <CoverageArea />
 
         {/* NEWS SECTION */}
-        <section className="pt-4 pb-4 md:pt-4 md:pb-4 bg-gray-50" id="tin-tuc">
+        <section className="pt-1 pb-1 md:pt-1 md:pb-1 bg-gray-50" id="tin-tuc">
           <div className="max-w-[1400px] mx-auto px-5 md:px-10">
 
             {/* HEADER */}
-            <div className="text-center mb-10 md:mb-12">
+            <div className="text-center mb-5 md:mb-6">
               <h2 className="text-3xl md:text-5xl font-bold text-[#111827] uppercase">
                 Cập Nhật Tin Tức <span className="text-[#2e7d32]">Mới Nhất</span>
               </h2>

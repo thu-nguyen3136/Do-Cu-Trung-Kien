@@ -31,17 +31,17 @@ export default function ThanhLyQuanCafePage() {
   ];
 
   const priceItems = [
-    { name: "Máy pha cà phê Espresso chuyên nghiệp (1 group, 2 group)", unit: "Máy", priceRange: "6.000.000 - 45.000.000 đ", note: "Nuova Simonelli, Breville, Expobar, Casadio" },
-    { name: "Máy xay cà phê hạt tự động", unit: "Máy", priceRange: "1.200.000 - 8.000.000 đ", note: "Fiorenzato, Mazzer, Eureka..." },
-    { name: "Bàn ghế cafe cóc, vỉa hè (Ghế xếp inox, bàn gỗ xếp)", unit: "Bộ", priceRange: "300.000 - 1.200.000 đ", note: "Bao gồm 1 bàn + 4 ghế" },
-    { name: "Bàn ghế gỗ cafe máy lạnh, sofa quán cafe", unit: "Bộ", priceRange: "800.000 - 5.500.000 đ", note: "Bàn me tây, ghế eames, ghế nệm" },
-    { name: "Tủ bánh kem, tủ mát trưng bày đồ uống", unit: "Chiếc", priceRange: "3.500.000 - 16.000.000 đ", note: "Kính vuông, kính cong các cỡ" },
-    { name: "Máy làm đá viên tự động quán cafe", unit: "Máy", priceRange: "5.000.000 - 25.000.000 đ", note: "Công suất 30kg - 200kg/ngày" },
-    { name: "Quầy bar pha chế, kệ để ly inox, bồn rửa quầy bar", unit: "Bộ", priceRange: "2.000.000 - 12.000.000 đ", note: "Inox 304 quầy bar chuyên dụng" }
+    { name: "Thanh lý máy pha cà phê Espresso chuyên nghiệp (1 group, 2 group)", unit: "Máy", priceRange: "6.000.000 - 45.000.000 đ", note: "Nuova Simonelli, Breville, Expobar, Casadio" },
+    { name: "Thanh lý máy xay cà phê hạt tự động", unit: "Máy", priceRange: "1.200.000 - 8.000.000 đ", note: "Fiorenzato, Mazzer, Eureka..." },
+    { name: "Thanh lý bàn ghế cafe cóc, vỉa hè (Ghế xếp inox, bàn gỗ xếp)", unit: "Bộ", priceRange: "300.000 - 1.200.000 đ", note: "Bao gồm 1 bàn + 4 ghế" },
+    { name: "Thanh lý bàn ghế gỗ cafe máy lạnh, sofa quán cafe", unit: "Bộ", priceRange: "800.000 - 5.500.000 đ", note: "Bàn me tây, ghế eames, ghế nệm" },
+    { name: "Thanh lý tủ bánh kem, tủ mát trưng bày đồ uống", unit: "Chiếc", priceRange: "3.500.000 - 16.000.000 đ", note: "Kính vuông, kính cong các cỡ" },
+    { name: "Thanh lý máy làm đá viên tự động quán cafe", unit: "Máy", priceRange: "5.000.000 - 25.000.000 đ", note: "Công suất 30kg - 200kg/ngày" },
+    { name: "Thanh lý quầy bar pha chế, kệ để ly inox, bồn rửa quầy bar", unit: "Bộ", priceRange: "2.000.000 - 12.000.000 đ", note: "Inox 304 quầy bar chuyên dụng" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thanh Lý Quán Cafe Giá Cao TPHCM | Thu Mua Trọn Gói 30P"
         description="Thu mua thanh lý quán cafe, quán cà phê trọn gói giá cao tại TPHCM. Bàn ghế gỗ, sofa, máy pha cafe Espresso, máy xay, quầy bar. Hotline: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThanhLyQuanCafePage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH (3/4) --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
@@ -131,7 +131,7 @@ export default function ThanhLyQuanCafePage() {
                   </div>
                 </figure>
 
-                <h2 className="text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
+                <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
                   Ưu điểm khi chọn thanh lý quán cafe tại Trung Kiên
                 </h2>
 
@@ -164,7 +164,7 @@ export default function ThanhLyQuanCafePage() {
                   <figcaption className="mt-4 text-brand-600 font-bold uppercase tracking-wide">Uy tín làm hàng đầu - Không ngại đường xa</figcaption>
                 </figure>
 
-                <h2 className="text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
+                <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
                   Cam kết của chúng tôi
                 </h2>
 

@@ -39,15 +39,12 @@ export default function CompetitorComparison() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-white border-t border-gray-100 overflow-hidden">
+    <section className="py-2 md:py-4 bg-white border-t border-gray-100 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-        
+
         {/* TIÊU ĐỀ */}
-        <div className="text-center mb-10 md:mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#18631c]/10 text-[#18631c] text-xs md:text-sm font-bold uppercase tracking-wider mb-3">
-            ⭐ Lợi Thế Cạnh Tranh Vượt Trội
-          </div>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] uppercase tracking-tight">
+        <div className="text-center mb-2 md:mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#111827] uppercase tracking-tight">
             Vì Sao Chọn <span className="text-[#18631c]">Đồ Cũ Trung Kiên</span> Thay Vì Đơn Vị Khác?
           </h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-[#18631c] to-[#2e7d32] mx-auto mt-4 rounded-full"></div>
@@ -77,8 +74,8 @@ export default function CompetitorComparison() {
             </thead>
             <tbody className="divide-y divide-gray-100 text-sm md:text-[15px]">
               {criteria.map((item, idx) => (
-                <tr 
-                  key={idx} 
+                <tr
+                  key={idx}
                   className={`transition-colors hover:bg-gray-50/80 ${item.highlight ? 'bg-green-50/20' : ''}`}
                 >
                   {/* TIÊU CHÍ */}
@@ -127,19 +124,37 @@ export default function CompetitorComparison() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3 justify-center">
+            {/* Nút Gọi Hotline (Đã thay bằng SVG) */}
             <a
               href="tel:0398771444"
-              className="bg-[#18631c] hover:bg-[#2e7d32] text-white font-bold py-3.5 px-6 rounded-xl transition duration-300 shadow-lg text-sm md:text-base uppercase tracking-wider flex items-center gap-2"
+              className="bg-[#18631c] hover:bg-[#2e7d32] text-white font-bold py-3.5 px-6 rounded-xl transition duration-300 shadow-lg text-sm md:text-base uppercase tracking-wider flex items-center gap-2.5 group"
             >
-              📞 0398.771.444
+              <svg
+                className="w-5 h-5 text-white group-hover:rotate-12 transition-transform duration-300"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
+              </svg>
+              0398.771.444
             </a>
+
+            {/* Nút Gửi Zalo (Đã thay bằng ảnh icon Zalo chuẩn) */}
             <a
               href="https://zalo.me/0398771444"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#0068ff] hover:bg-[#0052cc] text-white font-bold py-3.5 px-6 rounded-xl transition duration-300 shadow-lg text-sm md:text-base uppercase tracking-wider flex items-center gap-2"
+              className="bg-[#0068ff] hover:bg-[#0052cc] text-white font-bold py-3.5 px-6 rounded-xl transition duration-300 shadow-lg text-sm md:text-base uppercase tracking-wider flex items-center gap-2.5 group"
             >
-              💬 Gửi Ảnh Zalo
+              <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden shadow-sm group-hover:scale-110 transition-transform">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+                  alt="Zalo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              Gửi Ảnh Zalo
             </a>
           </div>
         </div>

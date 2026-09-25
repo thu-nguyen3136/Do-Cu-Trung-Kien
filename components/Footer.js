@@ -17,11 +17,11 @@ export default function Footer() {
           {/* Logo (Đã được làm to hơn & bọc Link về trang chủ) */}
           <div className="flex-shrink-0">
             <Link href="/" className="block bg-white p-3 rounded-2xl shadow-xl relative w-[240px] sm:w-[280px] md:w-[320px] h-[80px] sm:h-[90px] md:h-[100px] hover:scale-105 transition-transform duration-500">
-              <Image 
-                src="/logo-dai-trung-kien.png" 
-                alt="Đồ Cũ Trung Kiên" 
-                fill 
-                className="object-contain p-1" 
+              <Image
+                src="/logo-dai-trung-kien.png"
+                alt="Đồ Cũ Trung Kiên"
+                fill
+                className="object-contain p-1"
                 priority
                 quality={100}
                 unoptimized={true}
@@ -117,6 +117,8 @@ export default function Footer() {
                 { title: "Thanh Lý Nhà Hàng", href: "/thanh-ly-nha-hang" },
                 { title: "Thu Mua Tủ Đông, Tủ Mát", href: "/thu-mua-tu-dong-tu-mat" },
                 { title: "Thu Mua Đồ Cũ Gia Đình", href: "/thu-mua-do-cu-gia-dinh" },
+                { title: "Thu Mua Quán Karaoke", href: "/thu-mua-quan-karaoke" },
+                { title: "Thu Mua Đồ Inox Cũ", href: "/thu-mua-do-inox-cu" },
                 { title: "Thu Mua Nội Thất Khách Sạn", href: "/thu-mua-noi-that-khach-san" }
               ].map((svc, idx) => (
                 <li key={idx}>

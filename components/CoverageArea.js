@@ -23,15 +23,12 @@ export default function CoverageArea() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-[#f8fafc] border-t border-gray-100 overflow-hidden" id="khu-vuc-thu-mua">
+    <section className="py-2 md:py-6 bg-[#f8fafc] border-t border-gray-100 overflow-hidden" id="khu-vuc-thu-mua">
       <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-        
+
         {/* TIÊU ĐỀ */}
         <div className="text-center mb-10 md:mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#18631c]/10 text-[#18631c] text-xs md:text-sm font-bold uppercase tracking-wider mb-3">
-            📍 Mạng Lưới Phủ Khắp Toàn Miền Nam
-          </div>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] uppercase tracking-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#111827] uppercase tracking-tight">
             Khu Vực <span className="text-[#18631c]">Thu Mua Tận Nơi</span> Của Trung Kiên
           </h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-[#18631c] to-[#2e7d32] mx-auto mt-4 rounded-full"></div>
@@ -43,15 +40,12 @@ export default function CoverageArea() {
         {/* LƯỚI KHU VỰC */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {regions.map((reg, idx) => (
-            <div 
+            <div
               key={idx}
               className="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-sm hover:shadow-xl hover:border-[#18631c]/30 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="w-10 h-10 rounded-2xl bg-[#18631c]/10 text-[#18631c] flex items-center justify-center font-bold text-lg group-hover:bg-[#18631c] group-hover:text-white transition-colors">
-                    {idx + 1}
-                  </span>
                   <span className="text-[11px] font-bold uppercase tracking-wider bg-green-50 text-[#18631c] px-3 py-1 rounded-full border border-green-200">
                     ⚡ {reg.time}
                   </span>
@@ -71,7 +65,7 @@ export default function CoverageArea() {
                 </ul>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-[#18631c]">
+              <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-sm font-bold text-[#18631c]">
                 <span>Tự tháo dỡ & vận chuyển</span>
                 <span>Miễn phí 100%</span>
               </div>

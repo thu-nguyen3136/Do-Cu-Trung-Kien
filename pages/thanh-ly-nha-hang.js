@@ -31,17 +31,17 @@ export default function ThanhLyNhaHangPage() {
   ];
 
   const priceItems = [
-    { name: "Bếp Á đôi, bếp Á ba công nghiệp có quạt thổi", unit: "Bộ", priceRange: "4.500.000 - 18.000.000 đ", note: "Inox 304, còn sử dụng tốt" },
-    { name: "Bếp Âu 4 họng, 6 họng (Berjaya, OB4/OB6)", unit: "Chiếc", priceRange: "5.000.000 - 22.000.000 đ", note: "Có lò nướng hoặc không lò nướng" },
-    { name: "Tủ đông, tủ mát 4 cánh - 6 cánh inox công nghiệp", unit: "Chiếc", priceRange: "7.000.000 - 32.000.000 đ", note: "Berjaya, Hoshizaki, Sanaky" },
-    { name: "Bàn ghế nhà hàng (Gỗ sồi, bọc da, sofa nhà hàng tiệc)", unit: "Bộ", priceRange: "1.200.000 - 8.500.000 đ", note: "Bao gồm bàn và 4-8 ghế" },
-    { name: "Bàn sơ chế, chậu rửa bát inox 3 hố công nghiệp", unit: "Chiếc", priceRange: "1.500.000 - 6.500.000 đ", note: "Inox dày 1.0mm - 1.2mm" },
-    { name: "Hệ thống tum hút khói mùi & quạt hút ly tâm", unit: "Hệ thống", priceRange: "3.000.000 - 25.000.000 đ", note: "Tháo dỡ trọn gói tận nơi" },
-    { name: "Máy rửa chén bát công nghiệp nhà hàng", unit: "Máy", priceRange: "8.000.000 - 45.000.000 đ", note: "Winterhalter, Comenda, Dolphin" }
+    { name: "Thanh lý bếp Á đôi, bếp Á ba công nghiệp có quạt thổi", unit: "Bộ", priceRange: "4.500.000 - 18.000.000 đ", note: "Inox 304, còn sử dụng tốt" },
+    { name: "Thanh lý bếp Âu 4 họng, 6 họng (Berjaya, OB4/OB6)", unit: "Chiếc", priceRange: "5.000.000 - 22.000.000 đ", note: "Có lò nướng hoặc không lò nướng" },
+    { name: "Thanh lý tủ đông, tủ mát 4 cánh - 6 cánh inox công nghiệp", unit: "Chiếc", priceRange: "7.000.000 - 32.000.000 đ", note: "Berjaya, Hoshizaki, Sanaky" },
+    { name: "Thanh lý bàn ghế nhà hàng (Gỗ sồi, bọc da, sofa nhà hàng tiệc)", unit: "Bộ", priceRange: "1.200.000 - 8.500.000 đ", note: "Bao gồm bàn và 4-8 ghế" },
+    { name: "Thanh lý bàn sơ chế, chậu rửa bát inox 3 hố công nghiệp", unit: "Chiếc", priceRange: "1.500.000 - 6.500.000 đ", note: "Inox dày 1.0mm - 1.2mm" },
+    { name: "Thanh lý hệ thống tum hút khói mùi & quạt hút ly tâm", unit: "Hệ thống", priceRange: "3.000.000 - 25.000.000 đ", note: "Tháo dỡ trọn gói tận nơi" },
+    { name: "Thanh lý máy rửa chén bát công nghiệp nhà hàng", unit: "Máy", priceRange: "8.000.000 - 45.000.000 đ", note: "Winterhalter, Comenda, Dolphin" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thanh Lý Nhà Hàng Giá Cao TPHCM | Khảo Sát 30P - Trung Kiên"
         description="Dịch vụ thanh lý nhà hàng trọn gói giá cao TPHCM. Thu mua bếp Á Âu, tủ đông mát, bàn ghế, đồ inox. Khảo sát 30p, thanh toán 100%. Hotline: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThanhLyNhaHangPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- NỘI DUNG CHÍNH (3/4) --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6">
                 <h1 className="text-2xl md:text-4xl font-black text-red-600 uppercase tracking-tight text-center">
@@ -86,7 +86,7 @@ export default function ThanhLyNhaHangPage() {
 
                 {/* ĐOẠN 1: GIỮ NGUYÊN NỘI DUNG GỐC */}
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Trung Kiên - Đối Tác Tin Cậy Trong Dịch Vụ Thanh Lý Nhà Hàng Trọn Gói
                   </h2>
                   <p>
@@ -108,7 +108,7 @@ export default function ThanhLyNhaHangPage() {
 
                 {/* ĐOẠN 2: DANH MỤC THU MUA */}
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Đồ cũ Trung Kiên chuyên thu mua đồ nhà hàng đa dạng như:
                   </h2>
                   <p>
@@ -143,7 +143,7 @@ export default function ThanhLyNhaHangPage() {
 
                 {/* ĐOẠN 3: QUY TRÌNH 4 BƯỚC */}
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100">
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6 text-center">
                     Quy Trình Thanh Lý Nhà Hàng Chuyên Nghiệp - 4 Bước Nhanh Gọn
                   </h2>
                   <p className="text-center mb-8">Để đảm bảo sự minh bạch và nhanh chóng, chúng tôi luôn làm việc thanh lý nhà hàng theo một quy trình chuẩn:</p>
@@ -181,7 +181,7 @@ export default function ThanhLyNhaHangPage() {
 
                 {/* ĐOẠN 4: CAM KẾT VÀNG */}
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Cam Kết Vàng - Lợi Ích Vượt Trội Dành Cho Quý Khách Hàng
                   </h2>
                   <p>Khi lựa chọn dịch vụ thanh lý nhà hàng giá cao tại Trung Kiên, bạn hoàn toàn có thể yên tâm vào những cam kết vàng của chúng tôi:</p>

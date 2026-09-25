@@ -31,17 +31,17 @@ export default function ThanhLyQuanTraSuaPage() {
   ];
 
   const priceItems = [
-    { name: "Máy dập nắp cốc tự động (Fest, Yubann, YiFang...)", unit: "Máy", priceRange: "1.500.000 - 5.500.000 đ", note: "Mắt đọc quang học chuẩn, dập nhanh" },
-    { name: "Máy định lượng đường tự động 16 nút", unit: "Máy", priceRange: "1.000.000 - 3.800.000 đ", note: "Bơm đường chính xác, inox sáng đẹp" },
-    { name: "Máy làm trân châu tự động, nồi ủ trân châu", unit: "Bộ", priceRange: "1.200.000 - 6.000.000 đ", note: "Các dòng máy vo hạt, nồi ủ giữ nhiệt" },
-    { name: "Bình ủ trà inox 8L - 10L - 12L giữ nhiệt", unit: "Chiếc", priceRange: "250.000 - 800.000 đ", note: "Ruột inox 304 2 lớp cách nhiệt" },
-    { name: "Quầy pha chế trà sữa inox 304 có khay topping, bồn rửa", unit: "Bộ", priceRange: "3.500.000 - 15.000.000 đ", note: "Dài 1m2 - 2m2 theo kích thước" },
-    { name: "Máy làm đá viên quán trà sữa 40kg - 120kg", unit: "Máy", priceRange: "4.500.000 - 18.000.000 đ", note: "Làm đá nhanh, đá già tinh khiết" },
-    { name: "Bàn ghế bệt gỗ, bàn ghế sắt bọc đệm quán trà sữa", unit: "Bộ", priceRange: "400.000 - 2.500.000 đ", note: "1 bàn + 4 ghế theo mẫu mã quán" }
+    { name: "Thanh lý máy dập nắp cốc tự động (Fest, Yubann, YiFang...)", unit: "Máy", priceRange: "1.500.000 - 5.500.000 đ", note: "Mắt đọc quang học chuẩn, dập nhanh" },
+    { name: "Thanh lý máy định lượng đường tự động 16 nút", unit: "Máy", priceRange: "1.000.000 - 3.800.000 đ", note: "Bơm đường chính xác, inox sáng đẹp" },
+    { name: "Thanh lý máy làm trân châu tự động, nồi ủ trân châu", unit: "Bộ", priceRange: "1.200.000 - 6.000.000 đ", note: "Các dòng máy vo hạt, nồi ủ giữ nhiệt" },
+    { name: "Thanh lý bình ủ trà inox 8L - 10L - 12L giữ nhiệt", unit: "Chiếc", priceRange: "250.000 - 800.000 đ", note: "Ruột inox 304 2 lớp cách nhiệt" },
+    { name: "Thanh lý quầy pha chế trà sữa inox 304 có khay topping, bồn rửa", unit: "Bộ", priceRange: "3.500.000 - 15.000.000 đ", note: "Dài 1m2 - 2m2 theo kích thước" },
+    { name: "Thanh lý máy làm đá viên quán trà sữa 40kg - 120kg", unit: "Máy", priceRange: "4.500.000 - 18.000.000 đ", note: "Làm đá nhanh, đá già tinh khiết" },
+    { name: "Thanh lý bàn ghế bệt gỗ, bàn ghế sắt bọc đệm quán trà sữa", unit: "Bộ", priceRange: "400.000 - 2.500.000 đ", note: "1 bàn + 4 ghế theo mẫu mã quán" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thanh Lý Quán Trà Sữa Giá Cao TPHCM | Máy Dập Nắp, Quầy Bar"
         description="Chuyên thu mua thanh lý quán trà sữa trọn gói giá cao TPHCM: máy dập nắp, máy định lượng đường, quầy bar inox, bàn ghế. Khảo sát ngay: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThanhLyQuanTraSuaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
@@ -85,7 +85,7 @@ export default function ThanhLyQuanTraSuaPage() {
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-justify space-y-8">
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Dịch Vụ Thu Mua Thiết Bị Quán Trà Sữa Tận Nơi TPHCM
                   </h2>
                   <p>
@@ -110,7 +110,7 @@ export default function ThanhLyQuanTraSuaPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Các hạng mục Trung Kiên thu mua tại Quán Trà Sữa
                   </h2>
                   <p>
@@ -145,7 +145,7 @@ export default function ThanhLyQuanTraSuaPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100">
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-700 uppercase mb-6 text-center">
                     Lợi ích khi thanh lý tại Đồ Cũ Trung Kiên
                   </h2>
                   <div className="space-y-4">
@@ -189,7 +189,7 @@ export default function ThanhLyQuanTraSuaPage() {
                 />
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Khu vực phục vụ thu mua quán trà sữa
                   </h2>
                   <p>

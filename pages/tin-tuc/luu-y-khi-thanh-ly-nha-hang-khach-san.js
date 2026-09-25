@@ -14,7 +14,7 @@ export default function ArticleNhaHangKhachSan() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn Tránh Thua Lỗ | Trung Kiên"
         description="Những lưu ý quan trọng khi thanh lý nhà hàng, khách sạn trọn gói để không bị ép giá, thất thoát tài sản và thu hồi vốn tối đa. Xem chi tiết!"
@@ -49,7 +49,7 @@ export default function ArticleNhaHangKhachSan() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-10 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-[32px] shadow-sm border border-gray-100 overflow-hidden">
+            <article className="lg:col-span-3">
 
               <div className="mb-6 flex flex-wrap items-center gap-3">
                 <span className="bg-[#111827] text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Kinh Doanh F&B</span>
@@ -84,7 +84,7 @@ export default function ArticleNhaHangKhachSan() {
               {/* SECTION: Nội dung bài viết */}
               <section className="mb-12 space-y-10">
                 <div>
-                  <h2 className="text-2xl font-black text-[#111827] flex items-center gap-2 mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] flex items-center gap-2 mb-4">
                     <span className="bg-[#388e3c] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">1</span>
                     Lên danh sách kiểm kê (Inventory List) chi tiết
                   </h2>
@@ -94,7 +94,7 @@ export default function ArticleNhaHangKhachSan() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-black text-[#111827] flex items-center gap-2 mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] flex items-center gap-2 mb-4">
                     <span className="bg-[#388e3c] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">2</span>
                     Không bán lẻ tẻ, hãy ưu tiên "Thanh lý trọn gói"
                   </h2>
@@ -104,7 +104,7 @@ export default function ArticleNhaHangKhachSan() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-black text-[#111827] flex items-center gap-2 mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] flex items-center gap-2 mb-4">
                     <span className="bg-[#388e3c] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">3</span>
                     Làm rõ vấn đề "Chi phí tháo dỡ và bốc xếp"
                   </h2>
@@ -114,7 +114,7 @@ export default function ArticleNhaHangKhachSan() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-black text-[#111827] flex items-center gap-2 mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] flex items-center gap-2 mb-4">
                     <span className="bg-[#388e3c] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">4</span>
                     Cam kết về tiến độ giải phóng mặt bằng
                   </h2>

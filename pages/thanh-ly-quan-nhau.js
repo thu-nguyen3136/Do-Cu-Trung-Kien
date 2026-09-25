@@ -31,17 +31,17 @@ export default function ThanhLyQuanNhauPage() {
   ];
 
   const priceItems = [
-    { name: "Bàn ghế gỗ thông xếp quán nhậu (1 bàn + 4-6 ghế)", unit: "Bộ", priceRange: "500.000 - 2.200.000 đ", note: "Bàn chân sắt hoặc toàn bộ gỗ thông" },
-    { name: "Bàn ghế inox quán nhậu (Bàn tròn, bàn dài + ghế đôn)", unit: "Bộ", priceRange: "650.000 - 3.000.000 đ", note: "Inox sáng đẹp, không móp méo" },
-    { name: "Bếp nướng âm bàn than hoa / gas quán BBQ", unit: "Bộ", priceRange: "600.000 - 2.500.000 đ", note: "Kèm vỉ nướng, khay chứa than" },
-    { name: "Hệ thống ống hút khói dương quán BBQ lẩu nướng", unit: "Đường ống", priceRange: "4.000.000 - 20.000.000 đ", note: "Ống thả trần co giãn, quạt tổng" },
-    { name: "Tủ bia sệt, tủ bảo quản bia tươi quán nhậu", unit: "Chiếc", priceRange: "3.500.000 - 15.000.000 đ", note: "Làm lạnh nhanh, lốc máy êm" },
-    { name: "Tủ đông kem, tủ mát bảo quản thực phẩm quán nhậu", unit: "Chiếc", priceRange: "2.500.000 - 14.000.000 đ", note: "Sanaky, Berjaya, Alaska" },
-    { name: "Bếp khè xào nấu công nghiệp + bình gas", unit: "Bộ", priceRange: "400.000 - 1.800.000 đ", note: "Họng gang đúc chịu lực" }
+    { name: "Thanh lý bàn ghế gỗ thông xếp quán nhậu (1 bàn + 4-6 ghế)", unit: "Bộ", priceRange: "500.000 - 2.200.000 đ", note: "Bàn chân sắt hoặc toàn bộ gỗ thông" },
+    { name: "Thanh lý bàn ghế inox quán nhậu (Bàn tròn, bàn dài + ghế đôn)", unit: "Bộ", priceRange: "650.000 - 3.000.000 đ", note: "Inox sáng đẹp, không móp méo" },
+    { name: "Thanh lý bếp nướng âm bàn than hoa / gas quán BBQ", unit: "Bộ", priceRange: "600.000 - 2.500.000 đ", note: "Kèm vỉ nướng, khay chứa than" },
+    { name: "Thanh lý hệ thống ống hút khói dương quán BBQ lẩu nướng", unit: "Đường ống", priceRange: "4.000.000 - 20.000.000 đ", note: "Ống thả trần co giãn, quạt tổng" },
+    { name: "Thanh lý tủ bia sệt, tủ bảo quản bia tươi quán nhậu", unit: "Chiếc", priceRange: "3.500.000 - 15.000.000 đ", note: "Làm lạnh nhanh, lốc máy êm" },
+    { name: "Thanh lý tủ đông kem, tủ mát bảo quản thực phẩm quán nhậu", unit: "Chiếc", priceRange: "2.500.000 - 14.000.000 đ", note: "Sanaky, Berjaya, Alaska" },
+    { name: "Thanh lý bếp khè xào nấu công nghiệp + bình gas", unit: "Bộ", priceRange: "400.000 - 1.800.000 đ", note: "Họng gang đúc chịu lực" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thanh Lý Quán Nhậu Giá Cao TPHCM | Thu Mua Quán BBQ Trọn Gói"
         description="Chuyên thu mua thanh lý quán nhậu, quán nướng BBQ trọn gói giá cao tại TPHCM. Bàn ghế gỗ thông, bếp nướng, hút khói, tủ bia. Hotline 24/7: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThanhLyQuanNhauPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6">
                 <h1 className="text-2xl md:text-3xl font-black text-brand-600 uppercase tracking-tight text-left">
@@ -129,7 +129,7 @@ export default function ThanhLyQuanNhauPage() {
                 <figure className="my-10">
                   <div className="relative w-full aspect-[4/3] max-w-[700px] mx-auto rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                     <Image
-                      src="/thanh-ly-quan-nhau-2.jpg"
+                      src="/thanh-ly-quan-nhau-2.webp"
                       alt="Dịch vụ thu mua quán BBQ trọn gói chuyên nghiệp"
                       fill
                       className="object-cover"
@@ -137,7 +137,7 @@ export default function ThanhLyQuanNhauPage() {
                   </div>
                 </figure>
 
-                <h2 className="text-xl md:text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4">
+                <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4">
                   Quý khách nhận được gì khi thanh lý bàn ghế, nội thất quán nhậu tại chúng tôi?
                 </h2>
 

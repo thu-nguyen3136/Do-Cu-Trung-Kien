@@ -31,17 +31,17 @@ export default function ThanhLyNoiThatKhachSanPage() {
   ];
 
   const priceItems = [
-    { name: "Combo phòng ngủ khách sạn (Giường 1m8 + nệm lò xo + 2 tab + tủ áo)", unit: "Phòng", priceRange: "3.500.000 - 15.000.000 đ", note: "Khách sạn 3 - 5 sao gỗ cao cấp" },
-    { name: "Tủ lạnh mini (Minibar) khách sạn 50L - 90L", unit: "Chiếc", priceRange: "700.000 - 1.800.000 đ", note: "Dometic, Primo, Homesun, Casper" },
-    { name: "Tivi thông minh Smart TV khách sạn 32 - 55 inch", unit: "Chiếc", priceRange: "1.200.000 - 6.500.000 đ", note: "Samsung, LG, Sony, TCL" },
-    { name: "Bàn ghế sảnh tiếp tân, sofa lounge sảnh khách sạn", unit: "Bộ", priceRange: "2.500.000 - 18.000.000 đ", note: "Sofa bọc da thật, khung kim loại mạ vàng" },
-    { name: "Két sắt điện tử mini để phòng khách sạn", unit: "Chiếc", priceRange: "400.000 - 1.500.000 đ", note: "Khóa mã số điện tử còn hoạt động tốt" },
-    { name: "Máy nước nóng lạnh, máy sấy tóc gắn tường", unit: "Chiếc", priceRange: "200.000 - 1.200.000 đ", note: "Ariston, Ferroli, Panasonic" },
-    { name: "Thiết bị giặt sấy công nghiệp cho khách sạn", unit: "Máy", priceRange: "15.000.000 - 80.000.000 đ", note: "Máy giặt vắt công nghiệp 20kg - 50kg" }
+    { name: "Thu mua combo phòng ngủ khách sạn (Giường 1m8 + nệm lò xo + 2 tab + tủ áo)", unit: "Phòng", priceRange: "3.500.000 - 15.000.000 đ", note: "Khách sạn 3 - 5 sao gỗ cao cấp" },
+    { name: "Thu mua tủ lạnh mini (Minibar) khách sạn 50L - 90L", unit: "Chiếc", priceRange: "700.000 - 1.800.000 đ", note: "Dometic, Primo, Homesun, Casper" },
+    { name: "Thu mua tivi thông minh Smart TV khách sạn 32 - 55 inch", unit: "Chiếc", priceRange: "1.200.000 - 6.500.000 đ", note: "Samsung, LG, Sony, TCL" },
+    { name: "Thu mua bàn ghế sảnh tiếp tân, sofa lounge sảnh khách sạn", unit: "Bộ", priceRange: "2.500.000 - 18.000.000 đ", note: "Sofa bọc da thật, khung kim loại mạ vàng" },
+    { name: "Thu mua két sắt điện tử mini để phòng khách sạn", unit: "Chiếc", priceRange: "400.000 - 1.500.000 đ", note: "Khóa mã số điện tử còn hoạt động tốt" },
+    { name: "Thu mua máy nước nóng lạnh, máy sấy tóc gắn tường", unit: "Chiếc", priceRange: "200.000 - 1.200.000 đ", note: "Ariston, Ferroli, Panasonic" },
+    { name: "Thu mua thiết bị giặt sấy công nghiệp cho khách sạn", unit: "Máy", priceRange: "15.000.000 - 80.000.000 đ", note: "Máy giặt vắt công nghiệp 20kg - 50kg" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
         title="Thanh Lý Nội Thất Khách Sạn Giá Cao TPHCM | Đồ Cũ Trung Kiên"
         description="Chuyên thu mua thanh lý nội thất khách sạn, resort, homestay trọn gói giá cao tại TPHCM. Giường nệm, minibar, tivi, đồ gỗ buồng phòng: 0398.771.444."
@@ -74,7 +74,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
@@ -85,7 +85,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-justify space-y-8">
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Dịch Vụ Thanh Lý Nội Thất Khách Sạn – Thu Mua Giá Cao, Uy Tín
                   </h2>
                   <p className="text-[17px]">
@@ -113,7 +113,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6">
                     Danh Mục Thanh Lý Nội Thất Khách Sạn Tại Trung Kiên
                   </h2>
                   <p>Công ty Trung Kiên chuyên thu mua và thanh lý toàn bộ các thiết bị, nội thất từ A đến Z của khách sạn, resort, homestay. Dưới đây là danh sách chi tiết các mặt hàng chúng tôi thường xuyên mua lại:</p>
@@ -185,7 +185,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100 mt-10">
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6 text-center">
                     Quy Trình 4 Bước Thanh Lý Nhanh Chóng, Dễ Dàng Tại Đồ Cũ Trung Kiên
                   </h2>
                   <p className="text-center mb-6">Khi quyết định thanh lý nội thất khách sạn, việc chọn một quy trình đơn giản và hiệu quả là rất quan trọng.</p>
@@ -223,7 +223,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6">
                     Cam Kết Dịch Vụ Thu Mua Nội Thất Khách Sạn - Trung Kiên
                   </h2>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">

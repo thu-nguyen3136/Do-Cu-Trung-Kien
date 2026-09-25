@@ -93,6 +93,7 @@ export default function Header() {
                     <li><Link href="/thu-mua-do-inox-cu" className={subMenuLinkClass}>Thu Mua Đồ Inox Cũ</Link></li>
                     <li><Link href="/thu-mua-do-cu-gia-dinh" className={subMenuLinkClass}>Thu mua đồ cũ gia đình</Link></li>
                     <li><Link href="/thu-mua-noi-that-khach-san" className={subMenuLinkClass}>Thu Mua Nội Thất Khách Sạn</Link></li>
+                    <li><Link href="/thu-mua-quan-karaoke" className={subMenuLinkClass}>Thu Mua Quán Karaoke</Link></li>
                   </ul>
                 </div>
               </li>
@@ -153,6 +154,7 @@ export default function Header() {
                   <li><Link href="/thu-mua-do-inox-cu" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Đồ Inox Cũ</Link></li>
                   <li><Link href="/thu-mua-do-cu-gia-dinh" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu mua đồ cũ gia đình</Link></li>
                   <li><Link href="/thu-mua-noi-that-khach-san" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Nội Thất Khách Sạn</Link></li>
+                  <li><Link href="/thu-mua-quan-karaoke" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thu Mua Quán Karaoke</Link></li>
                 </ul>
 
                 <li><Link href="/tin-tuc" className="block py-2 px-3 border-b border-gray-50" onClick={() => setIsOpen(false)}>Tin Tức</Link></li>
