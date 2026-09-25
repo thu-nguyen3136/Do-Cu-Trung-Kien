@@ -23,15 +23,23 @@ export default function Sidebar() {
           <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
             <Link href="/thu-mua-noi-that-khach-san" className="flex items-center gap-3 group">
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
-                <Image src="/thanh-ly-noi-that-khach-san.jpg" alt="Thanh Lý Nội Thất Khách Sạn" fill className="object-cover group-hover:scale-110 transition-transform" />
+                <Image src="/thanh-ly-noi-that-khach-san.jpg" alt="Thu Mua Nội Thất Khách Sạn" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
-              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thu Mua Tủ Mát Cũ</h6>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thu Mua Nội Thất Khách Sạn</h6>
+            </Link>
+          </li>
+          <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
+            <Link href="/thu-mua-quan-karaoke" className="flex items-center gap-3 group">
+              <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                <Image src="/thu-mua-quan-karaoke-3.jpg" alt="Thu Mua Quán Karaoke" fill className="object-cover group-hover:scale-110 transition-transform" />
+              </div>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thu Mua Quán Karaoke</h6>
             </Link>
           </li>
           <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
             <Link href="/thu-mua-do-inox-cu" className="flex items-center gap-3 group">
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
-                <Image src="/thu-mua-do-inox.jpg" alt="Thu Mua Đồ Inox" fill className="object-cover group-hover:scale-110 transition-transform" />
+                <Image src="/thu-mua-do-inox.jpg" alt="Thu Mua Đồ Inox Cũ" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
               <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thu Mua Đồ Inox Cũ</h6>
             </Link>
@@ -41,7 +49,7 @@ export default function Sidebar() {
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                 <Image src="/thu-mua-do-cu-gia-dinh.jpg" alt="Thu Mua Đồ Cũ Gia Đình" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
-              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thu Mua Đồ Cũ Giá Cao Tại TPHCM</h6>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thu Mua Đồ Cũ Gia Đình</h6>
             </Link>
           </li>
           <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
@@ -49,7 +57,7 @@ export default function Sidebar() {
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                 <Image src="/thanh-ly-quan-tra-sua.jpg" alt="Thanh Lý Quán Trà Sữa" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
-              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Nhà Hàng</h6>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Quán Trà Sữa</h6>
             </Link>
           </li>
           <li className="p-3 hover:bg-gray-50 transition-colors">
@@ -57,7 +65,7 @@ export default function Sidebar() {
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                 <Image src="/thanh-ly-quan-pho.jpg" alt="Thanh Lý Quán Phở" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
-              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Quán Ăn</h6>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Quán Phở</h6>
             </Link>
           </li>
           <li className="p-3 hover:bg-gray-50 transition-colors">
@@ -81,7 +89,7 @@ export default function Sidebar() {
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                 <Image src="/thanh-ly-quan-an.jpg" alt="Thanh Lý Quán Ăn" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
-              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Nhà Nghỉ Khách Sạn</h6>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Quán Ăn</h6>
             </Link>
           </li>
           <li className="p-3 hover:bg-gray-50 transition-colors">
@@ -89,7 +97,7 @@ export default function Sidebar() {
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                 <Image src="/thanh-ly-nha-hang.jpg" alt="Thanh Lý Nhà Hàng" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
-              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Nhà Nghỉ Khách Sạn</h6>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Nhà Hàng</h6>
             </Link>
           </li>
         </ul>

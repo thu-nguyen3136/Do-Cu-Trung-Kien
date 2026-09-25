@@ -2,6 +2,14 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import { HomeSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
+import CompetitorComparison from '../components/CompetitorComparison';
+import CoverageArea from '../components/CoverageArea';
+import ValuationCriteria from '../components/ValuationCriteria';
+import newsPosts from '../data/posts.json';
 
 function Counter({ end, duration = 1500 }) {
   const [count, setCount] = useState(0);
@@ -38,7 +46,7 @@ export default function Home() {
       highlightTitle: 'ĐỒ CŨ', // Phần màu vàng #2e7d32
       description: 'Chuyên thu mua các loại đồ cũ với giá cao, tháo dỡ tận nơi chuyên nghiệp.',
       services: [
-        { id: 1, title: 'Thanh Lý Quán Cafe', image: '/thanh-ly-quan-cafe.jpg', link: '/thanh-ly-quan-cafe', description: 'Thu mua bàn ghế, máy pha cafe, quầy bar và thiết bị quán cafe trọn gói giá cao.' },
+        { id: 1, title: 'Thanh Lý Quán Cafe', image: '/thanh-ly-quan-cafe.jpg', link: '/thanh-ly-quan-ca-phe', description: 'Thu mua bàn ghế, máy pha cafe, quầy bar và thiết bị quán cafe trọn gói giá cao.' },
         { id: 2, title: 'Thanh Lý Quán Ăn', image: '/thanh-ly-quan-an.jpg', link: '/thanh-ly-quan-an', description: 'Chuyên thu mua thiết bị bếp, bàn ghế và dụng cụ quán ăn giá sỉ, tháo dỡ nhanh.' },
         { id: 3, title: 'Thanh Lý Quán Nhậu', image: '/thanh-ly-quan-nhau.jpg', link: '/thanh-ly-quan-nhau', description: 'Thu mua trọn gói quán nhậu, nhà hàng, hỗ trợ tháo dỡ và vận chuyển tận nơi.' },
         { id: 4, title: 'Thanh Lý Nhà Hàng', image: '/thanh-ly-nha-hang.jpg', link: '/thanh-ly-nha-hang', description: 'Thu mua thiết bị bếp công nghiệp, nội thất nhà hàng cao cấp với giá cạnh tranh nhất.' },
@@ -48,6 +56,7 @@ export default function Home() {
         { id: 8, title: 'Thu Mua Đồ Inox Cũ', image: '/thu-mua-do-inox.jpg', link: '/thu-mua-do-inox-cu', description: 'Thu mua bồn rửa inox, bàn bếp inox, kệ inox và đồ dùng inox công nghiệp.' },
         { id: 9, title: 'Thu mua đồ cũ gia đình', image: '/thu-mua-do-cu-gia-dinh.jpg', link: '/thu-mua-do-cu-gia-dinh', description: 'Thu mua nội thất gia đình, đồ gỗ cũ, tủ thờ, bàn ghế gỗ và đồ điện lạnh cũ.' },
         { id: 10, title: 'Thu Mua Nội Thất Khách Sạn', image: '/thanh-ly-noi-that-khach-san.jpg', link: '/thu-mua-noi-that-khach-san', description: 'Thu mua trọn gói nội thất khách sạn, giường, tủ, nệm và thiết bị điện dân dụng.' },
+        { id: 11, title: 'Thu Mua Quán Karaoke', image: '/thu-mua-quan-karaoke-3.jpg', link: '/thu-mua-quan-karaoke-3', description: 'Thu mua trọn gói dàn âm thanh, loa, amply, ánh sáng sân khấu, tivi và bàn ghế sofa quán karaoke.' },
       ]
     }
   ];
@@ -131,81 +140,51 @@ export default function Home() {
     return reviews.slice(start, start + reviewsPerSlide);
   };
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Đồ Cũ Trung Kiên",
-    "image": "https://thumuadocutrungkien.com/logo-viet-anh.png",
-    "@id": "https://thumuadocutrungkien.com/",
-    "url": "https://thumuadocutrungkien.com/",
-    "telephone": "0398771444",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-      "addressLocality": "Bình Tân",
-      "addressRegion": "Hồ Chí Minh",
-      "postalCode": "700000",
-      "addressCountry": "VN"
+  const homeFaqs = [
+    {
+      question: "Đồ Cũ Trung Kiên thu mua những mặt hàng nào tại TPHCM?",
+      answer: "Chúng tôi chuyên thu mua trọn gói: thanh lý nhà hàng, khách sạn, quán cafe, quán ăn, quán nhậu, quán phở, quán trà sữa; thu mua đồ cũ gia đình, bàn ghế gỗ, đồ đồng, đồ thờ; thu mua thiết bị bếp inox công nghiệp và tủ đông, tủ mát các loại."
     },
-    "description": "Chuyên thu mua đồ cũ, thu mua đồ gỗ, cửa cũ, thanh lý nhà hàng khách sạn giá cao tận nơi tại TP.HCM và các tỉnh lân cận.",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
+    {
+      question: "Quy trình khảo sát và thu mua đồ cũ tận nơi như thế nào?",
+      answer: "Quy trình gồm 4 bước nhanh gọn: 1. Tiếp nhận hình ảnh và thông tin qua Hotline/Zalo 0398.771.444. 2. Khảo sát tận nơi sau 30 phút và báo giá trực tiếp. 3. Thỏa thuận và thanh toán 100% tiền mặt hoặc chuyển khoản. 4. Tự tháo dỡ, bốc xếp và dọn dẹp sạch sẽ mặt bằng."
+    },
+    {
+      question: "Đồ Cũ Trung Kiên có tính phí tháo dỡ và vận chuyển không?",
+      answer: "Hoàn toàn MIỄN PHÍ 100%. Đồ Cũ Trung Kiên có đội xe tải chuyên dụng và đội ngũ thợ tháo dỡ chuyên nghiệp, tự túc toàn bộ công việc vận chuyển mà khách hàng không phải trả thêm bất kỳ chi phí nào."
+    },
+    {
+      question: "Khu vực thu mua của Đồ Cũ Trung Kiên gồm những đâu?",
+      answer: "Chúng tôi thu mua tận nơi tại tất cả các quận huyện thuộc TP.HCM (Quận 1, 3, 7, Bình Thạnh, Gò Vấp, Bình Tân, Tân Bình, Thủ Đức, Hóc Môn, Bình Chánh...) và các tỉnh lân cận như Bình Dương, Đồng Nai, Long An, Tây Ninh."
     }
-  };
+  ];
 
-  const news = [
-    {
-      id: 1,
-      title: "Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn",
-      desc: "Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ?",
-      image: "/thanh-ly-noi-that-khach-san-1.jpg",
-      slug: "/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san"
-    },
-    {
-      id: 2,
-      title: "Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM",
-      desc: "Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM",
-      image: "/thu-mua-do-cu-gia-dinh-3.jpeg",
-      slug: "/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
-    }
+  const homePriceItems = [
+    { name: "Thiết Bị Bếp Nhà Hàng (Bếp Á, bếp Âu, lò nướng, bồn rửa inox)", unit: "Cái / Bộ", priceRange: "2.000.000 - 35.000.000 đ", note: "Tùy kích thước, inox 304/201" },
+    { name: "Tủ Đông, Tủ Mát Công Nghiệp (Sanaky, Berjaya, Alaska...)", unit: "Chiếc", priceRange: "2.500.000 - 28.000.000 đ", note: "Tùy dung tích và độ lạnh" },
+    { name: "Bàn Ghế Nhà Hàng, Quán Ăn, Quán Nhậu (Gỗ, sắt, inox)", unit: "Bộ", priceRange: "600.000 - 6.500.000 đ", note: "Bao gồm bàn + 4-6 ghế" },
+    { name: "Thiết Bị Quán Cafe, Trà Sữa (Máy pha cafe, máy xay, máy dập nắp)", unit: "Máy / Bộ", priceRange: "3.000.000 - 45.000.000 đ", note: "Hãng Ý, Tây Ban Nha, Đài Loan" },
+    { name: "Nội Thất Khách Sạn (Giường ngủ, đệm cao cấp, tủ quần áo, tab đầu giường)", unit: "Phòng / Chiếc", priceRange: "1.500.000 - 15.000.000 đ", note: "Khách sạn 2-5 sao" },
+    { name: "Đồ Cũ Gia Đình (Máy giặt, tủ lạnh, máy lạnh, tivi, sofa phòng khách)", unit: "Món / Bộ", priceRange: "800.000 - 12.000.000 đ", note: "Thiết bị còn hoạt động tốt" },
+    { name: "Cửa Gỗ Cũ, Cửa Nhôm Xingfa, Cửa Sắt Cuốn", unit: "Bộ / Cánh", priceRange: "500.000 - 8.000.000 đ", note: "Gỗ gõ, căm xe, nhôm kính" }
   ];
 
   return (
     <div className="min-h-screen font-sans bg-gray-50 flex flex-col">
+      <SEOHead
+        title="Thu Mua Đồ Cũ Giá Cao TPHCM | Báo Giá 30P - Đồ Cũ Trung Kiên"
+        description="Đồ Cũ Trung Kiên chuyên thu mua đồ cũ giá cao tại TPHCM. Thanh lý nhà hàng, quán ăn, quán cafe, khách sạn, đồ gỗ cũ tận nơi. Hotline 24/7: 0398.771.444."
+        keywords="đồ cũ Trung Kiên, thu mua đồ cũ tphcm, thu mua cửa cũ, thanh lý nhà hàng khách sạn, thu mua đồ gỗ cũ, thanh lý quán cafe, thu mua xác nhà xưởng giá cao"
+        canonical="https://thumuadocutrungkien.com/"
+        ogImage="/banner-do-cu-trung-kien.jpg"
+      />
       <Head>
-        <title>Thu Mua Đồ Cũ Giá Cao TPHCM | Thanh Lý Nhà Hàng, Khách Sạn - Trung Kiên</title>
-        <meta name="description" content="Đồ Cũ Trung Kiên chuyên thu mua đồ cũ giá cao tại TPHCM. ⭐Thanh lý nhà hàng, khách sạn, quán cafe ⭐Thu mua cửa cũ, xác nhà xưởng. Báo giá tận nơi, vận chuyển 0đ!" />
-        <meta name="keywords" content="đồ cũ Trung Kiên, thu mua đồ cũ tphcm, thu mua cửa cũ, thanh lý nhà hàng khách sạn, thu mua đồ gỗ cũ, thanh lý quán cafe, thu mua xác nhà xưởng giá cao" />
-        <meta property="og:title" content="CỬA HÀNG THU MUA ĐỒ CŨ GIÁ CAO TPHCM ☎️【Trung Kiên】" />
-        <meta property="og:description" content="Chuyên thu mua thanh lý đồ cũ tận nơi giá cao nhất thị trường. Uy tín - Nhanh chóng - Tháo dỡ miễn phí." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://thumuadocutrungkien.com/" />
-        <link rel="canonical" href="https://thumuadocutrungkien.com/" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Đồ Cũ Trung Kiên",
-            "alternateName": "Thu Mua Đồ Cũ Trung Kiên",
-            "description": "Đơn vị chuyên thu mua đồ cũ, thanh lý nhà hàng, khách sạn và các loại cửa cũ giá cao tại TPHCM.",
-            "url": "https://thumuadocutrungkien.com/",
-            "telephone": "0398771444",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Hồ Chí Minh",
-              "addressCountry": "VN"
-            },
-            "priceRange": "$$"
-          })
-        }} />
+        <HomeSchema />
+        <FAQSchema faqs={homeFaqs} />
       </Head>
 
       {/* PHẦN BANNER CHÍNH */}
       <section className="relative w-full overflow-hidden block">
-        <h1 className="sr-only">Thu Mua Đồ Cũ Giá Cao, Thanh Lý Nhà Hàng, Khách Sạn TPHCM - Đồ Cũ Trung Kiên</h1>
         <div className="w-full">
           <img
             src="/banner-do-cu-trung-kien.jpg"
@@ -626,21 +605,66 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a href="tel:0398771444" className="bg-[#18631c] text-white hover:bg-[#2e7d32] font-bold uppercase px-8 py-5 rounded-xl shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-3">
-                <span className="text-2xl">📞</span> Gọi Hotine
+                <svg
+                  className="w-7 h-7"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                Gọi Hotline
               </a>
               <a href="https://zalo.me/0398771444" target="_blank" rel="noopener noreferrer" className="bg-[#0068ff] text-white hover:bg-[#0052cc] font-bold uppercase px-8 py-5 rounded-xl shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-3">
-                <span className="text-2xl font-sans">Zalo</span> Gửi Hình Zalo
+                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden shadow-sm">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+                    alt="Zalo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                Gửi Hình Zalo
               </a>
             </div>
           </div>
         </section>
 
+        {/* BẢNG SO SÁNH VỚI ĐỐI THỦ (CONTENT & SEARCH INTENT) */}
+        <CompetitorComparison />
+
+        {/* 4 TIÊU CHÍ ĐỊNH GIÁ & TƯ VẤN CHUYÊN GIA */}
+        <ValuationCriteria />
+
+        {/* BẢNG GIÁ VÀ CÂU HỎI THƯỜNG GẶP (ON-PAGE SEO & RICH SNIPPETS) */}
+        <section className="py-8 bg-white border-t border-gray-100">
+          <div className="max-w-[1400px] mx-auto px-5 md:px-10">
+            <PriceTable
+              title="Bảng Giá Thu Mua Đồ Cũ Tham Khảo Tại TPHCM"
+              subtitle="Mức giá thực tế được khảo sát trực tiếp dựa trên tình trạng thiết bị, thương hiệu và số lượng. Đồ Cũ Trung Kiên cam kết định giá cao nhất thị trường!"
+              items={homePriceItems}
+            />
+            <FAQAccordion
+              title="Câu Hỏi Thường Gặp Về Dịch Vụ Thu Mua Đồ Cũ Trung Kiên"
+              faqs={homeFaqs}
+            />
+          </div>
+        </section>
+
+        {/* KHU VỰC THU MUA TẬN NƠI (LOCAL SEO PHỦ 24 QUẬN HUYỆN) */}
+        <CoverageArea />
+
         {/* NEWS SECTION */}
-        <section className="pt-4 pb-4 md:pt-4 md:pb-4 bg-gray-50" id="tin-tuc">
+        <section className="pt-1 pb-1 md:pt-1 md:pb-1 bg-gray-50" id="tin-tuc">
           <div className="max-w-[1400px] mx-auto px-5 md:px-10">
 
             {/* HEADER */}
-            <div className="text-center mb-10 md:mb-12">
+            <div className="text-center mb-5 md:mb-6">
               <h2 className="text-3xl md:text-5xl font-bold text-[#111827] uppercase">
                 Cập Nhật Tin Tức <span className="text-[#2e7d32]">Mới Nhất</span>
               </h2>
@@ -650,22 +674,7 @@ export default function Home() {
 
             {/* DATA */}
             {(() => {
-              const news = [
-                {
-                  id: 1,
-                  title: "Lưu Ý Khi Thanh Lý Nhà Hàng Khách Sạn",
-                  desc: "Thanh lý nhà hàng, khách sạn trọn gói cần lưu ý những gì để tránh mất oan tiền tỷ?",
-                  image: "/thanh-ly-noi-that-khach-san-1.jpg",
-                  slug: "/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san"
-                },
-                {
-                  id: 2,
-                  title: "Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM",
-                  desc: "Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM",
-                  image: "/thu-mua-do-cu-gia-dinh-3.jpeg",
-                  slug: "/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
-                }
-              ];
+              const news = newsPosts;
 
               return (
                 <>
@@ -707,7 +716,7 @@ export default function Home() {
                           </h3>
 
                           <p className="text-gray-600 text-[15px] md:text-[17px] leading-relaxed line-clamp-3 mb-4">
-                            {item.desc}
+                            {item.description || item.desc}
                           </p>
 
                           <div className="text-[#2e7d32] font-bold text-sm tracking-wide flex items-center gap-2 group-hover:text-[#111827]">
@@ -723,7 +732,7 @@ export default function Home() {
                   <div className="text-center mt-10 md:mt-12">
                     <Link
                       href="/tin-tuc"
-                      className="inline-flex items-center justify-center bg-[#111827] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#18631c] transition"
+                      className="inline-flex items-center justify-center text-white font-bold px-8 py-4 rounded-xl bg-[#18631c] transition"
                     >
                       XEM TẤT CẢ TIN TỨC →
                     </Link>

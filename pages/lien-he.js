@@ -1,12 +1,47 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { BreadcrumbSchema } from '../components/SchemaMarkup';
+import SEOHead from '../components/SEOHead';
 
 export default function LienHe() {
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Liên hệ', url: 'https://thumuadocutrungkien.com/lien-he' }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans pb-8">
+      <SEOHead
+        title="Liên Hệ Đồ Cũ Trung Kiên | Báo Giá Thu Mua Tận Nơi 30 Phút"
+        description="Liên hệ Đồ Cũ Trung Kiên - Chuyên thu mua đồ cũ, thanh lý nhà hàng, quán ăn, khách sạn giá cao nhất TPHCM. Khảo sát tận nơi sau 30 phút. Hotline: 0398.771.444."
+        canonical="/lien-he"
+        ogImage="/logo-dai-trung-kien.png"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <Head>
-        <title>Liên Hệ | Đồ Cũ Trung Kiên</title>
-        <meta name="description" content="Liên hệ Đồ Cũ Trung Kiên - Thu mua đồ cũ, thanh lý nhà hàng, đồ gỗ tại TP.HCM. Hotline 24/7: 0398.771.444" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "mainEntity": {
+                "@type": "LocalBusiness",
+                "name": "Đồ Cũ Trung Kiên",
+                "telephone": "0398.771.444",
+                "email": "docutrungkien@gmail.com",
+                "url": "https://thumuadocutrungkien.com/",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
+                  "addressLocality": "Quận Bình Tân",
+                  "addressRegion": "TP.HCM",
+                  "addressCountry": "VN"
+                }
+              }
+            })
+          }}
+        />
       </Head>
 
       {/* Hero Section (Nhỏ gọn hơn) */}
@@ -18,7 +53,7 @@ export default function LienHe() {
             Liên Hệ <span className="text-[#388e3c]">Trung Kiên</span>
           </h1>
           <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto font-medium leading-relaxed">
-            Hệ thống cửa hàng thu mua đồ cũ uy tín hàng đầu TP.HCM. Chúng tôi luôn sẵn sàng hỗ trợ khảo sát và tiến hành thu dọn 24/7 mọi nơi.
+            Hệ thống cửa hàng thu mua đồ cũ uy tín tại TP.HCM. Chúng tôi luôn sẵn sàng hỗ trợ khảo sát và tiến hành thu dọn 24/7 mọi nơi.
           </p>
         </div>
       </div>
@@ -43,7 +78,14 @@ export default function LienHe() {
               <a href="tel:0398771444" className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#388e3c]/50 hover:bg-white/10 transition-all group/btn">
                 <div className="bg-[#388e3c] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 group-hover/btn:scale-105 transition-transform relative">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#388e3c] opacity-50"></span>
-                  <span className="text-lg md:text-xl relative z-10">📞</span>
+                  <svg
+                    className="w-5 h-5 md:w-6 md:h-6 text-white relative z-10 group-hover/btn:rotate-12 transition-transform duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
+                  </svg>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-gray-400 text-[11px] md:text-[12px] uppercase font-bold tracking-widest mb-0.5 shadow-sm">Hotline Nhận Báo Giá</span>
@@ -54,15 +96,18 @@ export default function LienHe() {
 
               {/* Zalo */}
               <a href="https://zalo.me/0398771444" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#0068ff]/50 hover:bg-[#0068ff]/10 transition-all group/btn">
-                <div className="bg-[#0068ff] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 group-hover/btn:scale-105 transition-transform shadow-[0_0_15px_rgba(0,104,255,0.4)]">
-                  <span className="text-white font-black text-[12px] md:text-[14px]">Zalo</span>
+                <div className="bg-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 group-hover/btn:scale-105 transition-transform shadow-[0_0_15px_rgba(0,104,255,0.4)] p-1.5 overflow-hidden">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+                    alt="Zalo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-gray-400 text-[11px] md:text-[12px] uppercase font-bold tracking-widest mb-0.5 shadow-sm">Gửi Hình Ảnh Qua Zalo</span>
                   <span className="text-white font-black text-xl md:text-2xl tracking-wider group-hover/btn:text-[#0068ff] transition-colors drop-shadow-md">0398.771.444</span>
                 </div>
               </a>
-
               {/* Email */}
               <a href="mailto:docutrungkien@gmail.com" className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:border-[#388e3c]/50 hover:bg-white/10 transition-all group/btn">
                 <div className="bg-[#2e7d32] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 group-hover/btn:scale-105 transition-transform">

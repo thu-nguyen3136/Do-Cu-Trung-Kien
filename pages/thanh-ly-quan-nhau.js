@@ -2,34 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThanhLyQuanNhauPage() {
   const hotline = "0398.771.444";
 
-  return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
-      <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thanh Lý Quán Nhậu | Thu Mua Bàn Ghế Quán BBQ Giá Cao | Trung Kiên</title>
-        <meta name="description" content="Hãy liên hệ ngay cho Đồ Cũ Trung Kiên, chúng tôi chuyên thu mua bàn ghế quán BBQ, quán nướng, quán nhậu, trà sữa, trà chanh giá cao nhất TPHCM." />
-        <meta name="keywords" content="Thanh Lý Quán Nhậu, thu mua quán nhậu, thanh lý bàn ghế quán nhậu, đồ cũ trung kiên" />
-        <link rel="canonical" href="https://docutrungkien.com/thu-mua-do-cu/thanh-ly-quan-nhau" />
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thanh Lý Quán Nhậu', url: 'https://thumuadocutrungkien.com/thanh-ly-quan-nhau' }
+  ];
 
-        {/* Local Business Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Đồ Cũ Trung Kiên",
-            "telephone": "0398.771.444",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-              "addressLocality": "Quận Bình Tân",
-              "addressRegion": "TP.HCM"
-            }
-          })}
-        </script>
+  const faqs = [
+    {
+      question: "Trung Kiên có thu mua bếp nướng và hệ thống hút khói quán BBQ không?",
+      answer: "Có. Chúng tôi nhận thu mua trọn gói bàn nướng không khói, ống hút khói dương, quạt hút công nghiệp, bếp khè, bếp chiên nhúng và tủ đông bảo quản thịt."
+    },
+    {
+      question: "Bàn ghế gỗ thông quán nhậu cũ có được thu mua giá cao không?",
+      answer: "Đồ Cũ Trung Kiên luôn định giá sát thị trường và thu mua với giá cao hơn 20% so với các đơn vị ve chai nhỏ lẻ, không ép giá."
+    },
+    {
+      question: "Có nhận thanh lý quán nhậu ngoài giờ hành chính không?",
+      answer: "Có. Đội ngũ thợ của chúng tôi làm việc 24/7, có thể bốc xếp hàng lúc đêm muộn hoặc sáng sớm để trả mặt bằng đúng hạn cho khách."
+    }
+  ];
+
+  const priceItems = [
+    { name: "Thanh lý bàn ghế gỗ thông xếp quán nhậu (1 bàn + 4-6 ghế)", unit: "Bộ", priceRange: "500.000 - 2.200.000 đ", note: "Bàn chân sắt hoặc toàn bộ gỗ thông" },
+    { name: "Thanh lý bàn ghế inox quán nhậu (Bàn tròn, bàn dài + ghế đôn)", unit: "Bộ", priceRange: "650.000 - 3.000.000 đ", note: "Inox sáng đẹp, không móp méo" },
+    { name: "Thanh lý bếp nướng âm bàn than hoa / gas quán BBQ", unit: "Bộ", priceRange: "600.000 - 2.500.000 đ", note: "Kèm vỉ nướng, khay chứa than" },
+    { name: "Thanh lý hệ thống ống hút khói dương quán BBQ lẩu nướng", unit: "Đường ống", priceRange: "4.000.000 - 20.000.000 đ", note: "Ống thả trần co giãn, quạt tổng" },
+    { name: "Thanh lý tủ bia sệt, tủ bảo quản bia tươi quán nhậu", unit: "Chiếc", priceRange: "3.500.000 - 15.000.000 đ", note: "Làm lạnh nhanh, lốc máy êm" },
+    { name: "Thanh lý tủ đông kem, tủ mát bảo quản thực phẩm quán nhậu", unit: "Chiếc", priceRange: "2.500.000 - 14.000.000 đ", note: "Sanaky, Berjaya, Alaska" },
+    { name: "Thanh lý bếp khè xào nấu công nghiệp + bình gas", unit: "Bộ", priceRange: "400.000 - 1.800.000 đ", note: "Họng gang đúc chịu lực" }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thanh Lý Quán Nhậu Giá Cao TPHCM | Thu Mua Quán BBQ Trọn Gói"
+        description="Chuyên thu mua thanh lý quán nhậu, quán nướng BBQ trọn gói giá cao tại TPHCM. Bàn ghế gỗ thông, bếp nướng, hút khói, tủ bia. Hotline 24/7: 0398.771.444."
+        keywords="Thanh Lý Quán Nhậu, thu mua quán nhậu, thanh lý bàn ghế quán nhậu, đồ cũ trung kiên, thanh lý quán nướng BBQ"
+        canonical="https://thumuadocutrungkien.com/thanh-ly-quan-nhau"
+        ogImage="/thanh-ly-quan-nhau.jpg"
+      />
+      <Head>
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thu Mua Thanh Lý Quán Nhậu Trọn Gói Giá Cao"
+          description="Chuyên thu mua bàn ghế quán nhậu, bếp nướng BBQ, tủ đông tủ mát và trang thiết bị quán nhậu tại TPHCM."
+          url="https://thumuadocutrungkien.com/thanh-ly-quan-nhau"
+          image="https://thumuadocutrungkien.com/thanh-ly-quan-nhau.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -46,11 +74,11 @@ export default function ThanhLyQuanNhauPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6">
                 <h1 className="text-2xl md:text-3xl font-black text-brand-600 uppercase tracking-tight text-left">
-                  Thanh Lý Quán Nhậu
+                  Thanh Lý Quán Nhậu Giá Cao Trọn Gói TPHCM - Đồ Cũ Trung Kiên
                 </h1>
               </header>
 
@@ -61,7 +89,7 @@ export default function ThanhLyQuanNhauPage() {
                     Dịch vụ thanh lý quán nhậu, thanh lý bàn ghế quán nhậu, nội thất quán nhậu, nhà hàng BBQ giá cao tại HCM
                   </p>
                   <p className="text-[18px]">
-                    Quý khách đang muốn thay đổi diện tích, không gian quán, quý khách muốn thay đổi những bộ bàn ghế để phù hợp với không gian và nhu cầu của khách hàng. Hãy liên hệ ngay cho <strong>Đồ Cũ Trung Kiên</strong>, chúng tôi chuyên thu mua bàn ghế quán BBQ, quán nướng, quán nhậu, trà sữa, trà chanh nội thất quán, tủ đông, tủ mát, bếp công nghiệp..., <strong>thanh lý quán nhậu</strong>, quán nướng, quán BBQ trọn gói nội thất giá cao trên thị trường khu vực TPHCM, Đồng Nai, Bình Dương và các tỉnh lân cận.
+                    Quý khách đang muốn thay đổi diện tích, không gian quán, quý khách muốn thay đổi những bộ bàn ghế để phù hợp với không gian và nhu cầu của khách hàng. Hãy liên hệ ngay cho <strong>Đồ Cũ Trung Kiên</strong>, chúng tôi chuyên thu mua bàn ghế quán BBQ, quán nướng, quán nhậu, trà sữa, trà chanh nội thất quán, <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">tủ đông tủ mát</Link>, bếp công nghiệp, <Link href="/thu-mua-do-inox-cu" className="text-brand-600 font-semibold hover:underline">đồ inox</Link>, <strong>thanh lý quán nhậu</strong>, quán nướng, quán BBQ, <Link href="/thanh-ly-quan-an" className="text-brand-600 font-semibold hover:underline">quán ăn</Link> và <Link href="/thanh-ly-nha-hang" className="text-brand-600 font-semibold hover:underline">nhà hàng</Link> trọn gói nội thất giá cao trên thị trường khu vực TPHCM, Đồng Nai, Bình Dương và các tỉnh lân cận.
                   </p>
                 </section>
 
@@ -101,7 +129,7 @@ export default function ThanhLyQuanNhauPage() {
                 <figure className="my-10">
                   <div className="relative w-full aspect-[4/3] max-w-[700px] mx-auto rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                     <Image
-                      src="/thanh-ly-quan-nhau-2.jpg"
+                      src="/thanh-ly-quan-nhau-2.webp"
                       alt="Dịch vụ thu mua quán BBQ trọn gói chuyên nghiệp"
                       fill
                       className="object-cover"
@@ -109,7 +137,7 @@ export default function ThanhLyQuanNhauPage() {
                   </div>
                 </figure>
 
-                <h2 className="text-xl md:text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4">
+                <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4">
                   Quý khách nhận được gì khi thanh lý bàn ghế, nội thất quán nhậu tại chúng tôi?
                 </h2>
 
@@ -172,9 +200,21 @@ export default function ThanhLyQuanNhauPage() {
                   </div>
                 </figure>
 
+                {/* BẢNG GIÁ THAM KHẢO & FAQ (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thanh Lý Quán Nhậu Tham Khảo"
+                  subtitle="Giá thu mua thực tế phụ thuộc vào tình trạng bàn ghế, thiết bị bếp và số lượng. Khảo sát tận nơi sau 30 phút!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Giải Đáp Thắc Mắc Khi Thanh Lý Quán Nhậu"
+                  faqs={faqs}
+                />
+
                 {/* THÔNG TIN LIÊN HỆ */}
                 <footer className="mt-12 p-8 bg-white border-2 border-brand-600 rounded-3xl shadow-md">
-                  <h4 className="text-2xl font-black text-brand-600 uppercase mb-8 border-b pb-2 text-center">THÔNG TIN LIÊN HỆ</h4>
+                  <h3 className="text-2xl font-black text-brand-600 uppercase mb-8 border-b pb-2 text-center">THÔNG TIN LIÊN HỆ</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[17px] font-medium">
                     <div className="space-y-4">
                       <p>📍 <strong>Chi Nhánh 1:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</p>

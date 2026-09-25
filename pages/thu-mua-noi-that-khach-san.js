@@ -2,38 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThanhLyNoiThatKhachSanPage() {
   const hotline = "0398.771.444";
 
-  // Dữ liệu Schema Markup để Google nhận diện dịch vụ thu mua đồ khách sạn
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Dịch Vụ Thanh Lý Nội Thất Khách Sạn Trọn Gói",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Đồ Cũ Trung Kiên",
-      "telephone": "0398.771.444",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-        "addressLocality": "Quận Bình Tân",
-        "addressRegion": "TP.HCM"
-      }
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thu Mua Nội Thất Khách Sạn', url: 'https://thumuadocutrungkien.com/thu-mua-noi-that-khach-san' }
+  ];
+
+  const faqs = [
+    {
+      question: "Trung Kiên có thu mua nội thất khách sạn số lượng lớn (50-200 phòng) không?",
+      answer: "Có. Chúng tôi có đầy đủ nguồn vốn, nhân sự và đội xe tải lớn để thu mua bao tiêu trọn gói mọi quy mô khách sạn từ 2 sao đến 5 sao, homestay, resort."
     },
-    "description": "Trung Kiên chuyên thanh lý nội thất khách sạn, resort, homestay trọn gói tại TPHCM. Thu mua giường, nệm, tủ, thiết bị vệ sinh, quầy lễ tân giá cao."
-  };
+    {
+      question: "Các thiết bị buồng phòng khách sạn gồm những gì?",
+      answer: "Thu mua: giường ngủ, nệm lò xo/cao su, tủ quần áo âm tường, minibar (tủ mát mini), tivi, máy sấy tóc, bàn làm việc, két sắt mini và thiết bị vệ sinh cao cấp."
+    },
+    {
+      question: "Thời gian hoàn thành tháo dỡ khách sạn nhiều tầng mất bao lâu?",
+      answer: "Đội ngũ 20-30 thợ chuyên nghiệp làm việc liên tục, có thể hoàn tất việc tháo dỡ toàn bộ tòa nhà và dọn dẹp mặt bằng sạch sẽ trong 3 - 5 ngày."
+    }
+  ];
+
+  const priceItems = [
+    { name: "Thu mua combo phòng ngủ khách sạn (Giường 1m8 + nệm lò xo + 2 tab + tủ áo)", unit: "Phòng", priceRange: "3.500.000 - 15.000.000 đ", note: "Khách sạn 3 - 5 sao gỗ cao cấp" },
+    { name: "Thu mua tủ lạnh mini (Minibar) khách sạn 50L - 90L", unit: "Chiếc", priceRange: "700.000 - 1.800.000 đ", note: "Dometic, Primo, Homesun, Casper" },
+    { name: "Thu mua tivi thông minh Smart TV khách sạn 32 - 55 inch", unit: "Chiếc", priceRange: "1.200.000 - 6.500.000 đ", note: "Samsung, LG, Sony, TCL" },
+    { name: "Thu mua bàn ghế sảnh tiếp tân, sofa lounge sảnh khách sạn", unit: "Bộ", priceRange: "2.500.000 - 18.000.000 đ", note: "Sofa bọc da thật, khung kim loại mạ vàng" },
+    { name: "Thu mua két sắt điện tử mini để phòng khách sạn", unit: "Chiếc", priceRange: "400.000 - 1.500.000 đ", note: "Khóa mã số điện tử còn hoạt động tốt" },
+    { name: "Thu mua máy nước nóng lạnh, máy sấy tóc gắn tường", unit: "Chiếc", priceRange: "200.000 - 1.200.000 đ", note: "Ariston, Ferroli, Panasonic" },
+    { name: "Thu mua thiết bị giặt sấy công nghiệp cho khách sạn", unit: "Máy", priceRange: "15.000.000 - 80.000.000 đ", note: "Máy giặt vắt công nghiệp 20kg - 50kg" }
+  ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thanh Lý Nội Thất Khách Sạn Giá Cao TPHCM | Đồ Cũ Trung Kiên"
+        description="Chuyên thu mua thanh lý nội thất khách sạn, resort, homestay trọn gói giá cao tại TPHCM. Giường nệm, minibar, tivi, đồ gỗ buồng phòng: 0398.771.444."
+        keywords="Thanh Lý Nội Thất Khách Sạn, Thanh Lý Nội Thất Khách Sạn Trọn Gói, Thanh Lý Nội Thất Khách Sạn Gía Cao, đồ cũ trung kiên"
+        canonical="https://thumuadocutrungkien.com/thu-mua-noi-that-khach-san"
+        ogImage="/thanh-ly-noi-that-khach-san.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thanh Lý Nội Thất Khách Sạn Trọn Gói Giá Cao TPHCM | Trung Kiên</title>
-        <meta name="description" content="Dịch Vụ Thanh Lý Nội Thất Khách Sạn - Thu Mua Giá Cao, Uy Tín. Trung Kiên thu mua trọn gói giường, nệm, đồ gỗ, thiết bị sảnh từ A-Z. Báo giá và tháo dỡ nhanh chóng." />
-        <meta name="keywords" content="Thanh Lý Nội Thất Khách Sạn, Thanh Lý Nội Thất Khách Sạn Trọn Gói, Thanh Lý Nội Thất Khách Sạn Gía Cao, đồ cũ trung kiên" />
-        <link rel="canonical" href="https://docutrungkien.com/thu-mua-do-cu/thanh-ly-noi-that-khach-san" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thanh Lý Nội Thất Khách Sạn Trọn Gói Giá Cao"
+          description="Chuyên thu mua trọn gói nội thất khách sạn, resort, homestay: giường, nệm, tủ áo, minibar, thiết bị sảnh giá cao tại TPHCM."
+          url="https://thumuadocutrungkien.com/thu-mua-noi-that-khach-san"
+          image="https://thumuadocutrungkien.com/thanh-ly-noi-that-khach-san.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -50,22 +74,22 @@ export default function ThanhLyNoiThatKhachSanPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
-                  Thanh Lý Nội Thất Khách Sạn
+                  Thanh Lý Nội Thất Khách Sạn Trọn Gói Giá Cao TPHCM - Đồ Cũ Trung Kiên
                 </h1>
               </header>
 
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed text-justify space-y-8">
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-4">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-4">
                     Dịch Vụ Thanh Lý Nội Thất Khách Sạn – Thu Mua Giá Cao, Uy Tín
                   </h2>
                   <p className="text-[17px]">
-                    <strong>Công ty Trung Kiên</strong> là đối tác tin cậy hàng đầu, cung cấp giải pháp <strong className="text-brand-600">thanh lý nội thất khách sạn trọn gói</strong> tại TPHCM và khu vực lân cận. Chúng tôi chuyên thu mua tất cả các danh mục nội thất, từ phòng ngủ đến khu vực sảnh lounge, với phương châm <strong className="text-red-600 uppercase">"ĐẾN NHANH - ĐỊNH GIÁ CHUẨN - THANH TOÁN LIỀN TAY"</strong>.
+                    <strong>Công ty Trung Kiên</strong> là đối tác tin cậy hàng đầu, cung cấp giải pháp <strong className="text-brand-600">thanh lý nội thất khách sạn trọn gói</strong> tại TPHCM và khu vực lân cận. Chúng tôi chuyên thu mua tất cả các danh mục nội thất, từ phòng ngủ đến khu vực sảnh lounge, cũng như <Link href="/thanh-ly-nha-hang" className="text-brand-600 font-semibold hover:underline">nhà hàng khách sạn</Link>, <Link href="/thu-mua-do-cu-gia-dinh" className="text-brand-600 font-semibold hover:underline">đồ nội thất gia đình</Link> và <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">tủ mát minibar</Link> với phương châm <strong className="text-red-600 uppercase">"ĐẾN NHANH - ĐỊNH GIÁ CHUẨN - THANH TOÁN LIỀN TAY"</strong>.
                   </p>
                   <p className="text-[17px]">
                     Sở hữu đội ngũ chuyên gia giàu kinh nghiệm và nguồn vốn mạnh, Trung Kiên cam kết mang đến cho Quý khách hàng mức giá tốt nhất thị trường. Mọi dự án đều được thực hiện bằng quy trình bài bản, minh bạch, giúp tối ưu hóa giá trị tài sản và rút ngắn thời gian thanh lý cho chủ đầu tư.
@@ -89,7 +113,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6">
                     Danh Mục Thanh Lý Nội Thất Khách Sạn Tại Trung Kiên
                   </h2>
                   <p>Công ty Trung Kiên chuyên thu mua và thanh lý toàn bộ các thiết bị, nội thất từ A đến Z của khách sạn, resort, homestay. Dưới đây là danh sách chi tiết các mặt hàng chúng tôi thường xuyên mua lại:</p>
@@ -161,7 +185,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100 mt-10">
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6 text-center">
                     Quy Trình 4 Bước Thanh Lý Nhanh Chóng, Dễ Dàng Tại Đồ Cũ Trung Kiên
                   </h2>
                   <p className="text-center mb-6">Khi quyết định thanh lý nội thất khách sạn, việc chọn một quy trình đơn giản và hiệu quả là rất quan trọng.</p>
@@ -199,7 +223,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-red-700 uppercase mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-red-700 uppercase mb-6">
                     Cam Kết Dịch Vụ Thu Mua Nội Thất Khách Sạn - Trung Kiên
                   </h2>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
@@ -234,6 +258,18 @@ export default function ThanhLyNoiThatKhachSanPage() {
                   </div>
                 </figure>
 
+                {/* BẢNG GIÁ THAM KHẢO & FAQ (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thanh Lý Nội Thất Khách Sạn Tham Khảo"
+                  subtitle="Giá combo nội thất phòng ngủ, minibar và thiết bị sảnh được định giá theo tiêu chuẩn sao của khách sạn. Khảo sát thẩm định giá ngay trong ngày!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Câu Hỏi Thường Gặp Về Thanh Lý Nội Thất Khách Sạn"
+                  faqs={faqs}
+                />
+
                 <section className="bg-gray-900 text-white p-8 rounded-3xl shadow-xl mt-12">
                   <h3 className="text-brand-400 text-xl font-black uppercase mb-6 border-b border-gray-700 pb-2">
                     Các Khu Vực Chuyên Nhận Thu Mua Thanh Lý Nội Thất Khách Sạn
@@ -261,7 +297,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
 
                 {/* THÔNG TIN LIÊN HỆ */}
                 <footer className="mt-8 p-8 bg-white border-2 border-brand-600 rounded-3xl shadow-md">
-                  <h4 className="text-2xl font-black text-brand-600 uppercase mb-8 border-b pb-2 text-center">THÔNG TIN LIÊN HỆ</h4>
+                  <h3 className="text-2xl font-black text-brand-600 uppercase mb-8 border-b pb-2 text-center">THÔNG TIN LIÊN HỆ</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[16px] font-medium text-gray-700">
                     <div className="space-y-4">
                       <p>📍 <strong>CN1:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</p>

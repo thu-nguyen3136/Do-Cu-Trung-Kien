@@ -12,9 +12,7 @@ export function FloatingContact() {
 
   return (
     <>
-      {/* FLOATING CONTACT BUTTONS - Bottom Corner Icons */}
-
-      {/* Left: Phone Button with Icon + Number (New Glossy Pill Design) */}
+      {/* Left: Phone Button with Icon + Number (New Glossy Pill Design - Perfectly Centered Waves) */}
       <a
         href="tel:0398771444"
         className="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-6 md:left-6 z-50 flex items-center group hover:no-underline"
@@ -22,22 +20,25 @@ export function FloatingContact() {
         aria-label="Gọi điện"
       >
         <div className="relative flex items-center">
-          {/* Ring Animations centered on the icon */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="absolute w-12 h-12 md:w-14 md:h-14 bg-brand-500 rounded-full animate-ping opacity-60"></div>
-            <div className="absolute w-14 h-14 md:w-16 md:h-16 border-2 border-brand-500 rounded-full animate-ping opacity-40" style={{ animationDuration: '1.5s' }}></div>
-          </div>
 
           {/* Pill Container */}
-          <div className="relative flex items-center bg-[#388e3c] group-hover:bg-[#2e7d32] rounded-full shadow-[0_4px_15px_rgba(224,138,13,0.5)] transition-all duration-300 transform group-hover:scale-105 border border-[#e59524] overflow-hidden ml-1">
+          <div className="relative flex items-center bg-[#388e3c] group-hover:bg-[#2e7d32] rounded-full shadow-[0_4px_15px_rgba(224,138,13,0.5)] transition-all duration-300 transform group-hover:scale-105 border border-[#e59524] overflow-visible ml-1">
 
-            {/* Glossy top overlay (no horizontal line) */}
-            <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-white/20 to-transparent pointer-events-none"></div>
+            {/* Glossy top overlay */}
+            <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-white/20 to-transparent pointer-events-none z-0 rounded-full overflow-hidden"></div>
 
-            {/* Phone Icon Circle */}
-            <div className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#e59524] to-[#388e3c] rounded-full border-[2px] sm:border-[3px] border-[#efbe7a] shadow-[inset_0_2px_4px_rgba(255,255,255,0.4)] z-10 mx-[2px] my-[2px]">
+            {/* Phone Icon Circle (Đặt overflow-visible để sóng lan ra ngoài vòng tròn) */}
+            <div className="relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#e59524] to-[#388e3c] rounded-full border-[2px] sm:border-[3px] border-[#efbe7a] shadow-[inset_0_2px_4px_rgba(255,255,255,0.4)] z-20 mx-[2px] my-[2px] overflow-visible">
+
+              {/* Ring Animations - Căn giữa tuyệt đối ngay tâm icon */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible z-[-1]">
+                <div className="absolute w-12 h-12 md:w-14 md:h-14 bg-[#e59524] rounded-full animate-ping opacity-60"></div>
+                <div className="absolute w-16 h-16 md:w-20 md:h-20 border-2 border-[#e59524] rounded-full animate-ping opacity-40" style={{ animationDuration: '1.5s' }}></div>
+              </div>
+
+              {/* Icon Điện Thoại */}
               <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:rotate-12 transition-transform duration-300"
+                className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white group-hover:rotate-12 transition-transform duration-300 relative z-10"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -46,7 +47,7 @@ export function FloatingContact() {
               </svg>
             </div>
 
-            {/* Text */}
+            {/* Text Số Điện Thoại */}
             <div className="px-2 sm:px-3 md:px-5 pr-3 sm:pr-4 md:pr-7 relative z-10">
               <span className="text-white font-black text-xs sm:text-[16px] md:text-xl tracking-wider drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
                 0398.771.444
@@ -63,9 +64,15 @@ export function FloatingContact() {
         title="Gửi SMS"
         aria-label="Gửi tin nhắn SMS"
       >
-        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-brand-500 hover:bg-brand-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-brand-500/50 hover:scale-110 transition-all duration-300 transform">
+        {/* Hiệu ứng sóng lan nhẹ phía sau */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-brand-500 rounded-full animate-ping opacity-30"></div>
+        </div>
+
+        {/* Icon chính với hiệu ứng phóng to và đổi màu mượt mà */}
+        <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-brand-500 hover:bg-brand-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-brand-500/50 hover:scale-110 transition-all duration-300 transform z-10">
           <svg
-            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white"
+            className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white group-hover:scale-110 transition-transform duration-300"
             fill="currentColor"
             viewBox="0 0 512 512"
             aria-hidden="true"

@@ -1,21 +1,47 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BreadcrumbSchema } from '../components/SchemaMarkup';
+import SEOHead from '../components/SEOHead';
 
 export default function GioiThieuPage() {
   const hotline = "0398.771.444";
 
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Giới thiệu', url: 'https://thumuadocutrungkien.com/gioi-thieu' }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Giới Thiệu Đồ Cũ Trung Kiên | Đơn Vị Thu Mua Uy Tín TPHCM"
+        description="Đồ Cũ Trung Kiên hơn 10 năm kinh nghiệm chuyên thu mua đồ cũ, thanh lý nhà hàng, khách sạn, quán cafe giá cao tận nơi tại TPHCM. Hotline: 0398.771.444."
+        keywords="về đồ cũ Trung Kiên, giới thiệu đồ cũ Trung Kiên, thu mua đồ cũ uy tín tphcm"
+        canonical="https://thumuadocutrungkien.com/gioi-thieu"
+        ogImage="/anh-gioi-thieu-do-cu-trung-kien.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Về Chúng Tôi | Đồ Cũ Trung Kiên - Thu Mua Trọn Gói TPHCM</title>
-        <meta name="description" content="Đồ Cũ Trung Kiên với hơn 10 năm kinh nghiệm, chuyên thu mua đồ cũ giá cao tận nơi tại TPHCM. Cam kết không ép giá, dọn dẹp sạch sẽ, thanh toán 100%." />
-        <meta name="keywords" content="về đồ cũ Trung Kiên, giới thiệu đồ cũ Trung Kiên, thu mua đồ cũ uy tín" />
-        <link rel="canonical" href="https://thumuadocugiacao.net/gioi-thieu" />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "mainEntity": {
+                "@type": "LocalBusiness",
+                "name": "Đồ Cũ Trung Kiên",
+                "url": "https://thumuadocutrungkien.com/",
+                "telephone": "0398.771.444",
+                "description": "Đồ Cũ Trung Kiên với hơn 10 năm kinh nghiệm trong lĩnh vực thu mua đồ cũ, thanh lý nhà hàng, khách sạn giá cao tại TPHCM."
+              }
+            })
+          }}
+        />
       </Head>
 
-      <main className="flex-grow pb-20">
+      <main className="flex-grow pb-1">
 
         {/* ================= BREADCRUMB ================= */}
         <div className="bg-white border-b border-gray-100 py-4">
@@ -27,7 +53,7 @@ export default function GioiThieuPage() {
         </div>
 
         {/* ================= MAIN LAYOUT (1 CỘT DUY NHẤT - FULL WIDTH) ================= */}
-        <section className="max-w-[1200px] mx-auto px-4 md:px-6 py-8 md:py-12">
+        <section className="max-w-[1200px] mx-auto px-4 md:px-6 py-4 md:py-4">
 
           <article className="bg-white p-6 md:p-10 lg:p-14 rounded-[32px] shadow-sm border border-gray-100 overflow-hidden">
 
@@ -67,12 +93,13 @@ export default function GioiThieuPage() {
 
               {/* 2. HÌNH ẢNH TO BẢN */}
               <div className="w-full relative flex justify-center items-center group">
-                <div className="relative w-full aspect-video md:h-[500px] flex items-center justify-center rounded-[30px] overflow-hidden shadow-2xl">
+                <div className="relative inline-block rounded-[30px] overflow-hidden shadow-2xl max-w-full">
                   <Image
-                    src="/anh-gioi-thieu-do-cu-vui-hung.jpg"
+                    src="/anh-gioi-thieu-do-cu-trung-kien.jpg"
                     alt="Về Đồ Cũ Trung Kiên"
-                    fill
-                    className="object-full transition-transform duration-700 group-hover:scale-105"
+                    width={1200}
+                    height={675}
+                    className="w-auto h-auto max-h-[500px] object-contain transition-transform duration-700 group-hover:scale-105 block"
                   />
 
                   {/* Badge kinh nghiệm */}
@@ -163,8 +190,17 @@ export default function GioiThieuPage() {
             {/* Nút Gọi Ngay cuối bài */}
             <div className="text-center border-t border-gray-100 pt-10">
               <p className="text-xl font-bold text-[#111827] mb-6">Bạn đang cần dọn dẹp mặt bằng? Gọi Trung Kiên ngay!</p>
-              <a href={`tel:${hotline}`} className="group inline-flex items-center gap-4 bg-[#111827] text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-lg hover:bg-[#388e3c] transition-all shadow-[0_15px_30px_rgba(17,24,39,0.3)] hover:-translate-y-1">
-                <span className="bg-white/20 p-2 rounded-lg group-hover:scale-110 transition-transform">📞</span>
+              <a href={`tel:${hotline}`} className="group inline-flex items-center gap-4 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-lg bg-[#388e3c] transition-all shadow-[0_15px_30px_rgba(17,24,39,0.3)] hover:-translate-y-1">
+                <span className="bg-white/20 p-2.5 rounded-lg group-hover:scale-110 transition-transform flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
+                  </svg>
+                </span>
                 Gọi Ngay: {hotline}
               </a>
             </div>

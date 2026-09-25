@@ -2,38 +2,62 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../components/Sidebar';
+import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/SchemaMarkup';
+import FAQAccordion from '../components/FAQAccordion';
+import PriceTable from '../components/PriceTable';
+import SEOHead from '../components/SEOHead';
 
 export default function ThuMuaDoInoxPage() {
   const hotline = "0398.771.444";
 
-  // Schema để Google nhận diện dịch vụ thu mua đồ Inox
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Thu Mua Đồ Inox Cũ Giá Cao",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Đồ Cũ Trung Kiên",
-      "telephone": "0398.771.444",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "271 Bình Long, Phường Bình Hưng Hòa",
-        "addressLocality": "Quận Bình Tân",
-        "addressRegion": "TP.HCM"
-      }
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thu Mua Đồ Inox Cũ', url: 'https://thumuadocutrungkien.com/thu-mua-do-inox-cu' }
+  ];
+
+  const faqs = [
+    {
+      question: "Đồ Cũ Trung Kiên thu mua các loại đồ Inox nào?",
+      answer: "Chúng tôi thu mua mọi sản phẩm inox 304, inox 201: bàn ghế inox tròn/vuông, chậu rửa bát inox đơn/đôi, kệ bếp inox, bàn soạn đồ ăn, tum hút mùi inox, giá kệ chén bát và bồn nước inox."
     },
-    "description": "Trung Kiên chuyên thu mua đồ inox cũ giá cao: bàn ghế inox, bếp inox công nghiệp, bồn rửa chén, kệ khay inox nhà hàng tại TPHCM."
-  };
+    {
+      question: "Inox bị trầy xước, móp méo hoặc ố màu có mua không?",
+      answer: "Có. Chúng tôi thu mua mọi tình trạng đồ inox cũ, kể cả đồ đã qua sử dụng lâu năm, móp méo hoặc cần bán phế liệu inox giá cao."
+    },
+    {
+      question: "Định giá thu mua đồ inox dựa trên yếu tố nào?",
+      answer: "Giá thu mua phụ thuộc vào chất liệu (Inox 304 hay 201), độ dày của tấm inox, kích thước, khối lượng và tình trạng sử dụng lại được hay không."
+    }
+  ];
+
+  const priceItems = [
+    { name: "Thu mua bàn inox 304 có tầng, bàn sơ chế đồ ăn", unit: "Chiếc", priceRange: "1.200.000 - 4.500.000 đ", note: "Inox dày 1.0mm - 1.5mm, có lót gỗ" },
+    { name: "Thu mua bàn ghế inox chữ nhật, bàn tròn tiệc inox", unit: "Bộ", priceRange: "600.000 - 3.200.000 đ", note: "1 bàn + 6-10 ghế đôn inox" },
+    { name: "Thu mua chậu rửa bát inox công nghiệp (1 hố, 2 hố, 3 hố)", unit: "Chiếc", priceRange: "1.500.000 - 6.000.000 đ", note: "Kèm vòi cấp xả và bàn chờ" },
+    { name: "Thu mua kệ inox để chén đĩa, giá nan inox 3-5 tầng", unit: "Chiếc", priceRange: "800.000 - 3.500.000 đ", note: "Inox thanh hộp chắc chắn" },
+    { name: "Thu mua tum hút mùi inox, quạt ly tâm công nghiệp", unit: "Hệ thống", priceRange: "2.500.000 - 18.000.000 đ", note: "Tự tháo dỡ nguyên hệ thống" },
+    { name: "Thu mua xe đẩy thức ăn inox, xe đẩy khay cơm 3 tầng", unit: "Chiếc", priceRange: "700.000 - 2.800.000 đ", note: "Bánh xe xoay 360 độ" },
+    { name: "Thu mua bồn nước inox Đại Thành, Sơn Hà cũ (500L - 2000L)", unit: "Bồn", priceRange: "1.000.000 - 4.500.000 đ", note: "Inox 304 không thủng, rò rỉ" }
+  ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Thu Mua Đồ Inox Cũ Giá Cao TPHCM | Bàn Ghế, Bếp Inox 304"
+        description="Đồ Cũ Trung Kiên thu mua đồ inox cũ giá cao tại TPHCM: bàn sơ chế inox, bồn rửa chén, kệ inox, tum hút mùi, bàn ghế inox tiệc. Hotline: 0398.771.444."
+        keywords="Thu Mua Đồ Inox Cũ, thu mua bàn ghế inox, thu mua bàn inox, thu mua bếp inox, thu mua đồ inox giá cao, đồ cũ trung kiên"
+        canonical="https://thumuadocutrungkien.com/thu-mua-do-inox-cu"
+        ogImage="/thu-mua-do-inox.jpg"
+      />
       <Head>
-        {/* --- SEO META TAGS --- */}
-        <title>Thu Mua Đồ Inox Cũ Giá Cao TPHCM | Bàn Ghế, Bếp Inox | Trung Kiên</title>
-        <meta name="description" content="Đồ Cũ Trung Kiên nhận thu mua đồ inox giá cao, thu mua bếp inox, mua bàn ghế inox cũ tại TP.HCM và các tỉnh lân cận với mức giá hấp dẫn nhất." />
-        <meta name="keywords" content="Thu Mua Đồ Inox Cũ, thu mua bàn ghế inox, thu mua bàn inox, thu mua bếp inox, thu mua đồ inox giá cao, đồ cũ trung kiên" />
-        <link rel="canonical" href="https://docutrungkien.com/thu-mua-do-cu/thu-mua-do-inox-cu-gia-cao" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <BreadcrumbSchema items={breadcrumbs} />
+        <ServiceSchema
+          name="Thu Mua Đồ Inox Cũ Giá Cao TPHCM"
+          description="Chuyên thu mua bàn ghế inox, thiết bị bếp inox công nghiệp, chậu rửa bát inox và kệ inox giá cao tại TPHCM."
+          url="https://thumuadocutrungkien.com/thu-mua-do-inox-cu"
+          image="https://thumuadocutrungkien.com/thu-mua-do-inox.jpg"
+        />
+        <FAQSchema faqs={faqs} />
       </Head>
 
       <main className="flex-grow pb-12">
@@ -50,11 +74,11 @@ export default function ThuMuaDoInoxPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH (3/4) --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+            <article className="lg:col-span-3">
 
               <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
-                  Thu Mua Đồ Inox Cũ Giá Cao
+                  Thu Mua Đồ Inox Cũ Giá Cao Tại TPHCM - Đồ Cũ Trung Kiên
                 </h1>
               </header>
 
@@ -62,7 +86,7 @@ export default function ThuMuaDoInoxPage() {
 
                 <section>
                   <p className="text-[20px]">
-                    <strong>Đồ Cũ Trung Kiên</strong> nhận <strong>thu mua đồ inox giá cao, thu mua bếp inox, mua bàn ghế inox cũ</strong> tại TP.HCM và các tỉnh lân cận, với mức giá thu mua hấp dẫn và cạnh tranh trên thị trường.
+                    <strong>Đồ Cũ Trung Kiên</strong> nhận <strong>thu mua đồ inox giá cao, thu mua bếp inox, mua bàn ghế inox cũ</strong> tại TP.HCM và các tỉnh lân cận, với mức giá thu mua hấp dẫn và cạnh tranh trên thị trường. Chúng tôi chuyên thu mua trọn gói thiết bị inox từ <Link href="/thanh-ly-nha-hang" className="text-brand-600 font-semibold hover:underline">nhà hàng</Link>, <Link href="/thanh-ly-quan-an" className="text-brand-600 font-semibold hover:underline">quán ăn</Link>, <Link href="/thanh-ly-quan-pho" className="text-brand-600 font-semibold hover:underline">quán phở</Link> và bếp ăn công nghiệp.
                     Liên Hệ: <strong className="text-red-600 text-2xl">{hotline}</strong> để được Đồ Cũ Trung Kiên đến và khảo sát báo giá tận nơi để có mức giá chính xác nhất!!!
                   </p>
                 </section>
@@ -82,7 +106,7 @@ export default function ThuMuaDoInoxPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
                     Những mặt hàng đồ inox mà Trung Kiên nhận thu mua và Thanh lý:
                   </h2>
                   <ul className="list-none p-0 space-y-4 text-[20px]">
@@ -128,7 +152,7 @@ export default function ThuMuaDoInoxPage() {
                 </figure>
 
                 <section className="bg-brand-50 p-8 rounded-[2rem] border-2 border-brand-100">
-                  <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase mb-6 text-center">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-gray-800 uppercase mb-6 text-center">
                     Quy Trình Thu Mua Đồ Cũ Của Công Ty Chúng Tôi
                   </h2>
                   <div className="space-y-6 text-[18px]">
@@ -150,7 +174,7 @@ export default function ThuMuaDoInoxPage() {
                 </figure>
 
                 <section>
-                  <h2 className="text-xl md:text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
+                  <h2 className="!text-xl md:!text-2xl font-bold text-brand-600 uppercase border-l-4 border-brand-600 pl-4 mb-6">
                     Cam kết thu mua đồ inox cũ giá cao nhất tại TP HCM
                   </h2>
                   <ul className="grid grid-cols-1 gap-4 list-none p-0">
@@ -168,6 +192,18 @@ export default function ThuMuaDoInoxPage() {
                     ))}
                   </ul>
                 </section>
+
+                {/* BẢNG GIÁ THAM KHẢO & FAQ (ON-PAGE SEO) */}
+                <PriceTable
+                  title="Bảng Giá Thu Mua Đồ Inox Cũ Tham Khảo"
+                  subtitle="Giá thu mua đồ inox 304 luôn cao hơn inox 201. Chúng tôi kiểm tra độ dày và nam châm thử inox trực tiếp trước sự chứng kiến của khách hàng!"
+                  items={priceItems}
+                />
+
+                <FAQAccordion
+                  title="Câu Hỏi Thường Gặp Khi Bán Đồ Inox Cũ"
+                  faqs={faqs}
+                />
 
                 <section className="mt-12 bg-gray-900 text-white p-8 rounded-3xl">
                   <h3 className="text-brand-400 text-xl font-black uppercase mb-6">Địa bàn phục vụ thu mua</h3>

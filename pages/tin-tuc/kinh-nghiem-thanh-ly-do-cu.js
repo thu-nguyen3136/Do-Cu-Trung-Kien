@@ -1,18 +1,36 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Sidebar from '../../components/Sidebar';
+import { BreadcrumbSchema, ArticleSchema } from '../../components/SchemaMarkup';
+import SEOHead from '../../components/SEOHead';
 
 export default function ArticleKinhNghiemDoCu() {
   const hotline = "0398.771.444";
 
+  const breadcrumbs = [
+    { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Tin tức', url: 'https://thumuadocutrungkien.com/tin-tuc' },
+    { name: 'Kinh Nghiệm Thanh Lý Đồ Cũ', url: 'https://thumuadocutrungkien.com/tin-tuc/kinh-nghiem-thanh-ly-do-cu' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50 font-sans antialiased text-gray-800 flex flex-col">
-      <Head>
-        <title>Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM (Cập Nhật 2026)</title>
-        <meta name="description" content="Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM. Chọn đúng đơn vị thu mua trọn gói giúp bạn không bị ép giá." />
-        <link rel="canonical" href="https://thumuadocugiacao.net/tin-tuc/kinh-nghiem-thanh-ly-do-cu-gia-cao" />
-      </Head>
+    <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
+      <SEOHead
+        title="Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM | Trung Kiên"
+        description="Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM. Chọn đúng đơn vị thu mua trọn gói giúp bạn không bị ép giá."
+        canonical="/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
+        ogType="article"
+        ogImage="/thu-mua-do-cu-gia-dinh-3.jpeg"
+        publishedTime="2024-01-15T08:00:00+07:00"
+        modifiedTime="2026-03-01T08:00:00+07:00"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
+      <ArticleSchema
+        title="Kinh Nghiệm Thanh Lý Đồ Cũ Giá Cao Tại TPHCM (Cập Nhật 2026)"
+        description="Bí quyết thanh lý đồ cũ gia đình, đồ văn phòng, bàn ghế quán cafe với giá cao nhất TPHCM. Chọn đúng đơn vị thu mua trọn gói giúp bạn không bị ép giá."
+        url="https://thumuadocutrungkien.com/tin-tuc/kinh-nghiem-thanh-ly-do-cu"
+        image="https://thumuadocutrungkien.com/thu-mua-do-cu-gia-dinh-3.jpeg"
+      />
 
       <main className="flex-grow pb-20">
         {/* ================= BREADCRUMB ================= */}
@@ -31,7 +49,7 @@ export default function ArticleKinhNghiemDoCu() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-10 items-start">
 
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
-            <article className="lg:col-span-3 bg-white p-6 md:p-10 rounded-[32px] shadow-sm border border-gray-100 overflow-hidden">
+            <article className="lg:col-span-3">
 
               <div className="mb-6 flex flex-wrap items-center gap-3">
                 <span className="bg-[#388e3c]/10 text-[#388e3c] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Mẹo Vặt - Chia Sẻ</span>
@@ -65,7 +83,7 @@ export default function ArticleKinhNghiemDoCu() {
 
               {/* SECTION: Nội dung bài viết */}
               <section className="mb-12">
-                <h2 className="text-2xl font-black text-[#111827] border-l-4 border-[#388e3c] pl-4 mb-6">
+                <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] border-l-4 border-[#388e3c] pl-4 mb-6">
                   1. Phân loại và vệ sinh sơ bộ sản phẩm
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -76,14 +94,14 @@ export default function ArticleKinhNghiemDoCu() {
                   <li><strong>Vệ sinh:</strong> Lau bụi bề mặt, kiểm tra xem sản phẩm còn hoạt động tốt không (đối với đồ điện tử).</li>
                 </ul>
 
-                <h2 className="text-2xl font-black text-[#111827] border-l-4 border-[#388e3c] pl-4 mb-6">
+                <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] border-l-4 border-[#388e3c] pl-4 mb-6">
                   2. Cung cấp thông tin chi tiết cho bên thu mua
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Hiện nay, để tiết kiệm thời gian, các đơn vị uy tín như Trung Kiên thường hỗ trợ <strong>báo giá online qua Zalo</strong>. Để nhận được báo giá chính xác nhất, bạn hãy chụp ảnh thật rõ nét (nhiều góc độ), báo rõ tình trạng xước xát, năm mua, và thương hiệu của sản phẩm.
                 </p>
 
-                <h2 className="text-2xl font-black text-[#111827] border-l-4 border-[#388e3c] pl-4 mb-6">
+                <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] border-l-4 border-[#388e3c] pl-4 mb-6">
                   3. Lựa chọn đơn vị thu mua trọn gói, uy tín
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-6">
@@ -101,7 +119,7 @@ export default function ArticleKinhNghiemDoCu() {
 
               {/* SECTION: FAQ Accordion */}
               <section className="mb-12">
-                <h2 className="text-2xl font-black text-[#111827] border-b-2 border-gray-100 pb-4 mb-6">
+                <h2 className="!text-xl md:!text-2xl font-bold text-[#111827] border-b-2 border-gray-100 pb-4 mb-6">
                   Các câu hỏi thường gặp
                 </h2>
                 <div className="space-y-4">
