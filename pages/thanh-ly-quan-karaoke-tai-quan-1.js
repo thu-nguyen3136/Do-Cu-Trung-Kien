@@ -7,7 +7,7 @@ import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
 
-const pageUrl = 'https://thumuadocutrungkien.com/thanh-ly-quan-karaoke-tai-q1';
+const pageUrl = 'https://thumuadocutrungkien.com/thanh-ly-quan-karaoke-tai-quan-1';
 const pageDescription = 'Thu mua, thanh lý quán karaoke tại Quận 1 trọn gói: loa, amply, mixer, màn hình, sofa và thiết bị phòng hát. Hỗ trợ tháo dỡ theo lịch. Gọi 0398.771.444.';
 const pageImage = '/thu-mua-quan-karaoke-1.jpg';
 
@@ -58,7 +58,7 @@ export default function ThanhLyQuanKaraokeTaiQ1Page() {
         title="Thanh Lý Karaoke Quận 1 Trọn Gói | Trung Kiên"
         description={pageDescription}
         keywords="thanh lý quán karaoke tại Quận 1, thanh lý karaoke Q1, thu mua quán karaoke Quận 1, thu mua phòng karaoke Q1, thanh lý phòng hát karaoke, thu mua loa karaoke Quận 1, thanh lý loa sub karaoke, thu mua amply karaoke, thu mua cục đẩy công suất, thanh lý mixer vang số, thu mua micro karaoke, thanh lý màn hình phòng hát, thu mua sofa karaoke, thanh lý bàn karaoke, thanh lý đèn sân khấu karaoke, tháo dỡ karaoke Quận 1, thanh lý karaoke Bùi Viện, thu mua karaoke Phạm Ngũ Lão"
-        canonical="/thanh-ly-quan-karaoke-tai-q1"
+        canonical="/thanh-ly-quan-karaoke-tai-quan-1"
         ogImage={pageImage}
       />
       <Head>
@@ -119,7 +119,7 @@ export default function ThanhLyQuanKaraokeTaiQ1Page() {
                   <li><strong>Vận chuyển từ tầng cao hoặc hẻm nhỏ:</strong> Kiểm tra chiều rộng lối đi, thang hàng, tải trọng và điểm tập kết. Nếu cần thiết bị nâng hạ, phương án phải được khảo sát và thống nhất với ban quản lý.</li>
                   <li><strong>Kiểm kê thiết bị điện tử:</strong> Ghi model, số lượng, phụ kiện và tình trạng hoạt động giúp việc đối chiếu, định giá rõ ràng hơn.</li>
                 </ol>
-                <p>Trường hợp cơ sở có thêm quầy bar, pub hoặc lounge, bạn có thể xem trang <Link href="/thanh-ly-quan-bar-tai-q1" className="text-brand-600 font-semibold hover:underline">thanh lý quán bar tại Quận 1</Link>. Phạm vi dịch vụ và danh mục tài sản của từng mô hình sẽ được xác nhận riêng.</p>
+                <p>Trường hợp cơ sở có thêm quầy bar, pub hoặc lounge, bạn có thể xem trang <Link href="/thanh-ly-quan-bar-tai-quan-1" className="text-brand-600 font-semibold hover:underline">thanh lý quán bar tại Quận 1</Link>. Phạm vi dịch vụ và danh mục tài sản của từng mô hình sẽ được xác nhận riêng.</p>
 
                 <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Các Hạng Mục Có Thể Thu Mua Khi Thanh Lý Karaoke</h2>
                 <p>Trung Kiên tiếp nhận đề nghị khảo sát theo từng phòng hoặc theo danh sách toàn cơ sở. Khả năng thu mua phụ thuộc thương hiệu, tình trạng và số lượng thực tế.</p>

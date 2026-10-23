@@ -48,7 +48,7 @@ export default function Home() {
       services: [
         { id: 1, title: 'Thanh Lý Quán Cafe', image: '/thanh-ly-quan-cafe.jpg', link: '/thanh-ly-quan-ca-phe', description: 'Thu mua bàn ghế, máy pha cafe, quầy bar và thiết bị quán cafe trọn gói giá cao.' },
         { id: 13, title: 'Thanh Lý Quán Bar TPHCM', image: '/thanh-ly-quan-bar-gia-cao.jpg', link: '/thanh-ly-quan-bar-tphcm', description: 'Tiếp nhận khảo sát quầy bar, thiết bị lạnh, máy làm đá, bàn ghế và âm thanh ánh sáng.' },
-        { id: 15, title: 'Thanh Lý Quán Bar Tại Quận 1', image: '/thanh-ly-quan-bar-tphcm.jpg', link: '/thanh-ly-quan-bar-tai-q1', description: 'Thu mua thiết bị bar, âm thanh, ánh sáng và nội thất; hỗ trợ lên lịch tháo dỡ theo điều kiện tại Quận 1.' },
+        { id: 15, title: 'Thanh Lý Quán Bar Tại Quận 1', image: '/thanh-ly-quan-bar-tphcm.jpg', link: '/thanh-ly-quan-bar-tai-quan-1', description: 'Thu mua thiết bị bar, âm thanh, ánh sáng và nội thất; hỗ trợ lên lịch tháo dỡ theo điều kiện tại Quận 1.' },
         { id: 12, title: 'Thu Mua Thanh Lý Quán Cafe TPHCM', image: '/thanh-ly-quan-cafe-1.jpeg', link: '/thanh-ly-quan-cafe-tphcm', description: 'Thu mua máy pha, máy xay, bàn ghế, quầy bar và thiết bị lạnh quán cafe tại TPHCM.' },
         { id: 2, title: 'Thanh Lý Quán Ăn', image: '/thanh-ly-quan-an.jpg', link: '/thanh-ly-quan-an', description: 'Chuyên thu mua thiết bị bếp, bàn ghế và dụng cụ quán ăn giá sỉ, tháo dỡ nhanh.' },
         { id: 3, title: 'Thanh Lý Quán Nhậu', image: '/thanh-ly-quan-nhau.jpg', link: '/thanh-ly-quan-nhau', description: 'Thu mua trọn gói quán nhậu, nhà hàng, hỗ trợ tháo dỡ và vận chuyển tận nơi.' },
@@ -61,7 +61,7 @@ export default function Home() {
         { id: 10, title: 'Thu Mua Nội Thất Khách Sạn', image: '/thanh-ly-noi-that-khach-san.jpg', link: '/thu-mua-noi-that-khach-san', description: 'Thu mua trọn gói nội thất khách sạn, giường, tủ, nệm và thiết bị điện dân dụng.' },
         { id: 14, title: 'Thanh Lý Khách Sạn Trọn Gói TPHCM', image: '/thanh-ly-noi-that-khach-san-1.jpg', link: '/thanh-ly-khach-san-tron-goi-tphcm', description: 'Thu mua giường nệm, tivi, minibar, máy lạnh và tài sản khách sạn theo lô hoặc trọn gói.' },
         { id: 11, title: 'Thu Mua Quán Karaoke', image: '/thu-mua-quan-karaoke-3.jpg', link: '/thu-mua-quan-karaoke', description: 'Thu mua trọn gói dàn âm thanh, loa, amply, ánh sáng sân khấu, tivi và bàn ghế sofa quán karaoke.' },
-        { id: 16, title: 'Thanh Lý Quán Karaoke Tại Quận 1', image: '/thu-mua-quan-karaoke.jpg', link: '/thanh-ly-quan-karaoke-tai-q1', description: 'Khảo sát thanh lý loa, amply, màn hình, sofa và thiết bị phòng karaoke tại Quận 1.' },
+        { id: 16, title: 'Thanh Lý Quán Karaoke Tại Quận 1', image: '/thu-mua-quan-karaoke.jpg', link: '/thanh-ly-quan-karaoke-tai-quan-1', description: 'Khảo sát thanh lý loa, amply, màn hình, sofa và thiết bị phòng karaoke tại Quận 1.' },
         { id: 17, title: 'Thanh Lý Khách Sạn Trọn Gói Tại Quận 1', image: '/thanh-ly-noi-that-khach-san-1.jpg', link: '/thanh-ly-khach-san-tron-goi-tai-quan-1', description: 'Thu mua nội thất buồng phòng và thiết bị khách sạn tại Quận 1 theo lô hoặc trọn gói.' },
       ]
     }
