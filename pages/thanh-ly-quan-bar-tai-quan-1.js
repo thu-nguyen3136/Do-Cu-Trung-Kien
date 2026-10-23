@@ -7,7 +7,7 @@ import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
 
-const pageUrl = 'https://thumuadocutrungkien.com/thanh-ly-quan-bar-tai-q1';
+const pageUrl = 'https://thumuadocutrungkien.com/thanh-ly-quan-bar-tai-quan-1';
 const pageDescription = 'Dịch vụ thu mua thanh lý quán bar tại Q1 giá cao. Thu mua âm thanh, quầy bar, ánh sáng; hỗ trợ tháo dỡ ban đêm theo lịch và quy định. Hotline 0398.771.444.';
 const pageImage = '/thanh-ly-quan-bar-gia-cao.jpg';
 
@@ -54,7 +54,7 @@ export default function ThanhLyQuanBarTaiQ1Page() {
         title="Thanh Lý Quán Bar Q1 Giá Cao, Hỗ Trợ Đêm | Trung Kiên"
         description={pageDescription}
         keywords="thanh lý quán bar tại Quận 1, thu mua quán bar Q1, thanh lý pub Quận 1, thu mua lounge Q1, thanh lý rooftop bar Quận 1, thu mua loa bar Quận 1, thu mua loa line array, thanh lý loa sub, thu mua mixer và cục đẩy công suất, thanh lý đèn moving head, thu mua đèn sân khấu laser, thanh lý quầy bar inox, thu mua máy làm đá quán bar, thanh lý máy rửa ly, thu mua tủ mát quán bar, thanh lý sofa lounge, tháo dỡ quán bar ban đêm Quận 1"
-        canonical="/thanh-ly-quan-bar-tai-q1"
+        canonical="/thanh-ly-quan-bar-tai-quan-1"
         ogImage={pageImage}
       />
       <Head>
