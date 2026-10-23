@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThuMuaQuanKaraokePage() {
   const hotline = "0398.771.444";
@@ -137,7 +138,7 @@ export default function ThuMuaQuanKaraokePage() {
             <article className="lg:col-span-3">
 
               {/* H1 */}
-              <header className="mb-8 border-b-2 border-brand-50 pb-6">
+              <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
                   Thu Mua Quán Karaoke Trọn Gói Giá Cao Tại TPHCM
                 </h1>
@@ -477,7 +478,7 @@ export default function ThuMuaQuanKaraokePage() {
                     </li>
 
                     <li>
-                      📞 <strong>Hotline:</strong> {hotline} - Trung Kiên
+                      <PhoneIcon className="mr-2 inline-block h-4 w-4 align-[-0.15em]" /> <strong>Hotline:</strong> {hotline} - Trung Kiên
                     </li>
 
                   </ul>

@@ -76,7 +76,7 @@ export default function ThuMuaDoInoxPage() {
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH (3/4) --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
+            <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
                   Thu Mua Đồ Inox Cũ Giá Cao Tại TPHCM - Đồ Cũ Trung Kiên
                 </h1>

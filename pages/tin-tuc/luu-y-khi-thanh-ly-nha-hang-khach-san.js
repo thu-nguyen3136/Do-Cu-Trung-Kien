@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Sidebar from '../../components/Sidebar';
 import { BreadcrumbSchema, ArticleSchema } from '../../components/SchemaMarkup';
 import SEOHead from '../../components/SEOHead';
+import PhoneIcon from '../../components/PhoneIcon';
 
 export default function ArticleNhaHangKhachSan() {
   const hotline = "0398.771.444";
@@ -32,7 +33,7 @@ export default function ArticleNhaHangKhachSan() {
         image="https://thumuadocutrungkien.com/thanh-ly-noi-that-khach-san-1.jpg"
       />
 
-      <main className="flex-grow pb-20">
+      <main className="flex-grow pb-0">
         {/* ================= BREADCRUMB ================= */}
         <div className="bg-white border-b border-gray-100 py-4">
           <div className="max-w-[1200px] mx-auto px-4 md:px-6 text-sm text-gray-500 flex items-center gap-2">
@@ -141,7 +142,7 @@ export default function ArticleNhaHangKhachSan() {
               <div className="border-t border-gray-100 pt-10 text-center">
                 <h3 className="text-2xl font-black text-[#111827] mb-4">Định Giá Khách Sạn Của Bạn Ngay Hôm Nay</h3>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href={`tel:${hotline}`} className="bg-[#111827] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#388e3c] transition-all tracking-wider">📞 GỌI {hotline}</a>
+                  <a href={`tel:${hotline}`} className="inline-flex items-center justify-center gap-2 bg-[#111827] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#388e3c] transition-all tracking-wider"><PhoneIcon className="h-4 w-4" /> GỌI {hotline}</a>
                 </div>
               </div>
 

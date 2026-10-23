@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThanhLyQuanTraSuaPage() {
   const hotline = "0398.771.444";
@@ -76,7 +77,7 @@ export default function ThanhLyQuanTraSuaPage() {
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
+             <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
                   Thanh Lý Quán Trà Sữa Trọn Gói Giá Cao TPHCM - Đồ Cũ Trung Kiên
                 </h1>
@@ -208,7 +209,7 @@ export default function ThanhLyQuanTraSuaPage() {
                     <p>📍 <strong>Địa Chỉ 2:</strong> 207 Nơ Trang Long, Phường 12, Quận Bình Thạnh, TP.HCM</p>
                     <p>📍 <strong>Địa Chỉ 3:</strong> 553 Kha Vạn Cân, Phường Linh Đông, Quận Thủ Đức, TPHCM</p>
                     <p>📍 <strong>Địa Chỉ 4:</strong> 136 Đường Số 10, Phường Tân Quy, Quận 7, TPHCM</p>
-                    <p className="text-brand-400 text-xl">📞 <strong>Hotline:</strong> {hotline} - Trung Kiên</p>
+                    <p className="flex items-center gap-2 text-brand-400 text-xl"><PhoneIcon className="h-5 w-5 shrink-0" /> <strong>Hotline:</strong> {hotline} - Trung Kiên</p>
                     <p>💬 <strong>Zalo báo giá:</strong> 0398.771.444 (Gửi ảnh nhận báo giá ngay)</p>
                   </div>
                 </footer>

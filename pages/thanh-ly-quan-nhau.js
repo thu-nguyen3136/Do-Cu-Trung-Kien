@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThanhLyQuanNhauPage() {
   const hotline = "0398.771.444";
@@ -76,7 +77,7 @@ export default function ThanhLyQuanNhauPage() {
             {/* --- CỘT TRÁI: NỘI DUNG --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6">
+              <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-3xl font-black text-brand-600 uppercase tracking-tight text-left">
                   Thanh Lý Quán Nhậu Giá Cao Trọn Gói TPHCM - Đồ Cũ Trung Kiên
                 </h1>
@@ -223,7 +224,7 @@ export default function ThanhLyQuanNhauPage() {
                       <p>📍 <strong>Chi Nhánh 4:</strong> 136 Đường Số 10, Phường Tân Quy, Quận 7, TP.HCM</p>
                     </div>
                     <div className="space-y-4 md:border-l md:pl-6 border-gray-100">
-                      <p className="text-red-600 text-xl">📞 <strong>Hotline 1:</strong> {hotline}</p>
+                      <p className="flex items-center gap-2 text-red-600 text-xl"><PhoneIcon className="h-5 w-5 shrink-0" /> <strong>Hotline 1:</strong> {hotline}</p>
                       <p>💬 <strong>Zalo:</strong> 0398.771.444</p>
                       <p>📧 <strong>Email:</strong> docutrungkien@gmail.com</p>
                       <p className="text-brand-600 font-black">24/24 - Phục vụ tất cả các ngày trong tuần</p>

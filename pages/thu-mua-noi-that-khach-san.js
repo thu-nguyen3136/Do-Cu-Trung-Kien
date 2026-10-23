@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThanhLyNoiThatKhachSanPage() {
   const hotline = "0398.771.444";
@@ -76,7 +77,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
+             <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
                   Thanh Lý Nội Thất Khách Sạn Trọn Gói Giá Cao TPHCM - Đồ Cũ Trung Kiên
                 </h1>
@@ -306,7 +307,7 @@ export default function ThanhLyNoiThatKhachSanPage() {
                       <p>📍 <strong>CN4:</strong> 136 Đường Số 10, Phường Tân Quy, Quận 7, TP.HCM</p>
                     </div>
                     <div className="space-y-4 md:border-l md:pl-6 border-gray-100 flex flex-col justify-center">
-                      <p className="text-red-600 text-2xl font-black m-0">📞 Hotline: {hotline}</p>
+                      <p className="flex items-center gap-2 text-red-600 text-2xl font-black m-0"><PhoneIcon className="h-6 w-6 shrink-0" /> Hotline: {hotline}</p>
                       <p className="m-0 text-lg">💬 <strong>Zalo Thẩm Định:</strong> 0398.771.444</p>
                       <p className="text-brand-600 font-black m-0 bg-brand-50 inline-block px-3 py-1 rounded">Email: docutrungkien@gmail.com</p>
                     </div>

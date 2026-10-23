@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThanhLyQuanAnPage() {
   const hotline = "0398.771.444";
@@ -190,7 +191,7 @@ export default function ThanhLyQuanAnPage() {
                     <li className="flex gap-2">📍 <span><strong>Địa Chỉ 2:</strong> 207 Nơ Trang Long, Phường 12, Quận Bình Thạnh, TP.HCM</span></li>
                     <li className="flex gap-2">📍 <span><strong>Địa Chỉ 3:</strong> 553 Kha Vạn Cân, Phường Linh Đông, Quận Thủ Đức, TPHCM</span></li>
                     <li className="flex gap-2">📍 <span><strong>Địa Chỉ 4:</strong> 136 Đường Số 10, Phường Tân Quy, Quận 7, TPHCM</span></li>
-                    <li className="flex gap-2 text-red-600 text-lg">📞 <span><strong>Hotline:</strong> {hotline} - Trung Kiên</span></li>
+                    <li className="flex gap-2 text-red-600 text-lg"><PhoneIcon className="mt-1 h-4 w-4 shrink-0" /> <span><strong>Hotline:</strong> {hotline} - Trung Kiên</span></li>
                   </ul>
                 </footer>
 

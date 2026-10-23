@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThanhLyQuanPhoPage() {
   const hotline = "0398.771.444";
@@ -76,7 +77,7 @@ export default function ThanhLyQuanPhoPage() {
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
+             <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
                   Thanh Lý Quán Phở Trọn Gói Giá Cao TPHCM - Đồ Cũ Trung Kiên
                 </h1>
@@ -212,7 +213,7 @@ export default function ThanhLyQuanPhoPage() {
                   <h3 className="text-2xl font-black uppercase mb-6 text-brand-500">THU MUA ĐỒ CŨ TRUNG KIÊN</h3>
                   <div className="space-y-4 font-medium opacity-90">
                     <p>📍 <strong>Địa Chỉ:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</p>
-                    <p>📞 <strong>Hotline:</strong> <span className="text-brand-400 text-xl">{hotline}</span> - Trung Kiên</p>
+                    <p className="flex items-center gap-2"><PhoneIcon className="h-4 w-4 shrink-0" /> <strong>Hotline:</strong> <span className="text-brand-400 text-xl">{hotline}</span> - Trung Kiên</p>
                     <p>💬 <strong>Zalo báo giá:</strong> 0398.771.444 (Gửi ảnh nhận báo giá ngay)</p>
                     <p>🌐 <strong>Website:</strong> thumuadocutrungkien.com</p>
                   </div>

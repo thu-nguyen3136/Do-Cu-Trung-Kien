@@ -13,7 +13,7 @@ export default function PriceTable({
     <section className="my-5 bg-white mt-1">
       {/* PHẦN TIÊU ĐỀ CANH GIỮA */}
       <div className="text-center max-w-3xl mx-auto mb-4 mt-1">
-        <h2 className="!text-xl md:!text-2xl font-bold text-gray-900 uppercase tracking-tight flex items-center justify-center gap-3">
+        <h2 className="!text-xl md:!text-2xl font-bold text-gray-900 tracking-tight flex items-center justify-center gap-3">
           {title}
         </h2>
         <div className="w-20 h-1.5 bg-gradient-to-r from-[#18631c] to-[#2e7d32] mx-auto mt-3 rounded-full"></div>
@@ -45,7 +45,7 @@ export default function PriceTable({
       <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
         <table className="w-full text-left border-collapse text-sm md:text-[15px]">
           <thead>
-            <tr className="bg-gray-100 text-gray-800 font-bold border-b border-gray-200 uppercase text-sm tracking-wider">
+            <tr className="bg-gray-100 text-gray-800 font-bold border-b border-gray-200 text-sm tracking-wider">
               <th className="py-3.5 px-4">{categoryHeader}</th>
               <th className="py-3.5 px-4">Đơn Vị</th>
               <th className="py-3.5 px-4 text-brand-700">Mức Giá Dự Kiến (VNĐ)</th>
