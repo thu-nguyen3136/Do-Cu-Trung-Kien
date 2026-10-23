@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThanhLyQuanCafePage() {
   const hotline = "0398.771.444";
@@ -76,7 +77,7 @@ export default function ThanhLyQuanCafePage() {
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH (3/4) --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6">
+              <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
                   Thanh Lý Quán Cafe Trọn Gói Giá Cao Tại TPHCM
                 </h1>
@@ -194,7 +195,7 @@ export default function ThanhLyQuanCafePage() {
                     <li>📍 <strong>Chi nhánh 2:</strong> 207 Nơ Trang Long, P. 12, Bình Thạnh, TP.HCM</li>
                     <li>📍 <strong>Chi nhánh 3:</strong> 553 Kha Vạn Cân, P. Linh Đông, Thủ Đức, TP.HCM</li>
                     <li>📍 <strong>Chi nhánh 4:</strong> 136 Đường Số 10, P. Tân Quy, Quận 7, TP.HCM</li>
-                    <li>📞 <strong>Hotline:</strong> {hotline} - Trung Kiên</li>
+                    <li className="flex items-center gap-2"><PhoneIcon className="h-4 w-4 shrink-0" /> <strong>Hotline:</strong> {hotline} - Trung Kiên</li>
                   </ul>
                 </section>
 

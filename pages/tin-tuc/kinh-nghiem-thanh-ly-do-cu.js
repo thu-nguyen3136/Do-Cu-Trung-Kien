@@ -32,7 +32,7 @@ export default function ArticleKinhNghiemDoCu() {
         image="https://thumuadocutrungkien.com/thu-mua-do-cu-gia-dinh-3.jpeg"
       />
 
-      <main className="flex-grow pb-20">
+      <main className="flex-grow pb-0">
         {/* ================= BREADCRUMB ================= */}
         <div className="bg-white border-b border-gray-100 py-4">
           <div className="max-w-[1200px] mx-auto px-4 md:px-6 text-sm text-gray-500 flex items-center gap-2">

@@ -47,6 +47,9 @@ export default function Home() {
       description: 'Chuyên thu mua các loại đồ cũ với giá cao, tháo dỡ tận nơi chuyên nghiệp.',
       services: [
         { id: 1, title: 'Thanh Lý Quán Cafe', image: '/thanh-ly-quan-cafe.jpg', link: '/thanh-ly-quan-ca-phe', description: 'Thu mua bàn ghế, máy pha cafe, quầy bar và thiết bị quán cafe trọn gói giá cao.' },
+        { id: 13, title: 'Thanh Lý Quán Bar TPHCM', image: '/thanh-ly-quan-bar-gia-cao.jpg', link: '/thanh-ly-quan-bar-tphcm', description: 'Tiếp nhận khảo sát quầy bar, thiết bị lạnh, máy làm đá, bàn ghế và âm thanh ánh sáng.' },
+        { id: 15, title: 'Thanh Lý Quán Bar Tại Quận 1', image: '/thanh-ly-quan-bar-tphcm.jpg', link: '/thanh-ly-quan-bar-tai-q1', description: 'Thu mua thiết bị bar, âm thanh, ánh sáng và nội thất; hỗ trợ lên lịch tháo dỡ theo điều kiện tại Quận 1.' },
+        { id: 12, title: 'Thu Mua Thanh Lý Quán Cafe TPHCM', image: '/thanh-ly-quan-cafe-1.jpeg', link: '/thanh-ly-quan-cafe-tphcm', description: 'Thu mua máy pha, máy xay, bàn ghế, quầy bar và thiết bị lạnh quán cafe tại TPHCM.' },
         { id: 2, title: 'Thanh Lý Quán Ăn', image: '/thanh-ly-quan-an.jpg', link: '/thanh-ly-quan-an', description: 'Chuyên thu mua thiết bị bếp, bàn ghế và dụng cụ quán ăn giá sỉ, tháo dỡ nhanh.' },
         { id: 3, title: 'Thanh Lý Quán Nhậu', image: '/thanh-ly-quan-nhau.jpg', link: '/thanh-ly-quan-nhau', description: 'Thu mua trọn gói quán nhậu, nhà hàng, hỗ trợ tháo dỡ và vận chuyển tận nơi.' },
         { id: 4, title: 'Thanh Lý Nhà Hàng', image: '/thanh-ly-nha-hang.jpg', link: '/thanh-ly-nha-hang', description: 'Thu mua thiết bị bếp công nghiệp, nội thất nhà hàng cao cấp với giá cạnh tranh nhất.' },
@@ -56,7 +59,10 @@ export default function Home() {
         { id: 8, title: 'Thu Mua Đồ Inox Cũ', image: '/thu-mua-do-inox.jpg', link: '/thu-mua-do-inox-cu', description: 'Thu mua bồn rửa inox, bàn bếp inox, kệ inox và đồ dùng inox công nghiệp.' },
         { id: 9, title: 'Thu mua đồ cũ gia đình', image: '/thu-mua-do-cu-gia-dinh.jpg', link: '/thu-mua-do-cu-gia-dinh', description: 'Thu mua nội thất gia đình, đồ gỗ cũ, tủ thờ, bàn ghế gỗ và đồ điện lạnh cũ.' },
         { id: 10, title: 'Thu Mua Nội Thất Khách Sạn', image: '/thanh-ly-noi-that-khach-san.jpg', link: '/thu-mua-noi-that-khach-san', description: 'Thu mua trọn gói nội thất khách sạn, giường, tủ, nệm và thiết bị điện dân dụng.' },
-        { id: 11, title: 'Thu Mua Quán Karaoke', image: '/thu-mua-quan-karaoke-3.jpg', link: '/thu-mua-quan-karaoke-3', description: 'Thu mua trọn gói dàn âm thanh, loa, amply, ánh sáng sân khấu, tivi và bàn ghế sofa quán karaoke.' },
+        { id: 14, title: 'Thanh Lý Khách Sạn Trọn Gói TPHCM', image: '/thanh-ly-noi-that-khach-san-1.jpg', link: '/thanh-ly-khach-san-tron-goi-tphcm', description: 'Thu mua giường nệm, tivi, minibar, máy lạnh và tài sản khách sạn theo lô hoặc trọn gói.' },
+        { id: 11, title: 'Thu Mua Quán Karaoke', image: '/thu-mua-quan-karaoke-3.jpg', link: '/thu-mua-quan-karaoke', description: 'Thu mua trọn gói dàn âm thanh, loa, amply, ánh sáng sân khấu, tivi và bàn ghế sofa quán karaoke.' },
+        { id: 16, title: 'Thanh Lý Quán Karaoke Tại Quận 1', image: '/thu-mua-quan-karaoke.jpg', link: '/thanh-ly-quan-karaoke-tai-q1', description: 'Khảo sát thanh lý loa, amply, màn hình, sofa và thiết bị phòng karaoke tại Quận 1.' },
+        { id: 17, title: 'Thanh Lý Khách Sạn Trọn Gói Tại Quận 1', image: '/thanh-ly-noi-that-khach-san-1.jpg', link: '/thanh-ly-khach-san-tron-goi-tai-quan-1', description: 'Thu mua nội thất buồng phòng và thiết bị khách sạn tại Quận 1 theo lô hoặc trọn gói.' },
       ]
     }
   ];
@@ -174,7 +180,7 @@ export default function Home() {
       <SEOHead
         title="Thu Mua Đồ Cũ Giá Cao TPHCM | Báo Giá 30P - Đồ Cũ Trung Kiên"
         description="Đồ Cũ Trung Kiên chuyên thu mua đồ cũ giá cao tại TPHCM. Thanh lý nhà hàng, quán ăn, quán cafe, khách sạn, đồ gỗ cũ tận nơi. Hotline 24/7: 0398.771.444."
-        keywords="đồ cũ Trung Kiên, thu mua đồ cũ tphcm, thu mua cửa cũ, thanh lý nhà hàng khách sạn, thu mua đồ gỗ cũ, thanh lý quán cafe, thu mua xác nhà xưởng giá cao"
+        keywords="Đồ Cũ Trung Kiên, thu mua đồ cũ TPHCM, thanh lý đồ cũ trọn gói, thanh lý nhà hàng, thu mua thiết bị nhà hàng, thanh lý khách sạn, thu mua nội thất khách sạn, thanh lý quán karaoke, thu mua loa karaoke, thanh lý quán bar, thu mua thiết bị quán bar, thanh lý quán cafe, thanh lý quán ăn, thanh lý quán nhậu, thanh lý quán trà sữa, thu mua tủ đông tủ mát, thu mua đồ inox cũ, thu mua đồ cũ gia đình, thanh lý quán bar Quận 1, thanh lý karaoke Quận 1, thanh lý khách sạn Quận 1"
         canonical="https://thumuadocutrungkien.com/"
         ogImage="/banner-do-cu-trung-kien.jpg"
       />
@@ -300,7 +306,7 @@ export default function Home() {
                       <div className="p-1 md:p-1 flex flex-col flex-grow text-center items-center bg-white relative">
 
                         {/* Tiêu đề */}
-                        <h3 className="font-bold text-[#111827] group-hover:text-[#18631c] text-[20px] md:text-[25px] mt-2 mb-3 transition-colors line-clamp-2 leading-snug flex items-center justify-center h-[54px] w-full px-2">
+                        <h3 className="font-bold text-[#111827] group-hover:text-[#18631c] text-[20px] md:text-[25px] mt-2 mb-3 py-1 transition-colors leading-relaxed flex items-center justify-center min-h-[80px] h-auto w-full px-2">
                           {srv.title}
                         </h3>
 

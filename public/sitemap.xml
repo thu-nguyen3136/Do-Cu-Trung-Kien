@@ -7,6 +7,12 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://thumuadocutrungkien.com/thu-mua-do-cu</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <!-- CÁC DỊCH VỤ THU MUA MỤC TIÊU (ƯU TIÊN SEO CAO NHẤT) -->
   <url>
@@ -26,6 +32,18 @@
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thumuadocutrungkien.com/thanh-ly-quan-bar-tphcm</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thumuadocutrungkien.com/thanh-ly-quan-bar-tai-q1</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://thumuadocutrungkien.com/thanh-ly-quan-nhau</loc>
@@ -64,6 +82,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://thumuadocutrungkien.com/thanh-ly-khach-san-tron-goi-tphcm</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thumuadocutrungkien.com/thu-mua-tu-dong-tu-mat</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -74,6 +98,18 @@
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thumuadocutrungkien.com/thanh-ly-quan-karaoke-tai-q1</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thumuadocutrungkien.com/thanh-ly-khach-san-tron-goi-tai-quan-1</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- TRANG DOANH NGHIỆP & LIÊN HỆ -->
@@ -106,6 +142,12 @@
   <url>
     <loc>https://thumuadocutrungkien.com/tin-tuc/luu-y-khi-thanh-ly-nha-hang-khach-san</loc>
     <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://thumuadocutrungkien.com/thanh-ly-quan-cafe-tphcm</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

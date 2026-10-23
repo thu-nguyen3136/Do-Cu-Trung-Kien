@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThuMuaDoCuGiaDinhPage() {
   const hotline = "0398.771.444";
@@ -76,7 +77,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
             {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6 text-center">
+              <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 uppercase tracking-tight">
                   Thu Mua Đồ Cũ Gia Đình Giá Cao Tận Nơi TPHCM - Đồ Cũ Trung Kiên
                 </h1>
@@ -240,7 +241,7 @@ export default function ThuMuaDoCuGiaDinhPage() {
                       <p>📍 <strong>CN4:</strong> 136 Đường Số 10, Phường Tân Quy, Quận 7, TP.HCM</p>
                     </div>
                     <div className="space-y-4 md:border-l md:pl-6 border-gray-100 flex flex-col justify-center">
-                      <p className="text-red-600 text-xl m-0">📞 <strong>Hotline:</strong> {hotline}</p>
+                      <p className="flex items-center gap-2 text-red-600 text-xl m-0"><PhoneIcon className="h-5 w-5 shrink-0" /> <strong>Hotline:</strong> {hotline}</p>
                       <p className="m-0">💬 <strong>Zalo:</strong> 0398.771.444</p>
                       <p className="m-0">📧 <strong>Email:</strong> docutrungkien@gmail.com</p>
                       <p className="text-brand-600 font-black m-0 bg-brand-50 inline-block px-3 py-1 rounded">24/24 - Làm việc cả ngày Lễ & CN</p>

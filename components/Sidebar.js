@@ -29,6 +29,14 @@ export default function Sidebar() {
             </Link>
           </li>
           <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
+            <Link href="/thanh-ly-khach-san-tron-goi-tphcm" className="flex items-center gap-3 group">
+              <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                <Image src="/thanh-ly-noi-that-khach-san-1.jpg" alt="Thanh Lý Khách Sạn TPHCM Trọn Gói" fill className="object-cover group-hover:scale-110 transition-transform" />
+              </div>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Khách Sạn TPHCM</h6>
+            </Link>
+          </li>
+          <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
             <Link href="/thu-mua-quan-karaoke" className="flex items-center gap-3 group">
               <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
                 <Image src="/thu-mua-quan-karaoke-3.jpg" alt="Thu Mua Quán Karaoke" fill className="object-cover group-hover:scale-110 transition-transform" />
@@ -74,6 +82,30 @@ export default function Sidebar() {
                 <Image src="/thanh-ly-quan-nhau.jpg" alt="Thanh Lý Quán Nhậu" fill className="object-cover group-hover:scale-110 transition-transform" />
               </div>
               <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Quán Nhậu</h6>
+            </Link>
+          </li>
+          <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
+            <Link href="/thanh-ly-quan-bar-tai-q1" className="flex items-center gap-3 group">
+              <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                <Image src="/thanh-ly-quan-bar-gia-cao.jpg" alt="Thanh Lý Quán Bar Trọn Gói Tại Quận 1" fill className="object-cover group-hover:scale-110 transition-transform" />
+              </div>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Quán Bar Trọn Gói Tại Quận 1</h6>
+            </Link>
+          </li>
+          <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
+            <Link href="/thanh-ly-quan-karaoke-tai-q1" className="flex items-center gap-3 group">
+              <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                <Image src="/thu-mua-quan-karaoke.jpg" alt="Thanh Lý Quán Karaoke Trọn Gói Tại Quận 1" fill className="object-cover group-hover:scale-110 transition-transform" />
+              </div>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Quán Karaoke Trọn Gói Tại Quận 1</h6>
+            </Link>
+          </li>
+          <li className="border-b border-gray-100 p-3 hover:bg-gray-50 transition-colors">
+            <Link href="/thanh-ly-khach-san-tron-goi-tai-quan-1" className="flex items-center gap-3 group">
+              <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+                <Image src="/thanh-ly-noi-that-khach-san-1.jpg" alt="Thanh Lý Khách Sạn Trọn Gói Tại Quận 1" fill className="object-cover group-hover:scale-110 transition-transform" />
+              </div>
+              <h6 className="text-[14px] text-gray-800 m-0 font-medium group-hover:text-[#388e3c] transition-colors leading-tight">Thanh Lý Khách Sạn Trọn Gói Tại Quận 1</h6>
             </Link>
           </li>
           <li className="p-3 hover:bg-gray-50 transition-colors">

@@ -73,13 +73,13 @@ export default function Header() {
 
               {/* Submenu: Thu Mua Đồ Cũ */}
               <li className="relative group h-full cursor-pointer flex items-center m-0">
-                <div className={navLinkClass}>
+                <Link href="/thu-mua-do-cu" className={navLinkClass}>
                   Thu Mua Đồ Cũ
                   <svg className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
                   </svg>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 transition-all group-hover:w-full"></span>
-                </div>
+                </Link>
 
                 <div className="absolute left-0 top-[100%] w-[260px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
                   <ul className="bg-white border-t-4 border-brand-600 shadow-2xl rounded-b-xl overflow-hidden border-x border-b border-gray-100">
@@ -141,7 +141,7 @@ export default function Header() {
                 <li><Link href="/" className="block py-2 px-3 border-b border-gray-50 hover:text-brand-600" onClick={() => setIsOpen(false)}>Trang chủ</Link></li>
                 <li><Link href="/gioi-thieu" className="block py-2 px-3 border-b border-gray-50 hover:text-brand-600" onClick={() => setIsOpen(false)}>Giới Thiệu</Link></li>
 
-                <li className="py-2 px-3 text-brand-600 text-[12px] font-black border-b border-gray-50 bg-gray-50/50">Thu Mua Đồ Cũ</li>
+                <li><Link href="/thu-mua-do-cu" className="block py-2 px-3 text-brand-600 text-[12px] font-black border-b border-gray-50 bg-gray-50/50" onClick={() => setIsOpen(false)}>Thu Mua Đồ Cũ</Link></li>
                 <ul className="pl-4">
 
                   <li><Link href="/thanh-ly-quan-ca-phe" className="block py-1.5 px-3 text-[13px] normal-case font-semibold border-b border-gray-50" onClick={() => setIsOpen(false)}>Thanh Lý Quán Cafe</Link></li>

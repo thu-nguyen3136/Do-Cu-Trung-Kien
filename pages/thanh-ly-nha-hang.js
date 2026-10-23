@@ -6,6 +6,7 @@ import { BreadcrumbSchema, ServiceSchema, FAQSchema } from '../components/Schema
 import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
+import PhoneIcon from '../components/PhoneIcon';
 
 export default function ThanhLyNhaHangPage() {
   const hotline = "0398.771.444";
@@ -76,7 +77,7 @@ export default function ThanhLyNhaHangPage() {
             {/* --- NỘI DUNG CHÍNH (3/4) --- */}
             <article className="lg:col-span-3">
 
-              <header className="mb-8 border-b-2 border-brand-50 pb-6">
+              <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-red-600 uppercase tracking-tight text-center">
                   THANH LÝ NHÀ HÀNG
                 </h1>
@@ -252,7 +253,7 @@ export default function ThanhLyNhaHangPage() {
                   <ul className="list-none p-0 space-y-4 font-medium">
                     <li className="flex gap-2">📍 <span><strong>Địa Chỉ:</strong> 271 Bình Long, Phường Bình Hưng Hòa, Quận Bình Tân, TP.HCM</span></li>
                     <li className="flex gap-2">📧 <span><strong>Email:</strong> docutrungkien@gmail.com</span></li>
-                    <li className="flex gap-2 text-red-600 text-lg">📞 <span><strong>Hotline:</strong> 0398.771.444 - Trung Kiên</span></li>
+                    <li className="flex gap-2 text-red-600 text-lg"><PhoneIcon className="mt-1 h-4 w-4 shrink-0" /> <span><strong>Hotline:</strong> 0398.771.444 - Trung Kiên</span></li>
                   </ul>
                 </footer>
 
