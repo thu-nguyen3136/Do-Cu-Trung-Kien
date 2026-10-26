@@ -119,7 +119,7 @@ export default function ThanhLyQuanKaraokeTaiQ1Page() {
                   <li><strong>Vận chuyển từ tầng cao hoặc hẻm nhỏ:</strong> Kiểm tra chiều rộng lối đi, thang hàng, tải trọng và điểm tập kết. Nếu cần thiết bị nâng hạ, phương án phải được khảo sát và thống nhất với ban quản lý.</li>
                   <li><strong>Kiểm kê thiết bị điện tử:</strong> Ghi model, số lượng, phụ kiện và tình trạng hoạt động giúp việc đối chiếu, định giá rõ ràng hơn.</li>
                 </ol>
-                <p>Trường hợp cơ sở có thêm quầy bar, pub hoặc lounge, bạn có thể xem trang <Link href="/thanh-ly-quan-bar-tai-quan-1" className="text-brand-600 font-semibold hover:underline">thanh lý quán bar tại Quận 1</Link>. Phạm vi dịch vụ và danh mục tài sản của từng mô hình sẽ được xác nhận riêng.</p>
+                <p>Trường hợp cơ sở có thêm quầy bar, pub hoặc lounge, bạn có thể xem trang <Link href="/thanh-ly-quan-bar-tai-quan-1" className="text-brand-600 font-semibold hover:underline">thanh lý quán bar tại Quận 1</Link>. Phạm vi dịch vụ và danh mục tài sản của từng mô hình sẽ được xác nhận riêng. Nếu quán nằm ở quận khác, xem dịch vụ <Link href="/thanh-ly-quan-karaoke-tron-goi-tphcm" className="text-brand-600 font-semibold hover:underline">thanh lý quán karaoke trọn gói TPHCM</Link>.</p>
 
                 <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Các Hạng Mục Có Thể Thu Mua Khi Thanh Lý Karaoke</h2>
                 <p>Trung Kiên tiếp nhận đề nghị khảo sát theo từng phòng hoặc theo danh sách toàn cơ sở. Khả năng thu mua phụ thuộc thương hiệu, tình trạng và số lượng thực tế.</p>

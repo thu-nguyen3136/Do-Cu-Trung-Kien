@@ -223,7 +223,7 @@ export default function ThuMuaQuanKaraokePage() {
 
                 <p>
                   Đặc biệt, với những khách hàng cần{' '}
-                  <strong>thanh lý quán karaoke tại TPHCM</strong> để nhanh chóng
+                  <Link href="/thanh-ly-quan-karaoke-tron-goi-tphcm" className="text-brand-600 font-semibold hover:underline">thanh lý quán karaoke trọn gói TPHCM</Link> để nhanh chóng
                   trả mặt bằng, Trung Kiên có thể hỗ trợ từ khâu khảo sát,
                   báo giá đến tháo dỡ, bốc xếp và vận chuyển. Các hạng mục
                   được phân loại để quá trình thanh lý diễn ra nhanh gọn,

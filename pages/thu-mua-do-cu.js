@@ -18,6 +18,7 @@ const services = [
   { id: 10, title: 'Thu Mua Nội Thất Khách Sạn', image: '/thanh-ly-noi-that-khach-san.jpg', link: '/thu-mua-noi-that-khach-san', description: 'Thu mua giường, tủ, nệm và nội thất khách sạn theo từng hạng mục.' },
   { id: 14, title: 'Thanh Lý Khách Sạn Trọn Gói TPHCM', image: '/thanh-ly-noi-that-khach-san-1.jpg', link: '/thanh-ly-khach-san-tron-goi-tphcm', description: 'Thu mua giường nệm, tivi, minibar, máy lạnh và tài sản khách sạn theo lô hoặc trọn gói.' },
   { id: 11, title: 'Thu Mua Quán Karaoke', image: '/thu-mua-quan-karaoke-3.jpg', link: '/thu-mua-quan-karaoke', description: 'Thu mua dàn âm thanh, loa, amply, ánh sáng, màn hình và sofa quán karaoke.' },
+  { id: 18, title: 'Thanh Lý Quán Karaoke Trọn Gói TPHCM', image: '/thu-mua-quan-karaoke-2.jpg', link: '/thanh-ly-quan-karaoke-tron-goi-tphcm', description: 'Thanh lý trọn gói phòng hát, dàn âm thanh, tivi, sofa và tháo dỡ vách cách âm, hỗ trợ trả mặt bằng.' },
   { id: 16, title: 'Thanh Lý Quán Karaoke Tại Quận 1', image: '/thu-mua-quan-karaoke.jpg', link: '/thanh-ly-quan-karaoke-tai-quan-1', description: 'Khảo sát thanh lý loa, amply, màn hình, sofa và thiết bị phòng karaoke tại Quận 1.' },
   { id: 17, title: 'Thanh Lý Khách Sạn Trọn Gói Tại Quận 1', image: '/thanh-ly-noi-that-khach-san-1.jpg', link: '/thanh-ly-khach-san-tron-goi-tai-quan-1', description: 'Thu mua nội thất buồng phòng và thiết bị khách sạn tại Quận 1 theo lô hoặc trọn gói.' }
 ];
