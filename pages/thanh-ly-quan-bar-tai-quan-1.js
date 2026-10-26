@@ -39,7 +39,7 @@ export default function ThanhLyQuanBarTaiQ1Page() {
 
   const breadcrumbs = [
     { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
-    { name: 'Thanh Lý Quán Bar TPHCM', url: 'https://thumuadocutrungkien.com/thanh-ly-quan-bar-tphcm' },
+    { name: 'Thanh Lý Quán Bar Trọn Gói TPHCM', url: 'https://thumuadocutrungkien.com/thanh-ly-quan-bar-tron-goi-tphcm' },
     { name: 'Thanh Lý Quán Bar Tại Q1', url: pageUrl }
   ];
 
@@ -73,7 +73,7 @@ export default function ThanhLyQuanBarTaiQ1Page() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-10 text-sm text-gray-500 flex flex-wrap items-center gap-2">
             <Link href="/" className="hover:text-brand-600 transition-colors">Trang chủ</Link>
             <span>/</span>
-            <Link href="/thanh-ly-quan-bar-tphcm" className="hover:text-brand-600 transition-colors">Thanh Lý Quán Bar TPHCM</Link>
+            <Link href="/thanh-ly-quan-bar-tron-goi-tphcm" className="hover:text-brand-600 transition-colors">Thanh Lý Quán Bar Trọn Gói TPHCM</Link>
             <span>/</span>
             <span className="text-gray-900 font-medium">Thanh Lý Quán Bar Tại Q1</span>
           </div>
@@ -154,7 +154,7 @@ export default function ThanhLyQuanBarTaiQ1Page() {
                 <section className="!mt-0 !mb-0">
                   <h3 className="!mt-3 !text-xl font-bold text-gray-900">4. Tủ mát, tủ đông và hệ thống điều hòa</h3>
                   <p>Thiết bị lạnh thường có tủ mát đứng nhiều cánh, tủ trưng bày đồ uống, tủ đông bàn chặt và máy lạnh âm trần hoặc giấu trần nối ống gió. Hãy cung cấp model, công suất, tình trạng làm lạnh và vị trí lắp đặt để dự trù cách tháo và di chuyển.</p>
-                  <p>Trung Kiên cũng nhận khảo sát các tài sản bar theo khu vực tại TP.HCM; xem thêm dịch vụ <Link href="/thanh-ly-quan-bar-tphcm" className="text-brand-600 font-semibold hover:underline">thanh lý quán bar trọn gói tại TPHCM</Link> hoặc <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">thu mua tủ đông, tủ mát</Link>.</p>
+                  <p>Trung Kiên cũng nhận khảo sát các tài sản bar theo khu vực tại TP.HCM; xem thêm dịch vụ <Link href="/thanh-ly-quan-bar-tron-goi-tphcm" className="text-brand-600 font-semibold hover:underline">thanh lý quán bar trọn gói tại TPHCM</Link> hoặc <Link href="/thu-mua-tu-dong-tu-mat" className="text-brand-600 font-semibold hover:underline">thu mua tủ đông, tủ mát</Link>.</p>
                   <figure className="not-prose mt-6 mb-0">
                     <div className="relative w-full aspect-video overflow-hidden rounded-xl">
                       <Image src="/thanh-ly-quan-bar-tron-goi.jpg" alt="Khu vực phục vụ và thiết bị trong quán bar" fill sizes="(max-width: 768px) 100vw, 75vw" className="object-cover" />
