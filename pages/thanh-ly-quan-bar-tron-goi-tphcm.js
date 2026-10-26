@@ -8,12 +8,16 @@ import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
 
 const pageUrl = 'https://thumuadocutrungkien.com/thanh-ly-quan-bar-tron-goi-tphcm';
-const pageDescription = 'Thu mua thanh lý quán bar TPHCM: quầy bar, máy làm đá, tủ mát, bàn ghế, sofa, âm thanh, ánh sáng. Khảo sát, tháo dỡ theo thỏa thuận. Gọi 0398.771.444.';
+const pageDescription = 'Thanh lý quán bar trọn gói TPHCM: thu mua quầy bar, máy làm đá, tủ mát, bàn ghế, sofa, âm thanh ánh sáng. Khảo sát tận nơi, tháo dỡ nhanh. Gọi 0398.771.444.';
 const pageImage = '/thanh-ly-quan-bar-gia-cao.jpg';
 
 export default function ThanhLyQuanBarTphcmPage() {
   const hotline = '0398.771.444';
   const faqs = [
+    {
+      question: 'Thanh lý quán bar trọn gói gồm những hạng mục nào?',
+      answer: 'Gói thanh lý quán bar trọn gói tại TPHCM có thể bao gồm quầy bar, thiết bị pha chế, máy làm đá, tủ mát, tủ đông, bàn ghế, sofa, hệ thống âm thanh, ánh sáng và đồ trang trí. Danh sách cụ thể, chi phí tháo dỡ và vận chuyển được thống nhất trước khi thực hiện.'
+    },
     {
       question: 'Tôi chỉ muốn bán lẻ vài chiếc loa hoặc một tủ mát có được không?',
       answer: 'Có. Trung Kiên tiếp nhận yêu cầu từ một vài thiết bị riêng lẻ đến thanh lý trọn gói quán bar, pub hoặc lounge. Giá và lịch thu mua được trao đổi theo tình trạng, số lượng và địa chỉ.'
@@ -38,7 +42,7 @@ export default function ThanhLyQuanBarTphcmPage() {
 
   const breadcrumbs = [
     { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
-    { name: 'Thu Mua Đồ Cũ', url: 'https://thumuadocutrungkien.com/' },
+    { name: 'Thu Mua Đồ Cũ', url: 'https://thumuadocutrungkien.com/thu-mua-do-cu' },
     { name: 'Thanh Lý Quán Bar Trọn Gói TPHCM', url: pageUrl }
   ];
 
@@ -47,16 +51,16 @@ export default function ThanhLyQuanBarTphcmPage() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
-        title="Thu Mua Thanh Lý Quán Bar Trọn Gói TPHCM Giá Cao | Trung Kiên"
+        title="Thanh Lý Quán Bar Trọn Gói TPHCM Giá Cao | Trung Kiên"
         description={pageDescription}
-        keywords="thanh lý quán bar TPHCM, thu mua thanh lý quán bar trọn gói, thu mua pub lounge, thanh lý rooftop bar, thu mua quầy bar inox, thanh lý quầy pha chế, thu mua loa quán bar, thanh lý loa sub và mixer, thu mua amply cục đẩy, thanh lý đèn moving head, thu mua máy làm đá quán bar, thanh lý máy rửa ly, thu mua tủ mát tủ đông quán bar, thanh lý sofa lounge, thanh lý quán bar Quận 1, tháo dỡ quán bar ban đêm"
+        keywords="thanh lý quán bar trọn gói TPHCM, thanh lý quán bar trọn gói, thu mua quán bar trọn gói, thanh lý quán bar TPHCM, thu mua thanh lý quán bar trọn gói, thu mua pub lounge, thanh lý rooftop bar, thu mua quầy bar inox, thanh lý quầy pha chế, thu mua loa quán bar, thanh lý loa sub và mixer, thu mua amply cục đẩy, thanh lý đèn moving head, thu mua máy làm đá quán bar, thanh lý máy rửa ly, thu mua tủ mát tủ đông quán bar, thanh lý sofa lounge, thanh lý quán bar Quận 1, tháo dỡ quán bar ban đêm"
         canonical="/thanh-ly-quan-bar-tron-goi-tphcm"
         ogImage={pageImage}
       />
       <Head>
         <BreadcrumbSchema items={breadcrumbs} />
         <ServiceSchema
-          name="Thanh Lý Quán Bar TPHCM Theo Hạng Mục Hoặc Trọn Gói"
+          name="Thanh Lý Quán Bar Trọn Gói TPHCM"
           description={pageDescription}
           url={pageUrl}
           image={`https://thumuadocutrungkien.com${pageImage}`}
@@ -78,13 +82,13 @@ export default function ThanhLyQuanBarTphcmPage() {
             <article className="lg:col-span-3 min-w-0">
               <header className="mb-4 border-b-2 border-brand-50 pb-1">
                 <h1 className="text-2xl md:text-4xl font-black text-brand-600 leading-tight">
-                  Dịch Vụ Thu Mua Thanh Lý Quán Bar TPHCM Trọn Gói Giá Cao, Nhanh Gọn
+                  Thanh Lý Quán Bar Trọn Gói TPHCM - Thu Mua Giá Cao, Nhanh Gọn
                 </h1>
               </header>
 
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-7">
                 <p>
-                  Kinh doanh quán bar, pub hay lounge thường cần đầu tư đáng kể cho không gian, nội thất và thiết bị chuyên dụng. Khi cần trả mặt bằng, chuyển đổi mô hình hoặc nâng cấp quán, việc thanh lý từng món riêng lẻ có thể mất thời gian, nhất là khi phải sắp xếp người mua, tháo dỡ và vận chuyển. <strong>Đồ Cũ Trung Kiên</strong> tiếp nhận yêu cầu <strong>thu mua thanh lý quán bar tại TPHCM</strong> theo từng hạng mục hoặc trọn gói, tùy tình trạng tài sản và lịch bàn giao.
+                  Kinh doanh quán bar, pub hay lounge thường cần đầu tư đáng kể cho không gian, nội thất và thiết bị chuyên dụng. Khi cần trả mặt bằng, chuyển đổi mô hình hoặc nâng cấp quán, việc thanh lý từng món riêng lẻ có thể mất thời gian, nhất là khi phải sắp xếp người mua, tháo dỡ và vận chuyển. <strong>Đồ Cũ Trung Kiên</strong> nhận <strong>thanh lý quán bar trọn gói TPHCM</strong>: khảo sát, định giá, tháo dỡ và vận chuyển toàn bộ tài sản trong một đợt, hoặc thu mua theo từng hạng mục tùy tình trạng tài sản và lịch bàn giao.
                 </p>
                 <p>
                   Tự đăng bán loa, bàn ghế, tủ mát hay máy làm đá có thể khiến mặt bằng chưa được giải phóng đúng kế hoạch. Gửi ảnh hoặc video hiện trạng qua <a href={`https://zalo.me/${hotline.replace(/\./g, '')}`}>Zalo {hotline}</a>, kèm địa chỉ, số lượng và thời hạn cần bàn giao để nhận tư vấn sơ bộ. Mức giá cuối cùng được xác nhận sau khi kiểm tra thiết bị và thống nhất danh sách thu mua.
@@ -97,7 +101,7 @@ export default function ThanhLyQuanBarTphcmPage() {
 
                 <figure className="not-prose mt-8 mb-0">
                   <div className="relative w-full aspect-video overflow-hidden rounded-2xl">
-                    <Image src={pageImage} alt="Không gian lounge với sofa và bàn khách, minh họa nhóm nội thất có thể khảo sát thanh lý" fill priority sizes="(max-width: 768px) 100vw, 75vw" className="object-cover" />
+                    <Image src={pageImage} alt="Thanh lý quán bar trọn gói TPHCM - không gian lounge với sofa và bàn khách" fill priority sizes="(max-width: 768px) 100vw, 75vw" className="object-cover" />
                   </div>
                 </figure>
 
@@ -165,7 +169,7 @@ export default function ThanhLyQuanBarTphcmPage() {
                   </figure>
                 </section>
 
-                <h2 className="!mt-3 !text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Bảng Giá Thu Mua Thanh Lý Quán Bar Tham Khảo Tại TP.HCM</h2>
+                <h2 className="!mt-3 !text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Bảng Giá Thanh Lý Quán Bar Trọn Gói Tham Khảo Tại TP.HCM</h2>
                 <p>
                   Khoảng giá dưới đây giúp bạn dự trù ban đầu, không phải cam kết giá cho mọi thiết bị. Giá thực tế còn tùy thương hiệu, đời máy, công suất, tình trạng ngoại quan, khả năng vận hành, số lượng và điều kiện tháo dỡ.
                 </p>
@@ -185,7 +189,7 @@ export default function ThanhLyQuanBarTphcmPage() {
                   <li><strong>Thanh toán rõ ràng:</strong> Hình thức và thời điểm thanh toán được xác nhận trước; hoàn tất theo danh sách hàng hóa đã chốt.</li>
                 </ol>
 
-                <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Quy Trình 4 Bước Thu Mua Quán Bar</h2>
+                <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Quy Trình 4 Bước Thanh Lý Quán Bar Trọn Gói</h2>
                 <ol>
                   <li><strong>Bước 1 - Gửi hình ảnh qua Zalo:</strong> Quay video toàn cảnh, chụp rõ nhãn thiết bị, số lượng và gửi đến hotline/Zalo {hotline}.</li>
                   <li><strong>Bước 2 - Nhận báo giá sơ bộ:</strong> Trung Kiên xem thông tin và phản hồi những hạng mục có thể thu mua cùng mức dự kiến; giá có thể điều chỉnh sau khi kiểm tra trực tiếp.</li>
@@ -196,11 +200,11 @@ export default function ThanhLyQuanBarTphcmPage() {
                   Trước ngày thực hiện, bạn nên tách riêng tài sản cá nhân, giấy tờ và hàng hóa cần giữ lại; đồng thời thông báo quy định ra vào cho ban quản lý nếu quán nằm trong tòa nhà hoặc trung tâm thương mại. Cách chuẩn bị này giúp tránh nhầm lẫn và chủ động hơn khi bàn giao.
                 </p>
 
-                <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Câu Hỏi Thường Gặp Khi Thanh Lý Quán Bar</h2>
+                <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Câu Hỏi Thường Gặp Khi Thanh Lý Quán Bar Trọn Gói</h2>
                 <FAQAccordion title="Giải Đáp Thắc Mắc Về Dịch Vụ Thanh Lý Quán Bar" faqs={faqs} />
 
                 <section>
-                  <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Khu Vực Nhận Thu Mua Quán Bar Tận Nơi Tại TP.HCM</h2>
+                  <h2 className="!text-2xl font-bold text-gray-900 border-l-4 border-brand-600 pl-4">Khu Vực Nhận Thanh Lý Quán Bar Trọn Gói Tại TP.HCM</h2>
                   <p>Trung Kiên tiếp nhận yêu cầu tại khu vực trung tâm như Quận 1, Quận 3, Quận 4, Quận 5, Quận 10; các khu vực Bình Thạnh, Phú Nhuận, Gò Vấp, Tân Bình, Tân Phú, Bình Tân, Quận 7 và TP. Thủ Đức. Huyện Bình Chánh, Nhà Bè, Hóc Môn cùng các tỉnh lân cận như Bình Dương, Đồng Nai sẽ được xác nhận lịch theo địa chỉ và khối lượng công việc.</p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 not-prose">
                     {districts.map((district) => (
