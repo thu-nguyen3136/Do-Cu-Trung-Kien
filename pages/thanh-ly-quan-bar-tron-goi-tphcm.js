@@ -7,7 +7,7 @@ import FAQAccordion from '../components/FAQAccordion';
 import PriceTable from '../components/PriceTable';
 import SEOHead from '../components/SEOHead';
 
-const pageUrl = 'https://thumuadocutrungkien.com/thanh-ly-quan-bar-tphcm';
+const pageUrl = 'https://thumuadocutrungkien.com/thanh-ly-quan-bar-tron-goi-tphcm';
 const pageDescription = 'Thu mua thanh lý quán bar TPHCM: quầy bar, máy làm đá, tủ mát, bàn ghế, sofa, âm thanh, ánh sáng. Khảo sát, tháo dỡ theo thỏa thuận. Gọi 0398.771.444.';
 const pageImage = '/thanh-ly-quan-bar-gia-cao.jpg';
 
@@ -39,7 +39,7 @@ export default function ThanhLyQuanBarTphcmPage() {
   const breadcrumbs = [
     { name: 'Trang chủ', url: 'https://thumuadocutrungkien.com/' },
     { name: 'Thu Mua Đồ Cũ', url: 'https://thumuadocutrungkien.com/' },
-    { name: 'Thanh Lý Quán Bar TPHCM', url: pageUrl }
+    { name: 'Thanh Lý Quán Bar Trọn Gói TPHCM', url: pageUrl }
   ];
 
   const districts = ['Quận 1', 'Quận 3', 'Quận 4', 'Quận 5', 'Quận 7', 'Quận 10', 'Bình Thạnh', 'Phú Nhuận', 'Gò Vấp', 'Tân Bình', 'Tân Phú', 'Bình Tân', 'TP. Thủ Đức', 'Bình Chánh', 'Nhà Bè', 'Hóc Môn'];
@@ -47,10 +47,10 @@ export default function ThanhLyQuanBarTphcmPage() {
   return (
     <div className="min-h-screen bg-white font-sans antialiased text-gray-800 flex flex-col">
       <SEOHead
-        title="Thu Mua Thanh Lý Quán Bar TPHCM Giá Cao | Trung Kiên"
+        title="Thu Mua Thanh Lý Quán Bar Trọn Gói TPHCM Giá Cao | Trung Kiên"
         description={pageDescription}
         keywords="thanh lý quán bar TPHCM, thu mua thanh lý quán bar trọn gói, thu mua pub lounge, thanh lý rooftop bar, thu mua quầy bar inox, thanh lý quầy pha chế, thu mua loa quán bar, thanh lý loa sub và mixer, thu mua amply cục đẩy, thanh lý đèn moving head, thu mua máy làm đá quán bar, thanh lý máy rửa ly, thu mua tủ mát tủ đông quán bar, thanh lý sofa lounge, thanh lý quán bar Quận 1, tháo dỡ quán bar ban đêm"
-        canonical="/thanh-ly-quan-bar-tphcm"
+        canonical="/thanh-ly-quan-bar-tron-goi-tphcm"
         ogImage={pageImage}
       />
       <Head>
@@ -69,7 +69,7 @@ export default function ThanhLyQuanBarTphcmPage() {
           <div className="max-w-[1400px] mx-auto px-5 md:px-10 text-sm text-gray-500">
             <Link href="/" className="hover:text-brand-600 transition-colors">Trang chủ</Link>
             <span className="mx-2">/</span>
-            <span className="text-gray-900 font-medium">Thanh Lý Quán Bar TPHCM</span>
+            <span className="text-gray-900 font-medium">Thanh Lý Quán Bar Trọn Gói TPHCM</span>
           </div>
         </nav>
 

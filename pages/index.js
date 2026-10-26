@@ -47,7 +47,7 @@ export default function Home() {
       description: 'Chuyên thu mua các loại đồ cũ với giá cao, tháo dỡ tận nơi chuyên nghiệp.',
       services: [
         { id: 1, title: 'Thanh Lý Quán Cafe', image: '/thanh-ly-quan-cafe.jpg', link: '/thanh-ly-quan-ca-phe', description: 'Thu mua bàn ghế, máy pha cafe, quầy bar và thiết bị quán cafe trọn gói giá cao.' },
-        { id: 13, title: 'Thanh Lý Quán Bar TPHCM', image: '/thanh-ly-quan-bar-gia-cao.jpg', link: '/thanh-ly-quan-bar-tphcm', description: 'Tiếp nhận khảo sát quầy bar, thiết bị lạnh, máy làm đá, bàn ghế và âm thanh ánh sáng.' },
+        { id: 13, title: 'Thanh Lý Quán Bar Trọn Gói TPHCM', image: '/thanh-ly-quan-bar-gia-cao.jpg', link: '/thanh-ly-quan-bar-tron-goi-tphcm', description: 'Tiếp nhận khảo sát quầy bar, thiết bị lạnh, máy làm đá, bàn ghế và âm thanh ánh sáng.' },
         { id: 15, title: 'Thanh Lý Quán Bar Tại Quận 1', image: '/thanh-ly-quan-bar-tphcm.jpg', link: '/thanh-ly-quan-bar-tai-quan-1', description: 'Thu mua thiết bị bar, âm thanh, ánh sáng và nội thất; hỗ trợ lên lịch tháo dỡ theo điều kiện tại Quận 1.' },
         { id: 12, title: 'Thu Mua Thanh Lý Quán Cafe TPHCM', image: '/thanh-ly-quan-cafe-1.jpeg', link: '/thanh-ly-quan-cafe-tphcm', description: 'Thu mua máy pha, máy xay, bàn ghế, quầy bar và thiết bị lạnh quán cafe tại TPHCM.' },
         { id: 2, title: 'Thanh Lý Quán Ăn', image: '/thanh-ly-quan-an.jpg', link: '/thanh-ly-quan-an', description: 'Chuyên thu mua thiết bị bếp, bàn ghế và dụng cụ quán ăn giá sỉ, tháo dỡ nhanh.' },
